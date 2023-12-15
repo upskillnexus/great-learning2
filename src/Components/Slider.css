@@ -1,0 +1,26 @@
+/* ImageSlider.css */
+.carousel {
+  /* max-height: 380px; */
+  width: 100%;
+  /* background-color: black; */
+  /* Adjust the height as needed */
+}
+
+.carousel-item {
+  /* text-align: center; */
+}
+
+.carousel-item img {
+  /* max-height: 500px; */
+  width: 50%;
+  /* Adjust the height as needed */
+  /* margin: 0 auto; */
+}
+
+.carousel-indicators {
+  /* background: blue; */
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: gray;
+}
