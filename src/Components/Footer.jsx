@@ -46,7 +46,7 @@ const Footer = () => {
             <Box>
               <Text fontSize={{ base: "sm", md: "md" }} mb={4}>
                 <Image src={logo} alt="WsCube Tech Logo" mb={{ base: "10px", md: "20px" }} maxW={{ base: "60%", sm: "40%", md: "50%" }} />
-                Upskill Nexus provides training in the most significant and demanding areas of Information Technology, including Cybersecurity, Data Analytics and Science, and Digital Marketing Science.
+                UpskillNexus provides training in the most significant and demanding areas of Information Technology, including Cybersecurity, Data Analytics and Science, and Digital Marketing Science.
               </Text>
 
               <Heading size="md">Stay up to date.</Heading>

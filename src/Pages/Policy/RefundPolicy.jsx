@@ -66,7 +66,7 @@ const RefundPolicy = () => {
     <>
       <Flex p="5" gap={5} flexDir={"column"} align="center">
         {/* <Box> */}
-        <Heading textAlign={"center"}>Refund Policy (Upskill Nexus)</Heading>
+        <Heading textAlign={"center"}>Refund Policy (UpskillNexus)</Heading>
         <Text w={{ base: "full", md: "50%" }} textAlign={"center"}>
           This Refund Policy outlines our approach to refunds for our training programs and services. By using our website and services, you agree to be bound by this policy.
         </Text>

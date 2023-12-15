@@ -150,9 +150,9 @@ const Courses = () => {
           <Flex flexDir="column" alignItems="center" textAlign={{ base: "center", md: "center" }}>
             <Image height={{ base: "60px", md: "80px" }} width={{ base: "60px", md: "80px" }} src="/Upskill-Nexus-favicon.png" />
             <Heading color="#b9292f" fontSize={{ base: "35px", md: "40px" }} textAlign={{ base: "center", md: "center" }}>
-              Get Upskilled <span style={{ color: "black" }}> with</span> Upskill Nexus
+              Get Upskilled <span style={{ color: "black" }}> with</span> UpskillNexus
             </Heading>
-            <Text w={{ base: "100%", md: "80%" }}>Upskill Nexus provides training in the most significant and demanding areas of Information Technology, including Cybersecurity, Data Analytics and Science, and Digital Marketing Science. Whether you are experienced in these fields already or just starting out, we are here to help. Our goal is to ensure that you have the skills and knowledge you need to succeed in the world of information technology. Get upskilled with Upskill Nexus and get ready for a rewarding IT career!</Text>
+            <Text w={{ base: "100%", md: "80%" }}>UpskillNexus provides training in the most significant and demanding areas of Information Technology, including Cybersecurity, Data Analytics and Science, and Digital Marketing Science. Whether you are experienced in these fields already or just starting out, we are here to help. Our goal is to ensure that you have the skills and knowledge you need to succeed in the world of information technology. Get upskilled with UpskillNexus and get ready for a rewarding IT career!</Text>
           </Flex>
           {/* <Button color="#b9292f" d="flex" gap="3" alignItems="center">
             Filter <BsFilter />
@@ -192,19 +192,23 @@ const Courses = () => {
           </Flex> */}
 
           {/* Courses */}
-          <Flex justify={"center"}>
-            <Grid
+          <Flex w="full" justify={"center"}>
+            <Flex
+              w="full"
+              flexWrap={"wrap"}
               gridTemplateColumns={{
                 base: "repeat(1, 1fr)", // On smaller screens, one column
                 md: "repeat(2, 1fr)", // On medium screens, two columns
                 lg: "repeat(3, 1fr)", // On large screens, three columns
                 xl: "repeat(3, 1fr)", // On extra-large screens, four columns
               }}
-              width={{ base: "full", md: "80%" }}
+              // width={{ base: "full", md: "80%" }}
+              justify={"center"}
               gap={{ base: "30px 15px", md: "30px 15px" }} // Adjust gap as needed
+              // bg="red"
             >
               {data.map((ele, i) => (
-                <Box key={i} borderRadius={"10px"} overflow={"hidden"} border="3px solid none" width={{ base: "full", md: "100%" }} minH={"260px"} boxShadow="0 0 3px rgba(0,0,0,0.2)">
+                <Box key={i} borderRadius={"10px"} overflow={"hidden"} border="3px solid none" width={"320px"} minH={"10vh"} boxShadow="0 0 3px rgba(0,0,0,0.2)">
                   <Image width={"100%"} position="relative" objectFit={"cover"} src={ele.image} />
 
                   {/* <Link to={path}> */}
@@ -237,7 +241,7 @@ const Courses = () => {
                   {/* </Link> */}
                 </Box>
               ))}
-            </Grid>
+            </Flex>
           </Flex>
         </Flex>
       </Box>

@@ -435,7 +435,7 @@ const CyberSecurityCourse = () => {
               keyH="Chapters Highlights"
               data={chapterhighlights}
               title={"Chapter Highlights"}
-              subTitle={"Upskill Nexus Covers 8+ Chapters that you will learn in the Cyber Security Program"}
+              subTitle={"UpskillNexus Covers 8+ Chapters that you will learn in the Cyber Security Program"}
             />
           </Box>
 
@@ -444,7 +444,7 @@ const CyberSecurityCourse = () => {
             <Box w="90%">
               <DynamicAccordians //
                 data={accordianData}
-                title="Reasons To Choose Upskill Nexus Cyber Security Course"
+                title="Reasons To Choose UpskillNexus Cyber Security Course"
                 subTitle="Welcome to our comprehensive six-month Cybersecurity Training Course, designed to equip aspiring professionals with the knowledge and skills necessary to thrive in the ever-evolving field of cybersecurity. This program covers a wide array of fundamental and advanced topics in cybersecurity, providing a structured learning path for individuals aiming to kickstart their career as cybersecurity analysts."
               />
             </Box>

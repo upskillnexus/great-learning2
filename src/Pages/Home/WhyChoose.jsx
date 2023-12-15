@@ -43,7 +43,7 @@ const WhyChoose = () => {
     <Flex flexDir="column" alignItems="center" gap={0} mt="80px">
       <Flex flexDir="column" alignItems={{ base: "center", md: "center" }} mb={2}>
         <Heading fontSize={{ base: "20px", sm: "28px", md: "40px" }}>
-          Why Choose <span style={{ color: "#b9292f" }}> Upskill Nexus </span>?
+          Why Choose <span style={{ color: "#b9292f" }}> UpskillNexus </span>?
         </Heading>
         <Text textAlign={"center"} w={{ base: "full", md: "80%" }}>
           An individual’s success depends on all-round development. At UpskillNexus, we understand that a person should be able to apply their technical digital skills in a business domain to create opportunities and must hold the soft skills to manifest and maximize returns from the opportunity. So we offer you our carefully designed programs that match what employers are looking for and prepare you for success.

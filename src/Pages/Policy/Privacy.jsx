@@ -18,7 +18,7 @@ const pData = [
     h: "WHAT DATA WE COLLECT",
     p: [
       {
-        content: "We collect certain data from you directly, like the information you enter yourself, data about your participation in courses, and data from third-party platforms you connect with Upskill Nexus. We also collect some data automatically, like information about your device and what parts of our Services you interact with or spend time using.",
+        content: "We collect certain data from you directly, like the information you enter yourself, data about your participation in courses, and data from third-party platforms you connect with UpskillNexus. We also collect some data automatically, like information about your device and what parts of our Services you interact with or spend time using.",
       },
       { heading: "Data You Provide to Us" },
       {
@@ -37,7 +37,7 @@ const pData = [
         content: "Program Data: When you enroll into a program, we collect certain data including which program, courses, assignments and quizzes you’ve started and completed; your exchanges with teaching assistants, answers to questions, and other items submitted to satisfy course requirements.",
       },
       {
-        content: "Student Payment Data: If you make payments, we collect certain data about your payment (such as your name and email id) as necessary to process your payment. You must provide certain payment and billing data directly to our payment processing partners, including your name, credit card information, billing address, and zip code. For security, Upskill Nexus does not collect or store sensitive cardholder data, such as full credit card numbers or card authentication data.",
+        content: "Student Payment Data: If you make payments, we collect certain data about your payment (such as your name and email id) as necessary to process your payment. You must provide certain payment and billing data directly to our payment processing partners, including your name, credit card information, billing address, and zip code. For security, UpskillNexus does not collect or store sensitive cardholder data, such as full credit card numbers or card authentication data.",
       },
       {
         content: "Sweepstakes, Promotions, and Surveys: We may invite you to complete a survey or participate in a promotion (like a contest, sweepstakes, or challenge), either through the Services or a third-party platform. If you participate, we will collect and store the data you provide as part of participation, such as your name, email address, or phone number. That data is subject to this Privacy Policy unless otherwise stated in the official rules of the promotion or in another privacy policy. The data collected will be used to administer the promotion or survey, including for notifying winners and distributing rewards. To receive a reward, you may be required to allow us to post some of your information publicly (like on a winner’s page). Where we use a third-party platform to administer a survey or promotion or feedback, the third party’s privacy policy will apply.",
@@ -58,13 +58,13 @@ const pData = [
       },
       { heading: "Cookies and Data Collection Tools" },
       {
-        content: "As detailed in our Cookie Policy, Upskill Nexus and service providers acting on our behalf (like Google Analytics and third party advertisers) use server log files and automated data collection tools like cookies, tags, scripts, customized links, device or browser fingerprints, and web beacons (together, “Data Collection Tools”) when you access and use the Services. These Data Collection Tools automatically track and collect certain System Data and Usage Data (as detailed in Section 1) when you use the Services. In some cases, we tie data gathered through those Data Collection Tools to other data that we collect as described in this Privacy Policy.",
+        content: "As detailed in our Cookie Policy, UpskillNexus and service providers acting on our behalf (like Google Analytics and third party advertisers) use server log files and automated data collection tools like cookies, tags, scripts, customized links, device or browser fingerprints, and web beacons (together, “Data Collection Tools”) when you access and use the Services. These Data Collection Tools automatically track and collect certain System Data and Usage Data (as detailed in Section 1) when you use the Services. In some cases, we tie data gathered through those Data Collection Tools to other data that we collect as described in this Privacy Policy.",
       },
       {
         content: "We use cookies for things like analysing your use of the Services, personalizing your experience, making it easier to log into the Services, and recognizing you when you return. We use cookies for things like identifying whether a page was visited, identifying whether an email was opened, and advertising more efficiently by excluding current users from certain promotional messages or identifying the source of a new page visit.",
       },
       {
-        heading2: "The types of cookies used by Upskill Nexus include:",
+        heading2: "The types of cookies used by UpskillNexus include:",
       },
       {
         content: "Essential Cookies: These cookies are essential for the basic functionalities offered by the Site and Service(s). These class of cookies helps in keeping a user logged in to the Service(s) and remember relevant information when they return to the Service(s).",
@@ -181,7 +181,7 @@ const pData = [
         content: "The amount of difficulty we may face to ensure the data can be kept updated and accurate; and",
       },
       {
-        content: "Any other circumstances (such as the nature and status of Upskill Nexus’s relationship with you).",
+        content: "Any other circumstances (such as the nature and status of UpskillNexus’s relationship with you).",
       },
     ],
   },
@@ -195,7 +195,7 @@ const pData = [
         content: "We may share your data with third parties under the following circumstances or as otherwise described in this Privacy Policy:",
       },
       {
-        content: "With Your Learning Consultants, Admissions and Upskill Nexus Team: We share data that we have about you with your Course Advisor / Admission Team, so they can suggest the right program or course for you. This data may include your city, country, email id, phone number, your work experience and other work-related information.",
+        content: "With Your Learning Consultants, Admissions and UpskillNexus Team: We share data that we have about you with your Course Advisor / Admission Team, so they can suggest the right program or course for you. This data may include your city, country, email id, phone number, your work experience and other work-related information.",
       },
       {
         content: "With Your Instructors, Evaluators, Moderators: We share data that we have about you with instructors or teaching assistants for courses you enrol in so they can improve the course for you. Also this data will be used by them to understand your performance in the program and helps in evaluating you for the skills you gained in the program for the issuing of certificate from the respective college / university as per required from book keeping purpose.",
@@ -204,7 +204,7 @@ const pData = [
         content: "The information shared to them are your email id, phone number, your work experience, your performance related information, your activities on the learning management system.",
       },
       {
-        content: "With Students, public and other mentors: If you’re a mentor or Instructor, we share data that we have about you with our students, program managers and employees of Upskill Nexus, so they can reach out to you to clarify questions or provide services to you. This data may include things like your name, email id, phone number, professional and education details, your activities on our website and learning management system.",
+        content: "With Students, public and other mentors: If you’re a mentor or Instructor, we share data that we have about you with our students, program managers and employees of UpskillNexus, so they can reach out to you to clarify questions or provide services to you. This data may include things like your name, email id, phone number, professional and education details, your activities on our website and learning management system.",
       },
       {
         content: "With Service Providers, Contractors, and Agents: We share your data with third-party companies who perform services on our behalf, like payment processing, and advertising services (including retargeted advertising). These service providers may access your personal data and are required to use it solely as we direct, to provide our requested service.",
@@ -228,13 +228,13 @@ const pData = [
         content: "Required to detect, prevent, or address fraud, abuse, misuse, potential violations of law (or rule or regulation), or security or technical issues; or",
       },
       {
-        content: "Reasonably necessary in our discretion to protect against imminent harm to the rights, property, or safety of Upskill Nexus, our users, employees, members of the public, or our Services.",
+        content: "Reasonably necessary in our discretion to protect against imminent harm to the rights, property, or safety of UpskillNexus, our users, employees, members of the public, or our Services.",
       },
       {
         content: "We may also disclose data about you to our auditors and legal advisors in order to assess our disclosure obligations and rights under this Privacy Policy.",
       },
       {
-        content: "During a Change in Control: If Upskill Nexus undergoes a business transaction like a merger, acquisition, corporate divestiture, or dissolution (including bankruptcy), or a sale of all or some of its assets, we may share, disclose, or transfer all of your data to the successor organization during such transition or in contemplation of a transition (including during due diligence).",
+        content: "During a Change in Control: If UpskillNexus undergoes a business transaction like a merger, acquisition, corporate divestiture, or dissolution (including bankruptcy), or a sale of all or some of its assets, we may share, disclose, or transfer all of your data to the successor organization during such transition or in contemplation of a transition (including during due diligence).",
       },
       {
         content: "After Aggregation/De-identification: we can disclose or use aggregate or de-identified data for any purpose.",
@@ -298,7 +298,7 @@ const pData = [
         heading: "Accessing, Updating and Correcting, Porting and Deleting Your Personal Data",
       },
       {
-        content: "You can access and update your personal data that Upskill Nexus collects and maintains as follows:",
+        content: "You can access and update your personal data that UpskillNexus collects and maintains as follows:",
       },
       {
         content: "To update data you provide directly, log into your account and update your account at any time.",
@@ -310,7 +310,7 @@ const pData = [
         heading: "Revocation of Consent",
       },
       {
-        content: "We recognise that the processing of your data may be based on your consent. In case you wish to withdraw such consent given to us for the processing of your data as identified in Section 3 above, please e-mail us at legal@Upskill Nexus.com. Please allow up to 30 days for a response. For your protection, we may require that the request be sent through the email address associated with your account, and may need to verify your identity before implementing your request.",
+        content: "We recognise that the processing of your data may be based on your consent. In case you wish to withdraw such consent given to us for the processing of your data as identified in Section 3 above, please e-mail us at legal@UpskillNexus.com. Please allow up to 30 days for a response. For your protection, we may require that the request be sent through the email address associated with your account, and may need to verify your identity before implementing your request.",
       },
       {
         content: "Further, please note that such revocation of consent shall be prospective in nature, and shall not affect the lawfulness of any data processed based on your consent given prior to revocation.",
@@ -331,7 +331,7 @@ const pData = [
         heading: "Children's Personal Information",
       },
       {
-        content: "Upskill Nexus does not knowingly collect any personal information from children under the age of 16. If you are under the age of 16, please do not submit any personal information through our Websites or Service(s). We encourage parents and legal guardians to monitor their children’s Internet usage and to help enforce this Policy by instructing their children never to provide personal information through our Service(s) or Websites without their permission. If you have reason to believe that a child under the age of 16 has provided personal information to us through our Websites or Service(s), please contact us and we will remove that information and terminate the child's account from our databases.",
+        content: "UpskillNexus does not knowingly collect any personal information from children under the age of 16. If you are under the age of 16, please do not submit any personal information through our Websites or Service(s). We encourage parents and legal guardians to monitor their children’s Internet usage and to help enforce this Policy by instructing their children never to provide personal information through our Service(s) or Websites without their permission. If you have reason to believe that a child under the age of 16 has provided personal information to us through our Websites or Service(s), please contact us and we will remove that information and terminate the child's account from our databases.",
       },
     ],
   },
@@ -362,7 +362,7 @@ const pData = [
     h: "COOKIE POLICY",
     p: [
       {
-        content: "Upskill Nexus and our third-party partners, such as our advertising and analytics partners, (Google Adwords, Google Analytics, Google Drive, Facebook, Linkedin, Bing, Mailchimp, Zoho CRM, Zendesk, Getsitecontrol, Quora) use cookies and other tracking technologies (e.g., web beacons, device identifiers and pixels) to provide functionality and to recognize you across different Services and devices.",
+        content: "UpskillNexus and our third-party partners, such as our advertising and analytics partners, (Google Adwords, Google Analytics, Google Drive, Facebook, Linkedin, Bing, Mailchimp, Zoho CRM, Zendesk, Getsitecontrol, Quora) use cookies and other tracking technologies (e.g., web beacons, device identifiers and pixels) to provide functionality and to recognize you across different Services and devices.",
       },
       {
         content: "You can choose to have your computer warn you each time a cookie is being sent, or you can choose to turn off all cookies. You do this through your browser settings. Since each browser is different, look at your browser's Help Menu to learn the correct way to modify your cookies.",
@@ -376,7 +376,7 @@ const pData = [
     h: "LINKS TO THIRD PARTY SITES",
     p: [
       {
-        content: "Our websites contain links to other websites that are not owned or controlled by Upskill Nexus. Please be aware that we are not responsible for the privacy practices of such other websites or third parties. We encourage you to be aware when you leave our Website and to read the privacy policies of each and every website that collects personal information.",
+        content: "Our websites contain links to other websites that are not owned or controlled by UpskillNexus. Please be aware that we are not responsible for the privacy practices of such other websites or third parties. We encourage you to be aware when you leave our Website and to read the privacy policies of each and every website that collects personal information.",
       },
     ],
   },
@@ -387,7 +387,7 @@ const pData = [
         content: "Our Website offer publicly accessible blogs or community forums. You should be aware that any information you provide in these areas may be read, collected, and used by others who access them.",
       },
       {
-        content: "Upskill Nexus may provide blogs, or community threads on the Company’s Website. Any personal information you choose to submit in such a forum may be read, collected, or used by others who visit these forums, and may be used to send you unsolicited messages. Upskill Nexus is not responsible for the personal information you choose to submit in these forums.",
+        content: "UpskillNexus may provide blogs, or community threads on the Company’s Website. Any personal information you choose to submit in such a forum may be read, collected, or used by others who visit these forums, and may be used to send you unsolicited messages. UpskillNexus is not responsible for the personal information you choose to submit in these forums.",
       },
       {
         content: "Remember that when you share information publicly, it may be indexable by search engines.",
@@ -422,7 +422,7 @@ const Privacy = () => {
         Privacy Policy
       </Text>
       <Box w={{ base: "100%", md: "90%" }} m="auto" p="5">
-        <Text>We at Upskill Nexus respect your privacy and want you to understand how we collect, use, and share data about you. This Privacy Policy covers our data collection practices and describes your rights to access, correct, or restrict our use of your personal data</Text>
+        <Text>We at UpskillNexus respect your privacy and want you to understand how we collect, use, and share data about you. This Privacy Policy covers our data collection practices and describes your rights to access, correct, or restrict our use of your personal data</Text>
         <Text>Unless we link to a different policy or state otherwise, this Privacy Policy applies when you visit or use our website, mobile applications, APIs or related services (the “Services”).</Text>
         <Text>By using the Services, you agree to the terms of this Privacy Policy. You shouldn’t use the Services if you don’t agree with this Privacy Policy or any other agreement that governs your use of the Services.</Text>
 

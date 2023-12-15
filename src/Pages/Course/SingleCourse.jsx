@@ -40,7 +40,7 @@ const SingleCourse = () => {
     },
     {
       description: "You will have the opportunity to get your hands on the latest tools and technologies in digital marketing, as well as those that will be most relevant in the future.",
-      text: "At Upskill Nexus digital marketing science course, you'll learn the latest digital marketing tools, technologies, and strategies. The agency professionals who will serve you as your trainers will show you how to effectively use these tools to reach your target audience and find success in your digital marketing efforts. You'll learn how to use the latest trends to maximize your impact and stay ahead of the competition. You'll also be taught how to measure and analyze your results, so that you can make adjustments as needed. Finally, you will be given an overview of the digital marketing landscape and how it is likely to evolve in the future, so that you can stay on top of the trends.",
+      text: "At UpskillNexus digital marketing science course, you'll learn the latest digital marketing tools, technologies, and strategies. The agency professionals who will serve you as your trainers will show you how to effectively use these tools to reach your target audience and find success in your digital marketing efforts. You'll learn how to use the latest trends to maximize your impact and stay ahead of the competition. You'll also be taught how to measure and analyze your results, so that you can make adjustments as needed. Finally, you will be given an overview of the digital marketing landscape and how it is likely to evolve in the future, so that you can stay on top of the trends.",
     },
     {
       description: "You will work on client projects of established digital marketing agencies.",
@@ -444,13 +444,13 @@ const SingleCourse = () => {
 
           {/* Chapter Highlights */}
           <Box w="full" py="8" bg="#f4f5f7">
-            <CourseInformation keyH="Chapters Highlights" data={chapterhighlights} title={"Chapter Highlights"} subTitle={"Upskill Nexus Covers 10+ Chapters that you will learn in the Digital Marketing Science Program"} />
+            <CourseInformation keyH="Chapters Highlights" data={chapterhighlights} title={"Chapter Highlights"} subTitle={"UpskillNexus Covers 10+ Chapters that you will learn in the Digital Marketing Science Program"} />
           </Box>
 
           {/* Reason to choose Upskill Digital Marketing science course */}
           <Flex w="full" justify={"center"} bg="#fff" py="8">
             <Box w="90%">
-              <DynamicAccordians data={accordianData} title="Reasons To Choose Upskill Nexus Digital Marketing Science Course" subTitle="Below are some reasons why you should choose our digital marketing science course." />
+              <DynamicAccordians data={accordianData} title="Reasons To Choose UpskillNexus Digital Marketing Science Course" subTitle="Below are some reasons why you should choose our digital marketing science course." />
             </Box>
           </Flex>
 
