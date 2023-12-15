@@ -70,8 +70,8 @@ const DataScienceCourse = () => {
       text: "Data Science is surely the skill of the future. It can easily be said that those people who take the first step to learn the precious skill of Data Science today will thrive in the future.",
     },
     {
-      description: "What are the various modes of coaching that Upskill Nexus provides?",
-      text: "At Upskill Nexus, You'll enroll in either the instructor-led Online Training or Offline (Delhi-NCR) Training.",
+      description: "What are the various modes of coaching that UpskillNexus provides?",
+      text: "At UpskillNexus, You'll enroll in either the instructor-led Online Training or Offline (Delhi-NCR) Training.",
     },
     {
       description: "What if I miss a live class?",
@@ -415,7 +415,7 @@ const DataScienceCourse = () => {
           <Box mt="50px" w={{ base: "100%", md: "80%" }}>
             <DigitalMarketingHighlights
               data={dataScience} //
-              subTitle={"The Data Science & Machine Learning course offered by Upskill Nexus is unlike any other course you have ever heard of before. This Data Science & Machine Learning course in Delhi NCR has specifications that are unlike anything else you are likely to see in the Data Science & Machine Learning education world.."}
+              subTitle={"The Data Science & Machine Learning course offered by UpskillNexus is unlike any other course you have ever heard of before. This Data Science & Machine Learning course in Delhi NCR has specifications that are unlike anything else you are likely to see in the Data Science & Machine Learning education world.."}
               title={"Data Science & Machine Learning Training Specification"}
             />
           </Box>

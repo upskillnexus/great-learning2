@@ -4,7 +4,7 @@ import React from "react";
 const TermHeading = () => {
   return (
     <Box>
-      <Heading textAlign={"center"}>Refund Policy (Upskill Nexus)</Heading>
+      <Heading textAlign={"center"}>Refund Policy (UpskillNexus)</Heading>
     </Box>
   );
 };

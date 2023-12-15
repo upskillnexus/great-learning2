@@ -23,13 +23,13 @@ const Term_condition = () => {
     {
       section: "Intellectual Property",
       content: [
-        "Content Ownership: Upskill Nexus retains all rights to the content, materials, and resources provided through our services, including but not limited to text, images, videos, and software.",
+        "Content Ownership: UpskillNexus retains all rights to the content, materials, and resources provided through our services, including but not limited to text, images, videos, and software.",
         "License: Upon payment of course fees, you are granted a limited, non-exclusive, and non-transferable license to access and use course materials for your personal, non-commercial use.", //
       ],
     },
     {
       section: "Limitation of Liability",
-      content: ["Upskill Nexus makes every effort to provide accurate and reliable information and services. However, we are not responsible for any losses, damages, or consequences arising from the use or misuse of our website or services."],
+      content: ["UpskillNexus makes every effort to provide accurate and reliable information and services. However, we are not responsible for any losses, damages, or consequences arising from the use or misuse of our website or services."],
     },
     {
       section: "Changes to Terms",
@@ -37,7 +37,7 @@ const Term_condition = () => {
     },
     {
       section: "Termination",
-      content: ["Upskill Nexus may, at its discretion, terminate or suspend your account and access to our services at any time, with or without cause."],
+      content: ["UpskillNexus may, at its discretion, terminate or suspend your account and access to our services at any time, with or without cause."],
     },
     {
       section: "Governing Law",
@@ -51,7 +51,7 @@ const Term_condition = () => {
         <Heading textAlign={"center"}>Term & Conditions</Heading>
 
         <Text w={{ base: "full", md: "50%" }} textAlign={"center"}>
-          Welcome to Upskill Nexus! These Terms and Conditions govern your use of our website, courses, and services. By accessing or using our website and services, you agree to be bound by these Terms.
+          Welcome to UpskillNexus! These Terms and Conditions govern your use of our website, courses, and services. By accessing or using our website and services, you agree to be bound by these Terms.
         </Text>
 
         <Flex flexDir={"column"} gap="20px" p="5" w={{ base: "full", md: "90%" }} border={"2px solid #b9292f"} rounded={"md"}>
