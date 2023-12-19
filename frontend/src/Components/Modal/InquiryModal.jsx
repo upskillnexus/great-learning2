@@ -41,7 +41,7 @@ export function InquiryModal({ isOpen, onClose, initialRef, finalRef }) {
         <ModalContent w="1200px">
           <ModalCloseButton />
           <Flex minH="80vh">
-            <Box w={{ base: 0, sm: "50%", md: "50%" }} bgImage="/inquery/form-image.png" backgroundSize="cover" />
+            <Box w={{ base: 0, md: "50%" }} bgImage="/inquery/form-image.png" backgroundSize="cover" />
             <ModalBody bg="#fff">
               <Flex py={6} h="full" flexDir={"column"} justify={"space-around"}>
                 <Heading color="#b9292f" fontSize={"22px"} textAlign={"center"} textTransform={"uppercase"} as="h4">
