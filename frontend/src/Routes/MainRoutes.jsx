@@ -37,14 +37,7 @@ export const MainRoutes = () => {
         <Route path="/refund-policy" element={<Refund />} />
         <Route path="/terms_of_use" element={<Terms />} />
         <Route path="/contact" element={<Contactus />} />
-        <Route
-          path="/login"
-          element={
-            <PrivateRoute>
-              <Login />
-            </PrivateRoute>
-          }
-        />
+        <Route path="/login" element={<Login />} />
 
         <Route
           path="/leads"

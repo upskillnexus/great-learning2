@@ -41,7 +41,7 @@ const Partners = () => {
         <Flex justify="center" direction="column" alignItems="center">
           <Flex flexDir="column" textAlign={"center"} alignItems="center" mb={3}>
             <Heading as="h2" size={{ base: "lg", md: "xl" }} mb={6} color="#b9292f">
-              Partnerships We Have With
+              Our Training Partners
             </Heading>
             <Text w={{ base: "full", md: "80%" }} textAlign={{ base: "justify", md: "center" }}>
               We're building promising futures with our valued partners — together, we're building a legacy of shared achievement and growth. These are the top brands with which we have formed a partnership.
@@ -59,8 +59,7 @@ const Partners = () => {
               justifyContent="center"
               alignItems="center"
               mx="auto"
-              p={4}
-            >
+              p={4}>
               {logos.map((logo, index) => (
                 <Flex flexDir={"column"} p="3" w="300px" alignItems="center" key={index} borderRadius={"10px"} overflow={"hidden"} bg="#fff" boxShadow="0 0 3px rgba(0,0,0,0.2)">
                   <Image width={"50%"} position="relative" objectFit={"cover"} src={logo.img} />

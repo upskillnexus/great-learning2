@@ -14,7 +14,8 @@ const Testimonials = () => {
     },
     {
       name: "Anjana Sharma",
-      title: "I was stuck in a boring job I didn't enjoy, and I needed a change. UpskillNexus's Data Science course transformed my career and I became a Business Intelligence Analyst in a highly reputed company. I now work in a field I'm passionate about. I'm finally excited to go to work every day",
+      title:
+        "I was stuck in a boring job I didn't enjoy, and I needed a change. UpskillNexus's Data Science course transformed my career and I became a Business Intelligence Analyst in a highly reputed company. I now work in a field I'm passionate about. I'm finally excited to go to work every day",
       image: "https://wallpapers.com/images/hd/emraan-hashmi-black-tie-rza6029vsvgutk7c.jpg",
     },
     {
@@ -25,7 +26,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <Flex align="center" flexDir="column" mt={{ base: "5", md: "5" }} p={{ base: 2, md: 5 }} w="100%" bg="#f8f8f8">
+    <Flex align="center" flexDir="column" mt={{ base: "5", md: "5" }} p={{ base: 0, md: 5 }} w="100%" bg="#f8f8f8">
       <Flex flexDir="column" textAlign={{ base: "center", md: "center" }} w={{ base: "100%", md: "80%" }}>
         <Heading color="#b9292f" as="h2" px={2}>
           Testimonials

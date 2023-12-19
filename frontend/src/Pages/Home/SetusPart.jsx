@@ -10,7 +10,7 @@ function SetsUsApart() {
 
   const contentData = [
     {
-      title: "Industry Leaders as Training Experts",
+      title: "Industry Leaders as Training Partners",
       icon: MdCheckCircleOutline,
       content: [
         {
@@ -53,7 +53,7 @@ function SetsUsApart() {
       <Box mt={{ base: "50px", md: "60px" }} p={{ base: 0, md: 8 }} bg="#fff">
         <Flex flexDir="column" alignItems="center">
           <Heading fontSize={{ base: "25px", sm: "35px", md: "40px" }} textAlign={{ base: "start", md: "center" }} color="#b9292f" mb={4}>
-            UpskillNexus Higlights
+            UpskillNexus Highlights
           </Heading>
           <Text w={{ base: "full", md: "70%" }} textAlign={{ base: "justify", md: "center" }}>
             Here are the standout features that make UpskillNexus unique compared to other training providers. These are what set us apart and make us the go-to choice for upskilling.

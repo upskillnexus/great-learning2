@@ -32,13 +32,37 @@ const Courses = () => {
   const dataScience = [
     {
       id: "3",
-      image: "/course/cyber1.png",
+      image: "/course/expert.png",
       name: "katill",
-      programName: "Mastering Cybersecurity Essentials",
+      programName: "Cybersecurity Expert Program",
       para: "Cybersecurity is a rapidly growing field that uses technology and processes to protect computer systems and data from online attacks. Cybersecurity courses equip students with the knowledge and skills necessary to thrive in this critical domain.",
       duration: "12 Months • Offline (In-Class Training)",
       badge: "DEDICATED CAREER SUPPORT",
       link: "cyber-security",
+    },
+
+    {
+      id: "3",
+      image: "/course/cyber1.png",
+      name: "katill",
+      programName: "Cybersecurity Professional Program",
+      para: "Cybersecurity is a rapidly growing field that uses technology and processes to protect computer systems and data from online attacks. Cybersecurity courses equip students with the knowledge and skills necessary to thrive in this critical domain.",
+      duration: "12 Months • Offline (In-Class Training)",
+      badge: "DEDICATED CAREER SUPPORT",
+      link: "cyber-security",
+    },
+    //
+
+    {
+      id: "2",
+      image: "/course/foundation.png",
+      name: "katill",
+      programName: "Foundational Employability Skills Program ",
+      para: "Anyone who takes the Digital Marketing Science Course will be able to learn about the complete science of digital marketing..",
+      duration: "3 Months • Offline (In-Class Training)",
+
+      badge: "DEDICATED CAREER SUPPORT",
+      link: "digital-marketing-science",
     },
     {
       id: "1",
@@ -50,6 +74,20 @@ const Courses = () => {
       badge: "DEDICATED CAREER SUPPORT",
       link: "data-science",
     },
+    //
+
+    {
+      id: "3",
+      image: "/course/advanced.png",
+      name: "katill",
+      programName: "Advanced Employability Skills Mastery Program",
+      para: "Cybersecurity is a rapidly growing field that uses technology and processes to protect computer systems and data from online attacks. Cybersecurity courses equip students with the knowledge and skills necessary to thrive in this critical domain.",
+      duration: "12 Months • Offline (In-Class Training)",
+      badge: "DEDICATED CAREER SUPPORT",
+      link: "cyber-security",
+    },
+
+    //
     {
       id: "2",
       image: "/course/digital-marketing.png",
@@ -158,13 +196,8 @@ const Courses = () => {
           }}
           align={"start"}
           justify={"space-between"}>
-          <Flex
-            flexDir={"column"}
-            alignItems="center"
-            textAlign={{
-              base: "center",
-              md: "center",
-            }}>
+          {/*  */}
+          <Flex flexDir={"column"} alignItems="center" justify={"center"} textAlign={"center"}>
             <Flex
               mb={{
                 base: "10px",
@@ -181,7 +214,7 @@ const Courses = () => {
               }}>
               <Image h={{ base: "auto", md: "80px", lg: "80px" }} w={{ base: "70%", md: "80px", lg: "80px" }} src="/Upskill-Nexus-favicon.png" />
               <Flex flexDir={{ base: "column", lg: "row" }} align="center">
-                <Heading fontSize={{ base: "35px", md: "40px" }} textAlign={{ base: "center", md: "center" }}>
+                <Heading fontSize={{ base: "35px", md: "40px" }} mb={0} textAlign={{ base: "center", md: "center" }}>
                   Get Upskilled
                 </Heading>
 
@@ -201,19 +234,21 @@ const Courses = () => {
             </Flex>
 
             {/*  */}
-            <Text w={{ base: "100%", md: "80%" }}>
-              <GetUpskillnexus text="UpskillNexus" />
-              is a higher education initiative invested in providing growth-oriented individuals with high-quality authentic and practical training in digital technology. With our courses, career aspirants can develop their critical digital technology skills along with employability skills for
-              success in today’s business world.
-            </Text>
-            <Text w={{ base: "100%", md: "80%" }}>
-              <GetUpskillnexus text="UpskillNexus" /> provides training in the most significant and demanding areas of Information Technology—<b>Cybersecurity, Data Science, and Digital Marketing Science.</b> Whether you are experienced in these fields already or just starting out, we are here to
-              help. Our goal is to ensure that you have the skills and knowledge you need to succeed in the world of information technology.
-            </Text>
+            <Flex flexDir={"column"} align={"center"} textAlign={{ base: "justify", md: "center" }}>
+              <Text w={{ base: "100%", md: "80%" }}>
+                <GetUpskillnexus text="UpskillNexus" />
+                is a higher education initiative invested in providing growth-oriented individuals with high-quality authentic and practical training in digital technology. With our courses, career aspirants can develop their critical digital technology skills along with employability skills for
+                success in today’s business world.
+              </Text>
+              <Text w={{ base: "100%", md: "80%" }}>
+                <GetUpskillnexus text="UpskillNexus" /> provides training in the most significant and demanding areas of Information Technology—<b>Cybersecurity, Data Science, and Digital Marketing Science.</b> Whether you are experienced in these fields already or just starting out, we are here to
+                help. Our goal is to ensure that you have the skills and knowledge you need to succeed in the world of information technology.
+              </Text>
 
-            <Text w={{ base: "100%", md: "80%" }}>
-              Get upskilled with <GetUpskillnexus text="UpskillNexus" /> and get ready for a rewarding IT career.
-            </Text>
+              <Text w={{ base: "100%", md: "80%" }}>
+                Get upskilled with <GetUpskillnexus text="UpskillNexus" /> and get ready for a rewarding IT career.
+              </Text>
+            </Flex>
           </Flex>
         </Flex>
 
@@ -252,7 +287,8 @@ const Courses = () => {
           {/* Courses */}
           <Flex w="full" justify={"center"}>
             <Flex
-              w="full"
+              w={{ base: "full", lg: "78%" }}
+              // bg="blue"
               flexWrap={"wrap"}
               gridTemplateColumns={{
                 base: "repeat(1, 1fr)", // On smaller screens, one column
@@ -269,7 +305,7 @@ const Courses = () => {
               // bg="red"
             >
               {data.map((ele, i) => (
-                <Box key={i} borderRadius={"10px"} overflow={"visible"} border="3px solid none" w={"320px"} minH={"10vh"} boxShadow="0 0 3px rgba(0,0,0,0.2)">
+                <Box key={i} borderRadius={"10px"} overflow={"hidden"} border="3px solid none" w={"350px"} minH={"10vh"} boxShadow="0 0 3px rgba(0,0,0,0.2)">
                   <Image w={"100%"} position="relative" objectFit={"cover"} src={ele.image} />
 
                   {/* <Link to={path}> */}

@@ -19,8 +19,12 @@ const Footer = () => {
       link: "/course/data-science",
     },
     {
-      name: "Cyber Security Course",
+      name: "Cybersecurity Course",
       link: "/course/cyber-security",
+    },
+    {
+      name: "Employability Skills",
+      link: "#",
     },
   ];
   const navigate = useNavigate();
@@ -71,8 +75,7 @@ const Footer = () => {
                 lg: "repeat(3, 1fr)",
               }}
               justifyContent="space-around"
-              flexWrap="wrap"
-            >
+              flexWrap="wrap">
               <Box flex="1" maxW={{ base: "100%", md: "400px" }} p={{ base: 0, sm: 0, md: 5 }} mb={{ base: 8, md: 0 }}>
                 <Text fontSize="lg" fontWeight="bold" mb={3}>
                   Popular Courses

@@ -28,8 +28,7 @@ export const TestimonialContent = ({ heading, text, avatar }) => (
       transform: "translateX(-50%)",
       //   bg: "blue",
       //   boxShadow: "0 0 10px black",
-    }}
-  >
+    }}>
     <Heading as={"h3"} fontSize={"xl"}>
       {heading}
     </Heading>
