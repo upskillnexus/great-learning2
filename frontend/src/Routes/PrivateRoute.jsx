@@ -25,11 +25,11 @@ const PrivateRoute = ({ children }) => {
     check();
   }, []);
 
-  console.log(isAuth);
+  // console.log(isAuth);
 
-  if (isAuth) {
-    return <Navigate to="/login" />;
-  }
+  // if (isAuth) {
+  //   return <Navigate to="/login" />;
+  // }
 
   return load ? (
     <Flex align={"center"} justify={"center"} minH="100vh" w="full">
