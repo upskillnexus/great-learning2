@@ -165,13 +165,14 @@ const Footer = () => {
                 </Text>
                 <VStack align="left" spacing={1}>
                   <Flex gap="2" align={"start"}>
-                    <Text color="#b9292f">
+                    <Text color="#b9292f" mt="2">
                       <CiLocationOn />
                     </Text>
-                    <Text>
-                      150, 1st floor, Kapil Vihar, Near Metro Pillar No.352, Pitampura, New
-                      Delhi-110034
-                    </Text>
+                    <Box>
+                      <Text>A-11, 2nd floor, Opposite Balaji Mandir,</Text>
+                      <Text>Near Metro Pillar No. 389, Rajouri Garden</Text>
+                      <Text>New Delhi-110027</Text>
+                    </Box>
                   </Flex>
                   <Flex gap="2" align={"start"}>
                     <Text color="#b9292f" lineHeight={1}>

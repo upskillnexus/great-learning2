@@ -1,6 +1,7 @@
 import React from "react";
 import AboutBanner from "../../Components/About/Banner";
 import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
+import GetUpskillnexus from "../../Components/Text/GetUpskillnexus";
 
 const DirectorMsg = () => {
   const data = [
@@ -96,6 +97,12 @@ const DirectorMsg = () => {
                 <Text key={i}>{ele?.content}</Text>
               </Box>
             ))}
+            <Box>
+              <Text fontWeight={"bold"}>Sincerely, Deepa Nair</Text>
+              <Text lineHeight={0}>
+                Managing Director <GetUpskillnexus text="UpskillNexus" bold="500" />
+              </Text>
+            </Box>
           </Box>
         </Flex>
       </Flex>
