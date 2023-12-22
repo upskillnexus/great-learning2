@@ -2,6 +2,7 @@ import { Box, Flex, Heading, Text, Image, Icon, Button, useDisclosure } from "@c
 import React, { useRef } from "react";
 import { MdCheckCircleOutline } from "react-icons/md";
 import { InquiryModal } from "../../Components/Modal/InquiryModal";
+import GetUpskillnexus from "../../Components/Text/GetUpskillnexus";
 
 function SetsUsApart() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -9,6 +10,15 @@ function SetsUsApart() {
   const finalRef = useRef(null);
 
   const contentData = [
+    {
+      title: "Robust Curriculum",
+      icon: MdCheckCircleOutline,
+      content: [
+        {
+          text: "We offer a robust curriculum that fits the practical requirements of today’s fast-changing industries and businesses. Our programs and courses have been thoughtfully designed by highly experienced and reputed industry leaders who know what it takes to overcome challenges in the real-world global workplace.",
+        },
+      ],
+    },
     {
       title: "Industry Leaders as Training Partners",
       icon: MdCheckCircleOutline,
@@ -24,6 +34,18 @@ function SetsUsApart() {
       content: [
         {
           text: "Our major focus while giving training is on providing Hands-On Practical Training so that you don’t just understand the concepts but become proficient in them.",
+        },
+      ],
+    },
+    {
+      title: "360-degree Assessment and Feedback",
+      icon: MdCheckCircleOutline,
+      content: [
+        {
+          text: "Assessments that align with the learning objectives. These include quizzes, assignments, labs, and final Project-Based Assesment.",
+        },
+        {
+          text: "We use both formative assessments (for learning), summative assessments (of learning) and constructive feedback mechanisms to assess and guide student learning outcomes.",
         },
       ],
     },
@@ -49,14 +71,27 @@ function SetsUsApart() {
 
   return (
     <>
-      <InquiryModal isOpen={isOpen} onOpen={onOpen} onClose={onClose} initialRef={initialRef} finalRef={finalRef} />
+      <InquiryModal
+        isOpen={isOpen}
+        onOpen={onOpen}
+        onClose={onClose}
+        initialRef={initialRef}
+        finalRef={finalRef}
+      />
       <Box mt={{ base: "50px", md: "60px" }} p={{ base: 0, md: 8 }} bg="#fff">
         <Flex flexDir="column" alignItems="center">
-          <Heading fontSize={{ base: "25px", sm: "35px", md: "40px" }} textAlign={{ base: "start", md: "center" }} color="#b9292f" mb={4}>
+          <Heading
+            fontSize={{ base: "25px", sm: "35px", md: "40px" }}
+            textAlign={{ base: "start", md: "center" }}
+            color="#b9292f"
+            mb={4}
+          >
             UpskillNexus Highlights
           </Heading>
           <Text w={{ base: "full", md: "70%" }} textAlign={{ base: "justify", md: "center" }}>
-            Here are the standout features that make UpskillNexus unique compared to other training providers. These are what set us apart and make us the go-to choice for upskilling.
+            Here are the standout features that make <GetUpskillnexus text="UpskillNexus" /> unique
+            compared to other training providers. These are what set us apart and make us the go-to
+            choice for upskilling.
           </Text>
         </Flex>
 
@@ -79,24 +114,38 @@ function SetsUsApart() {
                     <Icon color="#b9292f" boxSize={6} mr={2} as={content.icon} />
                   </Box>
                   <Box>
-                    <Heading color="#000" px={{ base: 1, md: 0 }} fontSize={{ base: "md", md: "1xl" }}>
+                    <Heading
+                      color="#000"
+                      px={{ base: 1, md: 0 }}
+                      fontSize={{ base: "md", md: "1xl" }}
+                    >
                       {content.title}
                     </Heading>
-                    <Flex mb={4}>
+                    <Flex flexDir={"column"} mb={4}>
                       {content?.content.map((item, itemIndex) => (
-                        <React.Fragment key={itemIndex}>
+                        <Box key={itemIndex}>
                           <Text>{item.text}</Text>
-                        </React.Fragment>
+                        </Box>
                       ))}
                     </Flex>
                   </Box>
                 </Flex>
               ))}
             </Box>
-            <Image src="/img5.jpg" alt="Training Image" boxShadow="0px 0px 10px rgba(0, 0, 0, 0.2)" />
+            <Image
+              src="/img5.jpg"
+              alt="Training Image"
+              boxShadow="0px 0px 10px rgba(0, 0, 0, 0.2)"
+            />
           </Flex>
 
-          <Button onClick={() => onOpen()} border="1px solid #b9292f" bg="#b9292f" color="#fff" _hover={{ bg: "#fff", color: "#b9292f" }}>
+          <Button
+            onClick={() => onOpen()}
+            border="1px solid #b9292f"
+            bg="#b9292f"
+            color="#fff"
+            _hover={{ bg: "#fff", color: "#b9292f" }}
+          >
             Explore Our Courses
           </Button>
         </Flex>

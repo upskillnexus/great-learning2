@@ -4,11 +4,12 @@ import RefundHead from "../../Components/Refund/RefundHead";
 import CanelRefund from "../../Components/Refund/CanelRefund";
 import Cancel2 from "../../Components/Refund/Cancel2";
 import Batch from "../../Components/Refund/Batch";
+import GetUpskillnexus from "../../Components/Text/GetUpskillnexus";
 
 const RefundPolicy = () => {
   const data = [
     {
-      title: "General Plicy",
+      title: "General Policy",
       arr: [
         {
           no: "1.1",
@@ -34,7 +35,11 @@ const RefundPolicy = () => {
           no: "2.1",
           tit: "Request Process",
           p: "To initiate a refund request, please contact our customer support team and provide the following information:",
-          list: ["Your full name and contact information", "Course name and date of purchase", "Reason for the refund request"],
+          list: [
+            "Your full name and contact information",
+            "Course name and date of purchase",
+            "Reason for the refund request",
+          ],
         },
         {
           no: "2.3",
@@ -66,14 +71,24 @@ const RefundPolicy = () => {
     <>
       <Flex p="5" gap={5} flexDir={"column"} align="center">
         {/* <Box> */}
-        <Heading textAlign={"center"}>Refund Policy (UpskillNexus)</Heading>
+        <Heading textAlign={"center"}>
+          Refund Policy (<GetUpskillnexus text={"UpskillNexus"} />)
+        </Heading>
         <Text w={{ base: "full", md: "50%" }} textAlign={"center"}>
-          This Refund Policy outlines our approach to refunds for our training programs and services. By using our website and services, you agree to be bound by this policy.
+          This Refund Policy outlines our approach to refunds for our training programs and
+          services. By using our website and services, you agree to be bound by this policy.
         </Text>
         {/* <RefundHead /> */}
         {/* </Box> */}
         {/* old  */}
-        <Flex flexDir={"column"} gap="20px" p="5" w={{ base: "full", md: "90%" }} border={"2px solid #b9292f"} rounded={"md"}>
+        <Flex
+          flexDir={"column"}
+          gap="20px"
+          p="5"
+          w={{ base: "full", md: "90%" }}
+          border={"2px solid #b9292f"}
+          rounded={"md"}
+        >
           {data.map((ele, i) => (
             <Box bg="" key={i} p="3" borderRadius={"10px"}>
               <Heading size="lg" color="#b9292f">

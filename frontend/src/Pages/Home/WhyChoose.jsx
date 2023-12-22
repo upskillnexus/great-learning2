@@ -1,152 +1,185 @@
-import { Box, Button, Flex, Grid, Heading, Image, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Flex,
+  Grid,
+  Heading,
+  Image,
+  ModalBody,
+  ModalCloseButton,
+  ModalFooter,
+  ModalHeader,
+  Text,
+  useDisclosure,
+} from "@chakra-ui/react";
 import { hoverStyle } from "../../style/button.style";
 import SocialProfileSimple from "../../Components/whyChooseComp";
 import GetUpskillnexus from "../../Components/Text/GetUpskillnexus";
+import { DynamicModal } from "../../Components/Modal/DynamicModal";
+import { useState } from "react";
 
 const WhyChoose = () => {
-  const flexData = [
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const [data, setData] = useState({});
+
+  const points = [
     {
-      name: "Vaibhav Sharma",
-      text: "Head Digital Marketing Trainer",
-      description: "Mr. Vaibhav Sharma is a Head Digital Marketing Trainer at Delhi Institute Of Digital Marketing. A Corporate Trainer and Industry Specialist who Conducted workshops with Nav Bharat Times and Trained Thousands of Businessmen, Professionals and Students.",
-      stats: [
-        { icon: "✅", count: "2,00,000 +", label: "Mentorship Sessions Completed" },
-        { icon: "⭐", count: "4.7/5", label: "Average Mentor Rating" },
+      heading: "Robust Curriculum",
+      icon: "/whychoose/icon1.png",
+      content: [
+        "We offer a robust curriculum that fits the practical requirements of today’s fast-changing industries and businesses. Our programs and courses have been thoughtfully designed by highly experienced and reputed industry leaders who know what it takes to overcome challenges in the real-world global workplace.",
       ],
-      button: { bgColor: "#b9292f", textColor: "white", label: "VIEW EXPERIENCE" },
-      imageSrc: "https://www.didm.in/assets/uploads/placement/DIDM_Trainer_Head_Mr.jpg",
     },
     {
-      name: "Amit Kharbanda",
-      text: "Digital Marketing Trainer",
-      description: "Amit Kharbanda is a Digital Marketing Trainer at Delhi Institute of Digital Marketing, a specialist in SEO, SMM, ORM, and Google Adwords",
-      stats: [
-        { icon: "✅", count: "2,00,000 +", label: "Mentorship Sessions Completed" },
-        { icon: "⭐", count: "4.7/5", label: "Average Mentor Rating" },
+      heading: "Hands-On Practical Training",
+      icon: "/whychoose/handson.png",
+      content: [
+        "Our major focus will be on providing Hands-On Practical Training through Live Projects so that you don’t just understand the concepts but become proficient and skilled in applying them.",
       ],
-      button: { bgColor: "#b9292f", textColor: "white", label: "VIEW EXPERIENCE" },
-      imageSrc: "https://www.didm.in/assets/uploads/placement/Amit_Kharbanda_DIDM_Kalkaji_Branch_Trainer1.jpg",
     },
     {
-      name: "Anil Chander",
-      text: "Digital Marketing Trainer",
-      description: "Anil Chander is a Digital Marketing Trainer at Delhi Institute of Digital Marketing, a specialist in WordPress, SEO, Google Ads, Social Media Marketing, and ORM.",
-      stats: [
-        { icon: "✅", count: "2,00,000 +", label: "Mentorship Sessions Completed" },
-        { icon: "⭐", count: "4.7/5", label: "Average Mentor Rating" },
+      heading: "100% Placement Support",
+      icon: "/whychoose/placement.png",
+      content: [
+        "Benefit from our extensive network and personalized guidance in landing your dream job or securing a well-deserved promotion.",
+        "For our selected programs, we offer internships with our industrial partners, leading to assured placements in reputed organisations.",
       ],
-      button: { bgColor: "#b9292f", textColor: "white", label: "VIEW EXPERIENCE" },
-      imageSrc: "https://www.didm.in/assets/uploads/placement/anil_asnora.jpg",
+    },
+    {
+      heading: "Customized Learning for Real-world Success",
+      icon: "/whychoose/learn.png",
+      content: [
+        "Our course programs are meticulously designed to align with industry demands, ensuring you gain the skills employers are actively seeking to contribute to the role from day one of the employment.",
+      ],
+    },
+    {
+      heading: "Expert Instructors for Personalized Guidance",
+      icon: "/whychoose/icon4.png",
+      content: [
+        "Learn in person from industry experts who bring a wealth of experience to provide practical insights and mentorship tailored to your career goals.",
+        "Learn from our experts face-to-face, clear doubts as and when you encounter challenges, and engage in live projects to consolidate your learning.",
+      ],
+    },
+    //
+
+    {
+      heading: "Targeted for Entry-Level and Mid-Career Professionals",
+      icon: "/whychoose/target.png",
+      content: [
+        "Whether you are looking to start a job or seeking to advance your career, our programs are tailored to meet your unique needs and aspirations in the digital age.",
+      ],
+    },
+    {
+      heading: "Holistic Approach to Professional Development",
+      icon: "/whychoose/holistic.png",
+      content: [
+        "Beyond technical and functional know-how, we focus on soft skills that set you apart in the competitive job market, including personal leadership, effective communication, collaboration, time management, critical thinking, problem-solving, adaptability, and a positive mindset.",
+        "Employability skills, often referred to as soft skills or transferable skills, are a set of attributes and qualities that make individuals effective and successful in the workplace. These skills go beyond technical or job-specific knowledge and are highly valued by employers across various industries and domains. Employability skills are essential for career advancement, effective teamwork, and overall professional success. We offer employability skills bundled with our course programs for the holistic development of our students.",
+      ],
+    },
+
+    //
+    {
+      heading: "Certifications",
+      icon: "/whychoose/certifications.png",
+      content: [
+        "Students shall receive co-branded certifications from UpskillNexus and industry training partners on successful completion of the courses.",
+      ],
+    },
+
+    {
+      heading: "360-degree Assessment and Feedback",
+      icon: "/whychoose/assesment.png",
+      content: [
+        "Assessments that align with the learning objectives. These include quizzes, assignments, labs, and final Project-Based Assesment.",
+        "We use both formative assessments (for learning), summative assessments (of learning) and constructive feedback mechanisms to assess and guide student learning outcomes.",
+      ],
+    },
+    {
+      heading: "24/7 Career Support",
+      icon: "/whychoose/support.png",
+      content: [
+        "No matter what stage of your career you are in, we are always available to help you with any issues pertaining to the training that you have taken from us.",
+      ],
     },
   ];
 
   return (
-    <Flex flexDir="column" alignItems="center" gap={0} mt="80px">
-      <Flex flexDir="column" alignItems={{ base: "center", md: "center" }} mb={2}>
-        <Heading fontSize={{ base: "20px", sm: "28px", md: "40px" }}>
-          Why Choose <GetUpskillnexus text="UpskillNexus" />?
-        </Heading>
-        <Text textAlign={"center"} w={{ base: "full", md: "80%" }}>
-          An individual’s success depends on all-round development. At UpskillNexus, we understand that a person should be able to apply their technical digital skills in a business domain to create opportunities and must hold the soft skills to manifest and maximize returns from the opportunity. So
-          we offer you our carefully designed programs that match what employers are looking for and prepare you for success.
-        </Text>
+    <Flex flexDir={{ base: "column", lg: "row" }} alignItems="center" gap={0} mt="80px" p="5">
+      <DynamicModal isOpen={isOpen} onClose={onClose}>
+        <ModalHeader></ModalHeader>
+        <ModalCloseButton />
+        <ModalBody>
+          <Heading size={"lg"} color="#b9292f">
+            {data?.heading}
+          </Heading>
+          {data?.content?.map((el, ind) => (
+            <Text key={ind}>⦿ {el}</Text>
+          ))}
+        </ModalBody>
+
+        <ModalFooter>
+          <Button colorScheme="red" bg="#b9292f" mr={3} onClick={onClose}>
+            Close
+          </Button>
+        </ModalFooter>
+      </DynamicModal>
+      {/*  */}
+      <Flex border="4px solid none" justify={"center"} h="full" w={{ base: "full", lg: "40%" }}>
+        <Image h="full" objectFit={"cover"} src="/whychoose.png" />
       </Flex>
 
-      {/* {flexData.map((data, index) =>
-        index % 2 == 0 ? (
-          <Flex key={index} flexDir={{ base: "column-reverse", md: "row" }} justify={"space-between"} bg="#">
-            <Flex align={"center"} flexDir="column" gap={"10px"} textAlign={"center"} maxW={{ base: "100%", md: "50%" }} px={5}>
-              <Heading>{data.heading}</Heading>
-              <Text fontSize={"18px"} textAlign={"justify"}>
-                {data.description}
-              </Text>
-
-              <Flex bg="#" maxW={{ base: "100%", md: "80%" }} p={5} justify={"space-between"}>
-                {data.stats.map((stat, statIndex) => (
-                  <Box key={statIndex} bg="#">
-                    <Heading size={"lg"}>{stat.icon}</Heading>
-                    <Heading size={"md"}>{stat.count}</Heading>
-                    <Text>{stat.label}</Text>
-                  </Box>
-                ))}
-              </Flex>
-
-              <Box py={8}>
-                <Button bg={data?.button?.bgColor} color={data?.button?.textColor} px={5}>
-                  {data.button.label}
-                </Button>
-              </Box>
-            </Flex>
-
-            <Box height="450px" width={{ base: "100%", md: "80%" }} style={{ backgroundImage: `url(${data.imageSrc})`, backgroundSize: "cover", backgroundPosition: "start" }}></Box>
-          </Flex>
-        ) : (
-          <Flex key={index} flexDir={{ base: "column", md: "row" }} justify={"space-between"} bg="#">
-            <Box height="450px" width={{ base: "100%", md: "80%" }} style={{ backgroundImage: `url(${data.imageSrc})`, backgroundSize: "cover", backgroundPosition: "start" }}></Box>
-            <Flex align={"center"} flexDir="column" gap={"10px"} textAlign={"center"} maxW={{ base: "100%", md: "50%" }} px={5}>
-              <Heading>{data.heading}</Heading>
-              <Text fontSize={"18px"} textAlign={"justify"}>
-                {data.description}
-              </Text>
-
-              <Flex bg="#" maxW={{ base: "100%", md: "80%" }} p={5} justify={"space-between"}>
-                {data.stats.map((stat, statIndex) => (
-                  <Box key={statIndex} bg="#">
-                    <Heading size={"lg"}>{stat.icon}</Heading>
-                    <Heading size={"md"}>{stat.count}</Heading>
-                    <Text>{stat.label}</Text>
-                  </Box>
-                ))}
-              </Flex>
-
-              <Box py={8}>
-                <Button bg={data.button.bgColor} color={data.button.textColor} px={5}>
-                  {data.button.label}
-                </Button>
-              </Box>
-            </Flex>
-          </Flex>
-        )
-      )} */}
-
-      {/* <Grid
-        templateColumns={{
-          base: "repeat(1, 1fr)",
-          md: "repeat(2, 1fr)",
-          lg: "repeat(3, 1fr)",
-        }}
-        gap={4}
-        justifyContent="center"
-        alignItems="center"
-        mx="auto"
+      <Flex
+        w={{ base: "full", lg: "70%" }}
+        flexDir="column"
+        alignItems={{ base: "center", lg: "start" }}
+        mb={2}
       >
-        {flexData.map((ele, i) => (
-          <SocialProfileSimple key={i} {...ele} />
-        ))}
-      </Grid> */}
-      <Flex flexDir={{ base: "column", md: "row" }} align={{ base: "center", md: "center" }} justify={"space-between"} mx="auto" w={{ base: "full", md: "95%" }}>
-        <Flex border="4px solid none" justifyContent={"center"} w={{ base: "50%", md: "40%" }}>
-          <Image w={{ base: "full", md: "60%" }} h="full" objectFit={"cover"} src="/whychoose.png" />
-        </Flex>
-        <Box border="4px solid none" mt={{ base: 3, md: "0" }} w={{ base: "full", md: "60%" }} mr={{ base: 0, md: "80px" }} textAlign={"justify"}>
-          <Heading fontSize={"lg"} as="h3" color="#b9292f">
-            Robust Curriculum
+        <Box>
+          <Heading fontSize={{ base: "20px", sm: "28px", md: "40px" }}>
+            Why Choose <GetUpskillnexus text="UpskillNexus" />?
           </Heading>
-          <Text>
-            We offer a robust curriculum that fits the practical requirements of today’s fast-changing industries and businesses. Our programs and courses have been thoughtfully designed by highly experienced and reputed industry leaders who know what it takes to overcome challenges in the
-            real-world global workplace.
+          <Text w={{ base: "full", md: "90%" }} textAlign={{ base: "justify", md: "start" }}>
+            An individual’s success depends on all-round development. At{" "}
+            <GetUpskillnexus text="UpskillNexus" />, we understand that a person should be able to
+            apply their technical digital skills in a business domain to create opportunities and
+            must hold the soft skills to manifest and maximize returns from the opportunity. So we
+            offer you our carefully designed programs that match what employers are looking for and
+            prepare you for success.
           </Text>
-          <Heading fontSize={"lg"} as="h3" color="#b9292f">
-            Customized Learning for Real-world Success
-          </Heading>
-          <Text>Our course programs are meticulously designed to align with industry demands, ensuring you gain the skills employers are actively seeking to contribute to the role from day one of the employment.</Text>
         </Box>
-      </Flex>
-
-      <Flex justify={"center"} mt="5" w="full">
-        <Button _hover={{ bg: "#fff", border: "2px solid #b9292f", color: "#b9292f" }} bg="#b9292f" border="2px solid #b9292f" color="#fff" width="auto" p="6">
-          Read More
-        </Button>
+        {/*  */}
+        <Flex
+          p="0"
+          flexWrap={"wrap"}
+          gap="2"
+          mb="3"
+          border="4px solid none"
+          mt={{ base: 3, md: "0" }}
+          w={"full"}
+        >
+          {points?.map((ele, i) => (
+            <Flex
+              key={i}
+              onClick={() => {
+                setData(ele), onOpen();
+              }}
+              gap="3"
+              align={"center"}
+              border="1px solid #ccc"
+              rounded={"md"}
+              cursor={"pointer"}
+              w={{ base: "full", md: "auto" }}
+              p="2"
+            >
+              <Image w="50px" src={ele?.icon} />
+              <Heading fontSize={"md"} as="h3" color="#b9292f">
+                {ele?.heading}
+              </Heading>
+            </Flex>
+          ))}
+        </Flex>
+        {/*  */}
       </Flex>
     </Flex>
   );

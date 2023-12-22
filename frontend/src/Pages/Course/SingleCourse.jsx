@@ -1,5 +1,15 @@
 import React, { useRef } from "react";
-import { Box, Heading, Text, Flex, Button, Image, Center, Grid, useDisclosure } from "@chakra-ui/react";
+import {
+  Box,
+  Heading,
+  Text,
+  Flex,
+  Button,
+  Image,
+  Center,
+  Grid,
+  useDisclosure,
+} from "@chakra-ui/react";
 import DigitalMarketingHighlights from "../../Components/Course/DigitalMar";
 import DynamicCard from "../../Components/Cards/DynamicCard";
 import CourseInformation from "../../Components/Course/CourseInfo";
@@ -27,6 +37,7 @@ import { IoIosAnalytics } from "react-icons/io";
 import InqueryFrms from "../../Components/Forms/InqueryFrms";
 import { hoverStyle } from "../../style/button.style";
 import { InquiryModal } from "../../Components/Modal/InquiryModal";
+import { FAQ } from "../Home/FAQ";
 
 const SingleCourse = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -35,11 +46,13 @@ const SingleCourse = () => {
 
   const accordianData = [
     {
-      description: "You will get real-world experience in digital marketing by working with esteemed digital marketing agency professionals.",
+      description:
+        "You will get real-world experience in digital marketing by working with esteemed digital marketing agency professionals.",
       text: "We have collaborated with the top-notch digital marketing agencies in our country for our ‘Digital Marketing Science’ course so that the highly knowledgeable and esteemed digital marketing professionals working in these agencies could help our students learn real-world digital marketing concepts. These agencies have been chosen for their expertise and experience in the field. The agency professionals who will be teaching you this course are the ones who work for the most reputable Indian and foreign brands. They deliver consistent results for them on a daily basis.",
     },
     {
-      description: "You will have the opportunity to get your hands on the latest tools and technologies in digital marketing, as well as those that will be most relevant in the future.",
+      description:
+        "You will have the opportunity to get your hands on the latest tools and technologies in digital marketing, as well as those that will be most relevant in the future.",
       text: "At UpskillNexus digital marketing science course, you'll learn the latest digital marketing tools, technologies, and strategies. The agency professionals who will serve you as your trainers will show you how to effectively use these tools to reach your target audience and find success in your digital marketing efforts. You'll learn how to use the latest trends to maximize your impact and stay ahead of the competition. You'll also be taught how to measure and analyze your results, so that you can make adjustments as needed. Finally, you will be given an overview of the digital marketing landscape and how it is likely to evolve in the future, so that you can stay on top of the trends.",
     },
     {
@@ -47,7 +60,8 @@ const SingleCourse = () => {
       text: "As you know, those who will be teaching you in this course are esteemed digital marketing agency professionals. Not only will you gain valuable knowledge and insight from these experts, but you will also have the opportunity to participate in real-world projects. These projects will involve working with clients of the digital marketing agency, giving you a chance to apply your skills in a professional environment. This is an excellent opportunity for you to network, hone your digital marketing skills, and gain experience in the field.",
     },
     {
-      description: "For every individual chapter of the course, you will learn from a specific 'specialized' trainer.",
+      description:
+        "For every individual chapter of the course, you will learn from a specific 'specialized' trainer.",
       text: "At DIDM, we understand that every digital marketer has a different specialty, and that is why in our digital marketing science course, each individual chapter will be taught by a different trainer who has specialized skills in that field. This means that each student will benefit from the expertise of a wide range of professionals and gain a comprehensive understanding of digital marketing. From performance marketing to programmatic advertising, the digital marketing agency professionals who we have appointed as trainers will ensure that every student gets a well-rounded education in the field. With this unique approach, we are confident that our trainees will be equipped with the necessary skills and knowledge to succeed in the digital marketing industry.",
     },
     {
@@ -68,12 +82,24 @@ const SingleCourse = () => {
   ];
 
   const cards = [
-    { img: "https://www.upgrad.com/_next/image/?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2FAdsManager_240X80_Color__1610623223234.png&w=256&q=75" },
-    { img: "https://www.upgrad.com/_next/image/?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2Ftwitter_ana_240X80__1610979088970.png&w=256&q=75" },
-    { img: "https://www.upgrad.com/_next/image/?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2Fbuzzsumo.png&w=256&q=75" }, //
-    { img: "https://www.upgrad.com/_next/image/?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2FAnsThePublic_240X80Color_With_BG__1610717179771.png&w=256&q=75" },
-    { img: "https://www.upgrad.com/_next/image/?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2FGTrends_240X80_Color_With_BG__1610717386040.png&w=256&q=75" },
-    { img: "https://www.upgrad.com/_next/image/?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2FSpyFu_240X80_BW_With_BG__1610721544937.png&w=256&q=75" },
+    {
+      img: "https://www.upgrad.com/_next/image/?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2FAdsManager_240X80_Color__1610623223234.png&w=256&q=75",
+    },
+    {
+      img: "https://www.upgrad.com/_next/image/?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2Ftwitter_ana_240X80__1610979088970.png&w=256&q=75",
+    },
+    {
+      img: "https://www.upgrad.com/_next/image/?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2Fbuzzsumo.png&w=256&q=75",
+    }, //
+    {
+      img: "https://www.upgrad.com/_next/image/?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2FAnsThePublic_240X80Color_With_BG__1610717179771.png&w=256&q=75",
+    },
+    {
+      img: "https://www.upgrad.com/_next/image/?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2FGTrends_240X80_Color_With_BG__1610717386040.png&w=256&q=75",
+    },
+    {
+      img: "https://www.upgrad.com/_next/image/?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2FSpyFu_240X80_BW_With_BG__1610721544937.png&w=256&q=75",
+    },
   ];
 
   const speakersData = [
@@ -128,17 +154,20 @@ const SingleCourse = () => {
 
   const cardData = [
     {
-      logoSrc: "https://www.upgrad.com/_next/image/?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2FTransition_1__1680530410305.png&w=16&q=75",
+      logoSrc:
+        "https://www.upgrad.com/_next/image/?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2FTransition_1__1680530410305.png&w=16&q=75",
       percentage: "300%",
       title: "Maximum Salary Hike",
     },
     {
-      logoSrc: "https://www.upgrad.com/_next/image/?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2FTransition_1__1680530410305.png&w=16&q=75",
+      logoSrc:
+        "https://www.upgrad.com/_next/image/?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2FTransition_1__1680530410305.png&w=16&q=75",
       percentage: "36%",
       title: "Average Salary Hike",
     },
     {
-      logoSrc: "https://www.upgrad.com/_next/image/?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2FTransition_1__1680530410305.png&w=16&q=75",
+      logoSrc:
+        "https://www.upgrad.com/_next/image/?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2FTransition_1__1680530410305.png&w=16&q=75",
       percentage: "300+",
       title: "Hiring Partners",
     },
@@ -147,15 +176,18 @@ const SingleCourse = () => {
   const creativityProjectsData = [
     {
       title: "Solve a range of industry-relevant projects",
-      description: "In this online digital marketing course, you will work on a variety of industry-relevant projects, allowing you to apply theoretical knowledge to real-world scenarios.",
+      description:
+        "In this online digital marketing course, you will work on a variety of industry-relevant projects, allowing you to apply theoretical knowledge to real-world scenarios.",
     },
     {
       title: "Run a 5-day social media marketing campaign and Google Ads campaign",
-      description: "Gain hands-on real-world experience by running a 5-day social media marketing campaign and a 5-day Google Ads campaign. This practical experience is essential for working as a digital marketer.",
+      description:
+        "Gain hands-on real-world experience by running a 5-day social media marketing campaign and a 5-day Google Ads campaign. This practical experience is essential for working as a digital marketer.",
     },
     {
       title: "Create digital marketing strategies for different brands",
-      description: "Participate in multiple case studies within the program, where you will develop digital marketing strategies for well-known brands such as Mamaearth, Zivame, cult.fit, and more.",
+      description:
+        "Participate in multiple case studies within the program, where you will develop digital marketing strategies for well-known brands such as Mamaearth, Zivame, cult.fit, and more.",
     },
   ];
 
@@ -189,23 +221,28 @@ const SingleCourse = () => {
   const careefBenifitData = [
     {
       point: "Career Advancement:",
-      description: "By completing our 'Digital Marketing Science' course, participants will be able to acquire more challenging roles and responsibilities in their current jobs or advance in their careers.",
+      description:
+        "By completing our 'Digital Marketing Science' course, participants will be able to acquire more challenging roles and responsibilities in their current jobs or advance in their careers.",
     },
     {
       point: "Enhanced Creativity:",
-      description: "To stay ahead of the competition in digital marketing, participants attending the 'Digital Marketing Science' course will learn how to be more creative and innovative in their approach.",
+      description:
+        "To stay ahead of the competition in digital marketing, participants attending the 'Digital Marketing Science' course will learn how to be more creative and innovative in their approach.",
     },
     {
       point: "Increased Job Opportunities:",
-      description: "In the ever-growing field of digital marketing, completing our 'Digital Marketing Science' course can open up a whole new world of career opportunities for participants.",
+      description:
+        "In the ever-growing field of digital marketing, completing our 'Digital Marketing Science' course can open up a whole new world of career opportunities for participants.",
     },
     {
       point: "Networking Opportunities:",
-      description: "The 'Digital Marketing Science' course will also provide participants with the opportunity to network with other industry professionals, which can lead to new job opportunities and business collaborations.",
+      description:
+        "The 'Digital Marketing Science' course will also provide participants with the opportunity to network with other industry professionals, which can lead to new job opportunities and business collaborations.",
     },
     {
       point: "Great Earning Potential:",
-      description: "Participants who have completed the 'Digital Marketing Science' course can negotiate higher salaries and better job benefits due to their updated skills and knowledge of digital marketing.",
+      description:
+        "Participants who have completed the 'Digital Marketing Science' course can negotiate higher salaries and better job benefits due to their updated skills and knowledge of digital marketing.",
     },
   ];
 
@@ -259,13 +296,15 @@ const SingleCourse = () => {
 
   const courseInfoData = [
     {
-      content: "Course created by professionals who work for some of the country's most reputable digital marketing agencies.",
+      content:
+        "Course created by professionals who work for some of the country's most reputable digital marketing agencies.",
     },
     {
       content: "Work on LIVE projects of agency clients and deliver results.",
     },
     {
-      content: "Stand out from other digital marketers by learning the newest concepts of digital marketing.",
+      content:
+        "Stand out from other digital marketers by learning the newest concepts of digital marketing.",
     },
     {
       content: "Get introduced to the latest digital marketing tools and technologies.",
@@ -274,7 +313,8 @@ const SingleCourse = () => {
       content: "Get hired by the country’s most established Digital Marketing Agencies.",
     },
     {
-      content: "Learn every individual chapter of the course from a specific ‘specialized’ trainer.",
+      content:
+        "Learn every individual chapter of the course from a specific ‘specialized’ trainer.",
     },
   ];
 
@@ -356,7 +396,13 @@ const SingleCourse = () => {
 
   return (
     <>
-      <InquiryModal isOpen={isOpen} onOpen={onOpen} onClose={onClose} initialRef={initialRef} finalRef={finalRef} />
+      <InquiryModal
+        isOpen={isOpen}
+        onOpen={onOpen}
+        onClose={onClose}
+        initialRef={initialRef}
+        finalRef={finalRef}
+      />
       <Box>
         <Flex flexDir={"column"} alignItems={"center"}>
           <Box
@@ -367,8 +413,23 @@ const SingleCourse = () => {
             backgroundPosition="center"
             backgroundRepeat="no-repeat"
           >
-            <Flex position={"relative"} minH={"20vh"} maxW={{ base: "100%", md: "90%" }} mx="auto" py="40px" px="20px" direction={{ base: "column", md: "column" }} align={{ base: "center", md: "start" }}>
-              <Box flex="1" border="1px solid none" maxW={{ base: "100%", md: "50%" }} color="white" ml={{ base: "0", md: "20px" }}>
+            <Flex
+              position={"relative"}
+              minH={"20vh"}
+              maxW={{ base: "100%", md: "90%" }}
+              mx="auto"
+              py="40px"
+              px="20px"
+              direction={{ base: "column", md: "column" }}
+              align={{ base: "center", md: "start" }}
+            >
+              <Box
+                flex="1"
+                border="1px solid none"
+                maxW={{ base: "100%", md: "50%" }}
+                color="white"
+                ml={{ base: "0", md: "20px" }}
+              >
                 <Heading fontSize="40px" fontWeight={"500"} color="#fff">
                   {topData?.title}
                 </Heading>
@@ -381,10 +442,22 @@ const SingleCourse = () => {
                 upGrad Results reviewed by Deloitte
               </Text> */}
                 <Flex mt="20px">
-                  <Button onClick={() => onOpen()} bg="#e95454" _hover={{ bg: "transparent", border: "1px solid #e95454" }} color="white" mr="10px">
+                  <Button
+                    onClick={() => onOpen()}
+                    bg="#e95454"
+                    _hover={{ bg: "transparent", border: "1px solid #e95454" }}
+                    color="white"
+                    mr="10px"
+                  >
                     Apply Now
                   </Button>
-                  <Button onClick={() => onOpen()} _hover={hoverStyle} variant="outline" borderColor="#e95454" color="#fff">
+                  <Button
+                    onClick={() => onOpen()}
+                    _hover={hoverStyle}
+                    variant="outline"
+                    borderColor="#e95454"
+                    color="#fff"
+                  >
                     Enquiry Now
                   </Button>
                 </Flex>
@@ -402,7 +475,18 @@ const SingleCourse = () => {
                   w="40px"
                 >
                   {topData?.logo?.map((ele, i) => (
-                    <Flex w="150px" rounded={"md"} bg="white" p="2" textAlign={"center"} justify={"center"} flexDir={"column"} align={"center"} key={i} border="2px solid white">
+                    <Flex
+                      w="150px"
+                      rounded={"md"}
+                      bg="white"
+                      p="2"
+                      textAlign={"center"}
+                      justify={"center"}
+                      flexDir={"column"}
+                      align={"center"}
+                      key={i}
+                      border="2px solid white"
+                    >
                       <Image src={ele?.img} alt="Company 1" boxSize="50px" mx="10px" />
                       <Heading fontSize={"12px"} color="black">
                         {ele?.heading}
@@ -418,16 +502,36 @@ const SingleCourse = () => {
           </Box>
           {/* Digital Marketing Course Highlights */}
           <Box mt="50px" w={{ base: "100%", md: "80%" }}>
-            <DigitalMarketingHighlights data={DigitalhighlightsData} subTitle={"The Digital Marketing Science course offered by DIDM is unlike any other course you have ever heard of before. This digital marketing course in Delhi NCR has specifications that are unlike anything else you are likely to see in the digital marketing education world.."} title={"Digital Marketing Science Training Specification"} />
+            <DigitalMarketingHighlights
+              data={DigitalhighlightsData}
+              subTitle={
+                "The Digital Marketing Science course offered by DIDM is unlike any other course you have ever heard of before. This digital marketing course in Delhi NCR has specifications that are unlike anything else you are likely to see in the digital marketing education world.."
+              }
+              title={"Digital Marketing Science Training Specification"}
+            />
           </Box>
 
           <Box w="full" py="8" bg="#f4f5f7">
-            <CourseInformation keyH="Key Highlights" data={courseInfoData} title={"Digital Marketing Science Key Highlights"} subTitle={"The key highlights of our Digital Marketing Science course can be found below, which make it unique to any other Digital Marketing Course in the country.."} />
+            <CourseInformation
+              keyH="Key Highlights"
+              data={courseInfoData}
+              title={"Digital Marketing Science Key Highlights"}
+              subTitle={
+                "The key highlights of our Digital Marketing Science course can be found below, which make it unique to any other Digital Marketing Course in the country.."
+              }
+            />
           </Box>
 
           {/* Best Certification Course on Digital Marketing */}
           <Box>
-            <DynamicCard onOpen={onOpen} bg="#b9292f" borderRadius="none" button="Enquiry Now" title={"Best Certification Course on Digital Marketing"} text="Best-in-class digital marketing course content taught by leading faculty and industry leaders in the form of online marketing classes, recorded video lectures, case studies and live projects. Now integrated with Generative AI modules." />
+            <DynamicCard
+              onOpen={onOpen}
+              bg="#b9292f"
+              borderRadius="none"
+              button="Enquiry Now"
+              title={"Best Certification Course on Digital Marketing"}
+              text="Best-in-class digital marketing course content taught by leading faculty and industry leaders in the form of online marketing classes, recorded video lectures, case studies and live projects. Now integrated with Generative AI modules."
+            />
           </Box>
 
           {/* Only Image Slider */}
@@ -439,24 +543,47 @@ const SingleCourse = () => {
 
           {/* Digital Marketing Science Course */}
           <Box w="full" bg="#fff" py="8">
-            <ChatGPTComponent onOpen={onOpen} data={digital_Course} title={"Digital Marketing Science Course"} subTitle="In our digital marketing science course, we provide agency-based training to beginner and intermediate-level digital marketers in highly advanced concepts of digital marketing, so that they can become the most uniquely skilled digital marketers possible." />
+            <ChatGPTComponent
+              onOpen={onOpen}
+              data={digital_Course}
+              title={"Digital Marketing Science Course"}
+              subTitle="In our digital marketing science course, we provide agency-based training to beginner and intermediate-level digital marketers in highly advanced concepts of digital marketing, so that they can become the most uniquely skilled digital marketers possible."
+            />
           </Box>
 
           {/* Chapter Highlights */}
           <Box w="full" py="8" bg="#f4f5f7">
-            <CourseInformation keyH="Chapters Highlights" data={chapterhighlights} title={"Chapter Highlights"} subTitle={"UpskillNexus Covers 10+ Chapters that you will learn in the Digital Marketing Science Program"} />
+            <CourseInformation
+              keyH="Chapters Highlights"
+              data={chapterhighlights}
+              title={"Chapter Highlights"}
+              subTitle={
+                "UpskillNexus Covers 10+ Chapters that you will learn in the Digital Marketing Science Program"
+              }
+            />
           </Box>
 
           {/* Reason to choose Upskill Digital Marketing science course */}
           <Flex w="full" justify={"center"} bg="#fff" py="8">
             <Box w="90%">
-              <DynamicAccordians data={accordianData} title="Reasons To Choose UpskillNexus Digital Marketing Science Course" subTitle="Below are some reasons why you should choose our digital marketing science course." />
+              <DynamicAccordians
+                data={accordianData}
+                title="Reasons To Choose UpskillNexus Digital Marketing Science Course"
+                subTitle="Below are some reasons why you should choose our digital marketing science course."
+              />
             </Box>
           </Flex>
 
           {/* Eligibility Criteria */}
           <Box m="0" w="full">
-            <DynamicCard onOpen={onOpen} bg="#b9292f" borderRadius="none" button="Enquiry Now" title={"Eligibility Criteria"} text="The eligibility criteria for DIDM’s digital marketing science course is, the applicant must have at least one year of experience working in a digital marketing role." />
+            <DynamicCard
+              onOpen={onOpen}
+              bg="#b9292f"
+              borderRadius="none"
+              button="Enquiry Now"
+              title={"Eligibility Criteria"}
+              text="The eligibility criteria for DIDM’s digital marketing science course is, the applicant must have at least one year of experience working in a digital marketing role."
+            />
           </Box>
           {/*  */}
 
@@ -469,7 +596,14 @@ const SingleCourse = () => {
 
           {/* Still have question */}
           <Box w="full">
-            <DynamicCard onOpen={onOpen} subTitle={""} bg="#b9292f" borderRadius="none" title={"Still have questions? Call @999-095-2299 for answers"} button={"Enquiry Now"} />
+            <DynamicCard
+              onOpen={onOpen}
+              subTitle={""}
+              bg="#b9292f"
+              borderRadius="none"
+              title={"Still have questions? Call @999-095-2299 for answers"}
+              button={"Enquiry Now"}
+            />
           </Box>
 
           {/* Explore our Learning Platform */}
@@ -604,6 +738,10 @@ const SingleCourse = () => {
           </Box>
         </Flex> */}
           {/*  */}
+
+          <Flex justify={"center"} minH="70vh" py="8">
+            <FAQ />
+          </Flex>
         </Flex>
       </Box>
     </>

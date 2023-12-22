@@ -1,5 +1,15 @@
 import React, { useRef } from "react";
-import { Box, Heading, Text, Flex, Button, Image, Center, Grid, useDisclosure } from "@chakra-ui/react";
+import {
+  Box,
+  Heading,
+  Text,
+  Flex,
+  Button,
+  Image,
+  Center,
+  Grid,
+  useDisclosure,
+} from "@chakra-ui/react";
 import DigitalMarketingHighlights from "../../Components/Course/DigitalMar";
 import DynamicCard from "../../Components/Cards/DynamicCard";
 import CourseInformation from "../../Components/Course/CourseInfo";
@@ -27,6 +37,7 @@ import { IoIosAnalytics } from "react-icons/io";
 import InqueryFrms from "../../Components/Forms/InqueryFrms";
 import { hoverStyle } from "../../style/button.style";
 import { InquiryModal } from "../../Components/Modal/InquiryModal";
+import { FAQ } from "../Home/FAQ";
 
 const DataScienceCourse = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -95,12 +106,24 @@ const DataScienceCourse = () => {
   ];
 
   const cards = [
-    { img: "https://www.upgrad.com/_next/image/?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2FAdsManager_240X80_Color__1610623223234.png&w=256&q=75" },
-    { img: "https://www.upgrad.com/_next/image/?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2Ftwitter_ana_240X80__1610979088970.png&w=256&q=75" },
-    { img: "https://www.upgrad.com/_next/image/?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2Fbuzzsumo.png&w=256&q=75" }, //
-    { img: "https://www.upgrad.com/_next/image/?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2FAnsThePublic_240X80Color_With_BG__1610717179771.png&w=256&q=75" },
-    { img: "https://www.upgrad.com/_next/image/?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2FGTrends_240X80_Color_With_BG__1610717386040.png&w=256&q=75" },
-    { img: "https://www.upgrad.com/_next/image/?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2FSpyFu_240X80_BW_With_BG__1610721544937.png&w=256&q=75" },
+    {
+      img: "https://www.upgrad.com/_next/image/?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2FAdsManager_240X80_Color__1610623223234.png&w=256&q=75",
+    },
+    {
+      img: "https://www.upgrad.com/_next/image/?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2Ftwitter_ana_240X80__1610979088970.png&w=256&q=75",
+    },
+    {
+      img: "https://www.upgrad.com/_next/image/?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2Fbuzzsumo.png&w=256&q=75",
+    }, //
+    {
+      img: "https://www.upgrad.com/_next/image/?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2FAnsThePublic_240X80Color_With_BG__1610717179771.png&w=256&q=75",
+    },
+    {
+      img: "https://www.upgrad.com/_next/image/?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2FGTrends_240X80_Color_With_BG__1610717386040.png&w=256&q=75",
+    },
+    {
+      img: "https://www.upgrad.com/_next/image/?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2FSpyFu_240X80_BW_With_BG__1610721544937.png&w=256&q=75",
+    },
   ];
 
   const speakersData = [
@@ -155,17 +178,20 @@ const DataScienceCourse = () => {
 
   const cardData = [
     {
-      logoSrc: "https://www.upgrad.com/_next/image/?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2FTransition_1__1680530410305.png&w=16&q=75",
+      logoSrc:
+        "https://www.upgrad.com/_next/image/?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2FTransition_1__1680530410305.png&w=16&q=75",
       percentage: "300%",
       title: "Maximum Salary Hike",
     },
     {
-      logoSrc: "https://www.upgrad.com/_next/image/?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2FTransition_1__1680530410305.png&w=16&q=75",
+      logoSrc:
+        "https://www.upgrad.com/_next/image/?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2FTransition_1__1680530410305.png&w=16&q=75",
       percentage: "36%",
       title: "Average Salary Hike",
     },
     {
-      logoSrc: "https://www.upgrad.com/_next/image/?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2FTransition_1__1680530410305.png&w=16&q=75",
+      logoSrc:
+        "https://www.upgrad.com/_next/image/?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2FTransition_1__1680530410305.png&w=16&q=75",
       percentage: "300+",
       title: "Hiring Partners",
     },
@@ -174,30 +200,36 @@ const DataScienceCourse = () => {
   const creativityProjectsData = [
     {
       title: "Solve a range of industry-relevant projects",
-      description: "In this online digital marketing course, you will work on a variety of industry-relevant projects, allowing you to apply theoretical knowledge to real-world scenarios.",
+      description:
+        "In this online digital marketing course, you will work on a variety of industry-relevant projects, allowing you to apply theoretical knowledge to real-world scenarios.",
     },
     {
       title: "Run a 5-day social media marketing campaign and Google Ads campaign",
-      description: "Gain hands-on real-world experience by running a 5-day social media marketing campaign and a 5-day Google Ads campaign. This practical experience is essential for working as a digital marketer.",
+      description:
+        "Gain hands-on real-world experience by running a 5-day social media marketing campaign and a 5-day Google Ads campaign. This practical experience is essential for working as a digital marketer.",
     },
     {
       title: "Create digital marketing strategies for different brands",
-      description: "Participate in multiple case studies within the program, where you will develop digital marketing strategies for well-known brands such as Mamaearth, Zivame, cult.fit, and more.",
+      description:
+        "Participate in multiple case studies within the program, where you will develop digital marketing strategies for well-known brands such as Mamaearth, Zivame, cult.fit, and more.",
     },
   ];
 
   const careefBenifitData = [
     {
       point: "What you will learn?",
-      description: "Python, SQL, Statistics, Data Visualization, Data Mining, Predictive Analytics, Machine Learning and Modeling etc",
+      description:
+        "Python, SQL, Statistics, Data Visualization, Data Mining, Predictive Analytics, Machine Learning and Modeling etc",
     },
     {
       point: "Who can Enroll in this Program?",
-      description: "Anyone ready to devote their time in learning regardless of any specialization or background such as Engineers, Marketing & Sales Professionals, Fresher’s, Data Professionals, Domain Experts, Software & IT Professionals can opt for this Program.",
+      description:
+        "Anyone ready to devote their time in learning regardless of any specialization or background such as Engineers, Marketing & Sales Professionals, Fresher’s, Data Professionals, Domain Experts, Software & IT Professionals can opt for this Program.",
     },
     {
       point: "Job Opportunities",
-      description: "You can apply Globally as a Data Analyst, Data Scientist, Data Engineer, Product Analyst, Machine Learning Engineer, Business Analyst.",
+      description:
+        "You can apply Globally as a Data Analyst, Data Scientist, Data Engineer, Product Analyst, Machine Learning Engineer, Business Analyst.",
     },
     {
       point: "Minimum Eligibility",
@@ -351,7 +383,13 @@ const DataScienceCourse = () => {
 
   return (
     <>
-      <InquiryModal isOpen={isOpen} onOpen={onOpen} onClose={onClose} initialRef={initialRef} finalRef={finalRef} />
+      <InquiryModal
+        isOpen={isOpen}
+        onOpen={onOpen}
+        onClose={onClose}
+        initialRef={initialRef}
+        finalRef={finalRef}
+      />
       <Box>
         <Flex flexDir={"column"} alignItems={"center"}>
           <Box
@@ -362,8 +400,23 @@ const DataScienceCourse = () => {
             backgroundPosition="center"
             backgroundRepeat="no-repeat"
           >
-            <Flex position={"relative"} minH={"20vh"} maxW={{ base: "100%", md: "90%" }} mx="auto" py="40px" px="20px" direction={{ base: "column", md: "column" }} align={{ base: "center", md: "start" }}>
-              <Box flex="1" border="4px solid none" w={{ base: "100%", lg: "65%" }} color="white" ml={{ base: "0", md: "20px" }}>
+            <Flex
+              position={"relative"}
+              minH={"20vh"}
+              maxW={{ base: "100%", md: "90%" }}
+              mx="auto"
+              py="40px"
+              px="20px"
+              direction={{ base: "column", md: "column" }}
+              align={{ base: "center", md: "start" }}
+            >
+              <Box
+                flex="1"
+                border="4px solid none"
+                w={{ base: "100%", lg: "65%" }}
+                color="white"
+                ml={{ base: "0", md: "20px" }}
+              >
                 <Heading fontSize="40px" fontWeight={"500"} color="#fff">
                   {topData?.title}
                 </Heading>
@@ -376,10 +429,22 @@ const DataScienceCourse = () => {
                 upGrad Results reviewed by Deloitte
               </Text> */}
                 <Flex mt="20px">
-                  <Button onClick={() => onOpen()} bg="#e95454" _hover={{ bg: "transparent", border: "1px solid #e95454" }} color="white" mr="10px">
+                  <Button
+                    onClick={() => onOpen()}
+                    bg="#e95454"
+                    _hover={{ bg: "transparent", border: "1px solid #e95454" }}
+                    color="white"
+                    mr="10px"
+                  >
                     Apply Now
                   </Button>
-                  <Button onClick={() => onOpen()} _hover={hoverStyle} variant="outline" borderColor="#e95454" color="#fff">
+                  <Button
+                    onClick={() => onOpen()}
+                    _hover={hoverStyle}
+                    variant="outline"
+                    borderColor="#e95454"
+                    color="#fff"
+                  >
                     Enquiry Now
                   </Button>
                 </Flex>
@@ -397,7 +462,18 @@ const DataScienceCourse = () => {
                   w="40px"
                 >
                   {topData?.logo?.map((ele, i) => (
-                    <Flex w="150px" rounded={"md"} bg="white" p="2" textAlign={"center"} justify={"center"} flexDir={"column"} align={"center"} key={i} border="2px solid white">
+                    <Flex
+                      w="150px"
+                      rounded={"md"}
+                      bg="white"
+                      p="2"
+                      textAlign={"center"}
+                      justify={"center"}
+                      flexDir={"column"}
+                      align={"center"}
+                      key={i}
+                      border="2px solid white"
+                    >
                       <Image src={ele?.img} alt="Company 1" boxSize="50px" mx="10px" />
                       <Heading fontSize={"12px"} color="black">
                         {ele?.heading}
@@ -415,7 +491,9 @@ const DataScienceCourse = () => {
           <Box mt="50px" w={{ base: "100%", md: "80%" }}>
             <DigitalMarketingHighlights
               data={dataScience} //
-              subTitle={"The Data Science & Machine Learning course offered by UpskillNexus is unlike any other course you have ever heard of before. This Data Science & Machine Learning course in Delhi NCR has specifications that are unlike anything else you are likely to see in the Data Science & Machine Learning education world.."}
+              subTitle={
+                "The Data Science & Machine Learning course offered by UpskillNexus is unlike any other course you have ever heard of before. This Data Science & Machine Learning course in Delhi NCR has specifications that are unlike anything else you are likely to see in the Data Science & Machine Learning education world.."
+              }
               title={"Data Science & Machine Learning Training Specification"}
             />
           </Box>
@@ -425,7 +503,9 @@ const DataScienceCourse = () => {
               keyH="Program Highlights"
               data={courseInfoData}
               title={"Data Science Program Highlights"}
-              subTitle={"The key highlights of our Data Science & Machine Learning course can be found below, which make it unique to any other Data Science & Machine Learning Course in the country.."}
+              subTitle={
+                "The key highlights of our Data Science & Machine Learning course can be found below, which make it unique to any other Data Science & Machine Learning Course in the country.."
+              }
             />
           </Box>
 
@@ -467,7 +547,9 @@ const DataScienceCourse = () => {
               keyH="Course Curriculum"
               data={chapterhighlights}
               title={"Our Course Curriculum"}
-              subTitle={"Here is our Data Science & Machine Learning Course curriculum. Our course will walk you through all the essential topics in Data Science step by step so you can absorb each lesson without any hassle. Industry Relevant Curriculum, Top Faculty, Network with Domain Experts, Hands on Learning. Learn Python, SQL, Tableau and more from Industry Leaders and Top Faculty."}
+              subTitle={
+                "Here is our Data Science & Machine Learning Course curriculum. Our course will walk you through all the essential topics in Data Science step by step so you can absorb each lesson without any hassle. Industry Relevant Curriculum, Top Faculty, Network with Domain Experts, Hands on Learning. Learn Python, SQL, Tableau and more from Industry Leaders and Top Faculty."
+              }
             />
           </Box>
 
@@ -526,6 +608,9 @@ const DataScienceCourse = () => {
 
               <InqueryFrms />
             </Box>
+          </Flex>
+          <Flex justify={"center"} minH="70vh" py="8">
+            <FAQ />
           </Flex>
         </Flex>
       </Box>

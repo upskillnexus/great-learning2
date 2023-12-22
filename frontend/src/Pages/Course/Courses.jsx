@@ -1,6 +1,25 @@
 import "./course.css";
 import { ChevronRightIcon } from "@chakra-ui/icons";
-import { Box, Flex, Heading, Button, Grid, Image, Text, Badge, calc, ModalHeader, ModalCloseButton, ModalBody, FormControl, FormLabel, Input, ModalFooter, useDisclosure } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Heading,
+  Button,
+  Grid,
+  Image,
+  Text,
+  Badge,
+  calc,
+  ModalHeader,
+  ModalCloseButton,
+  ModalBody,
+  FormControl,
+  FormLabel,
+  Input,
+  ModalFooter,
+  useDisclosure,
+  Fade,
+} from "@chakra-ui/react";
 import $ from "jquery";
 import { BsClipboard2Data, BsClipboardData, BsFilter } from "react-icons/bs";
 import { MdDownload, MdSecurity } from "react-icons/md";
@@ -66,29 +85,22 @@ const Courses = () => {
 
   return (
     <>
-      <InquiryModal isOpen={isOpen} onOpen={onOpen} onClose={onClose} initialRef={initialRef} finalRef={finalRef} />
+      <InquiryModal
+        isOpen={isOpen}
+        onOpen={onOpen}
+        onClose={onClose}
+        initialRef={initialRef}
+        finalRef={finalRef}
+      />
       {/*  */}
-      <Box
-        px={{
-          base: 1,
-          md: "8",
-        }}
-        mt={{
-          base: "0",
-          md: "20px",
-        }}>
+      <Box px={{ base: 1, md: "8" }} mt={{ base: "0", md: "20px" }}>
         <Flex
           gap={8}
-          mt={{
-            base: "0px",
-            md: 7,
-          }}
-          flexDir={{
-            base: "column",
-            md: "row",
-          }}
+          mt={{ base: "0px", md: 7 }}
+          flexDir={{ base: "column", md: "row" }}
           align={"start"}
-          justify={"space-between"}>
+          justify={"space-between"}
+        >
           {/*  */}
           <Flex flexDir={"column"} alignItems="center" justify={"center"} textAlign={"center"}>
             <Flex
@@ -104,10 +116,19 @@ const Courses = () => {
               textAlign={{
                 base: "center",
                 md: "center",
-              }}>
-              <Image h={{ base: "auto", md: "80px", lg: "80px" }} w={{ base: "70%", md: "80px", lg: "80px" }} src="/Upskill-Nexus-favicon.png" />
+              }}
+            >
+              <Image
+                h={{ base: "auto", md: "80px", lg: "80px" }}
+                w={{ base: "70%", md: "80px", lg: "80px" }}
+                src="/Upskill-Nexus-favicon.png"
+              />
               <Flex flexDir={{ base: "column", lg: "row" }} align="center">
-                <Heading fontSize={{ base: "35px", md: "40px" }} mb={0} textAlign={{ base: "center", md: "center" }}>
+                <Heading
+                  fontSize={{ base: "35px", md: "40px" }}
+                  mb={0}
+                  textAlign={{ base: "center", md: "center" }}
+                >
                   Get Upskilled
                 </Heading>
 
@@ -120,7 +141,8 @@ const Courses = () => {
                   display={{
                     base: "none",
                     md: "block",
-                  }}>
+                  }}
+                >
                   UpskillNexus
                 </Heading>
               </Flex>
@@ -130,16 +152,23 @@ const Courses = () => {
             <Flex flexDir={"column"} align={"center"} textAlign={{ base: "justify", md: "center" }}>
               <Text w={{ base: "100%", md: "80%" }}>
                 <GetUpskillnexus text="UpskillNexus" />
-                is a higher education initiative invested in providing growth-oriented individuals with high-quality authentic and practical training in digital technology. With our courses, career aspirants can develop their critical digital technology skills along with employability skills for
-                success in today’s business world.
+                is a higher education initiative invested in providing growth-oriented individuals
+                with high-quality authentic and practical training in digital technology. With our
+                courses, career aspirants can develop their critical digital technology skills along
+                with employability skills for success in today’s business world.
               </Text>
               <Text w={{ base: "100%", md: "80%" }}>
-                <GetUpskillnexus text="UpskillNexus" /> provides training in the most significant and demanding areas of Information Technology—<b>Cybersecurity, Data Science, and Digital Marketing Science.</b> Whether you are experienced in these fields already or just starting out, we are here to
-                help. Our goal is to ensure that you have the skills and knowledge you need to succeed in the world of information technology.
+                <GetUpskillnexus text="UpskillNexus" /> provides training in the most significant
+                and demanding areas of Information Technology—
+                <b>Cybersecurity, Data Science, and Digital Marketing Science.</b> Whether you are
+                experienced in these fields already or just starting out, we are here to help. Our
+                goal is to ensure that you have the skills and knowledge you need to succeed in the
+                world of information technology.
               </Text>
 
               <Text w={{ base: "100%", md: "80%" }}>
-                Get upskilled with <GetUpskillnexus text="UpskillNexus" /> and get ready for a rewarding IT career.
+                Get upskilled with <GetUpskillnexus text="UpskillNexus" /> and get ready for a
+                rewarding IT career.
               </Text>
             </Flex>
           </Flex>
@@ -176,7 +205,6 @@ const Courses = () => {
               </Flex>
             ))}
           </Flex> */}
-
           {/* Courses */}
           <Flex w="full" justify={"center"}>
             <Flex
@@ -184,45 +212,63 @@ const Courses = () => {
               // bg="blue"
               flexWrap={"wrap"}
               gridTemplateColumns={{
-                base: "repeat(1, 1fr)", // On smaller screens, one column
-                md: "repeat(2, 1fr)", // On medium screens, two columns
-                lg: "repeat(3, 1fr)", // On large screens, three columns
-                xl: "repeat(3, 1fr)", // On extra-large screens, four columns
+                base: "repeat(1, 1fr)",
+                md: "repeat(2, 1fr)",
+                lg: "repeat(3, 1fr)",
+                xl: "repeat(3, 1fr)",
               }}
               // width={{ base: "full", md: "80%" }}
               justify={"center"}
-              gap={{
-                base: "30px 15px",
-                md: "30px 15px",
-              }} // Adjust gap as needed
+              gap={{ base: "30px 15px", md: "30px 15px" }} // Adjust gap as needed
               // bg="red"
             >
               {data.map((ele, i) => (
-                <Box key={i} borderRadius={"10px"} overflow={"hidden"} border="3px solid none" w={"350px"} minH={"10vh"} boxShadow="0 0 3px rgba(0,0,0,0.2)">
+                <Box
+                  key={i}
+                  borderRadius={"10px"}
+                  overflow={"hidden"}
+                  border="3px solid none"
+                  w={"355px"}
+                  minH={"10vh"}
+                  boxShadow="0 0 3px rgba(0,0,0,0.2)"
+                >
                   <Image w={"100%"} position="relative" objectFit={"cover"} src={ele.image} />
 
                   {/* <Link to={path}> */}
-                  <Flex flexDir={"column"} justify={"space-between"} boxShadow={"inset -2px -5px 10px rgba(255,255,255,0.5)"} borderRadius="10px" minH={"250px"}>
+                  <Flex
+                    flexDir={"column"}
+                    justify={"space-between"}
+                    boxShadow={"inset -2px -5px 10px rgba(255,255,255,0.5)"}
+                    borderRadius="10px"
+                    minH={"250px"}
+                  >
                     <Box p="2">
                       <Link to={`/course/${ele?.link}`}>
                         <Heading textAlign={"center"} size="md">
-                          {ele.programName}
+                          {ele?.programName}
                         </Heading>
                         <Text>
-                          {ele.para.substring(0, 79)}
-                          ...
+                          <GetUpskillnexus text={ele?.poweredBy} bold="500" />
+                          {ele?.para}
                         </Text>
                       </Link>
 
                       <Text>{ele.duration}</Text>
                     </Box>
                     {/*  */}
-                    <Flex mt="2" borderTop={"1px solid rgba(0,0,0,0.1)"} h="50px" alignItems="center" justify={"space-between"}>
+                    <Flex
+                      mt="2"
+                      borderTop={"1px solid rgba(0,0,0,0.1)"}
+                      h="50px"
+                      alignItems="center"
+                      justify={"space-between"}
+                    >
                       <a
                         style={{
                           border: "4px solid none",
                         }}
-                        href={`/course/${ele?.link}`}>
+                        href={`/course/${ele?.link}`}
+                      >
                         <Button
                           _hover={{
                             bg: "none",
@@ -232,11 +278,23 @@ const Courses = () => {
                           borderRadius={"0"}
                           border={"1px solid none"}
                           bg="none"
-                          color="#b9292f">
+                          color="#b9292f"
+                        >
                           View Program
                         </Button>
                       </a>
-                      <Button d="flex" align={"center"} gap="3" onClick={() => onOpen()} _hover={hoverStyle} w="full" h="full" borderRadius={"0"} bg="#b9292f" color="#fff">
+                      <Button
+                        d="flex"
+                        align={"center"}
+                        gap="3"
+                        onClick={() => onOpen()}
+                        _hover={hoverStyle}
+                        w="full"
+                        h="full"
+                        borderRadius={"0"}
+                        bg="#b9292f"
+                        color="#fff"
+                      >
                         Enquire Now <FaArrowAltCircleRight />
                       </Button>
                     </Flex>

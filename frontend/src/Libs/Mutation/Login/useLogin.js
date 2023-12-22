@@ -8,7 +8,7 @@ const useLogin = () => {
   const queryClient = useQueryClient();
   const userLogin = useMutation({
     mutationFn: async (formdata) => {
-      console.log(formdata)
+      // console.log(formdata)
       const res = await api.post("user/login", formdata);
       return res?.data;
     },

@@ -1,4 +1,4 @@
-import { Box, Center } from "@chakra-ui/react";
+import { Box, Center, Fade } from "@chakra-ui/react";
 import { Header } from "../Components/Header/Header";
 import HomePageSlider from "../Components/HomePageSlider";
 import Courses from "./Course/Courses";
@@ -31,6 +31,7 @@ export const Deshboard = () => {
             <Explore />
             <WhyChoose />
             <Partners />
+            
             <TrainingPrograms />
 
             <Testimonials />

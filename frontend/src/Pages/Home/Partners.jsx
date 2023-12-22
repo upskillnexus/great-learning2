@@ -2,6 +2,7 @@ import { Box, Flex, Grid, Image, Heading, Text, Button, useDisclosure } from "@c
 import { useRef } from "react";
 import { Link } from "react-router-dom";
 import { InquiryModal } from "../../Components/Modal/InquiryModal";
+// import VisibilitySensor from "react-visibility-sensor";
 
 const Partners = () => {
   // Define an array of partner logos
@@ -15,28 +16,37 @@ const Partners = () => {
       img: "/didm.png",
       comp: "DIDM",
       color: "#be0002",
-      content: "DIDM makes our candidates gratifying when it comes to infusing skills with practical knowledge and recent trends in the industry. We are a reputed and the best digital marketing institute in Delhi/NCR & across India. By MSME | ISO Certified.",
+      content:
+        "DIDM makes our candidates gratifying when it comes to infusing skills with practical knowledge and recent trends in the industry. We are a reputed and the best digital marketing institute in Delhi/NCR & across India. By MSME | ISO Certified.",
       link: "https://www.didm.in/",
     },
     {
       img: "/partners/nexus.png", //
       comp: "NEXUS",
       color: "#ffca04",
-      content: "A transformational fintech company since 2012 of financial services by delivering the best of practices in fintech software development for a decade now.  We've been helping banks & businesses with the digital transformation.",
+      content:
+        "A transformational fintech company since 2012 of financial services by delivering the best of practices in fintech software development for a decade now.  We've been helping banks & businesses with the digital transformation.",
       link: "https://www.xbizventures.com/SecureNexus-ISS",
     },
     {
       img: "/skill.png", //
       comp: "SKILLS SHIKSHA",
       color: "blue",
-      content: "Skillshiksha is India’s best online learning platform where you can have blended modules and learn at your own pace. Master the recent trends in the market to stay competitive as change occurs at a rapid pace.",
+      content:
+        "Skillshiksha is India’s best online learning platform where you can have blended modules and learn at your own pace. Master the recent trends in the market to stay competitive as change occurs at a rapid pace.",
       link: "https://www.skillshiksha.com/",
     },
   ];
 
   return (
     <>
-      <InquiryModal isOpen={isOpen} onOpen={onOpen} onClose={onClose} initialRef={initialRef} finalRef={finalRef} />
+      <InquiryModal
+        isOpen={isOpen}
+        onOpen={onOpen}
+        onClose={onClose}
+        initialRef={initialRef}
+        finalRef={finalRef}
+      />
       <Box bg="#f8f8f8" p={5} mt="40px">
         <Flex justify="center" direction="column" alignItems="center">
           <Flex flexDir="column" textAlign={"center"} alignItems="center" mb={3}>
@@ -44,7 +54,9 @@ const Partners = () => {
               Our Training Partners
             </Heading>
             <Text w={{ base: "full", md: "80%" }} textAlign={{ base: "justify", md: "center" }}>
-              We're building promising futures with our valued partners — together, we're building a legacy of shared achievement and growth. These are the top brands with which we have formed a partnership.
+              We're building promising futures with our valued partners — together, we're building a
+              legacy of shared achievement and growth. These are the top brands with which we have
+              formed a partnership.
             </Text>
           </Flex>
 
@@ -57,11 +69,22 @@ const Partners = () => {
               }}
               gap={4}
               justifyContent="center"
-              alignItems="center"
+              // alignItems="center"
               mx="auto"
-              p={4}>
+              p={4}
+            >
               {logos.map((logo, index) => (
-                <Flex flexDir={"column"} p="3" w="300px" alignItems="center" key={index} borderRadius={"10px"} overflow={"hidden"} bg="#fff" boxShadow="0 0 3px rgba(0,0,0,0.2)">
+                <Flex
+                  flexDir={"column"}
+                  p="3"
+                  w="300px"
+                  alignItems="center"
+                  key={index}
+                  borderRadius={"10px"}
+                  overflow={"hidden"}
+                  bg="#fff"
+                  boxShadow="0 0 3px rgba(0,0,0,0.2)"
+                >
                   <Image width={"50%"} position="relative" objectFit={"cover"} src={logo.img} />
 
                   {/* <Link to={path}> */}
@@ -69,10 +92,17 @@ const Partners = () => {
                     <Heading style={{ color: `${logo.color}` }} size="md">
                       {/* {logo.comp} */}
                     </Heading>
-                    <Text textAlign={"justify"}>{logo.content}</Text>
+                    <Text textAlign={"center"}>{logo.content}</Text>
                   </Box>
                   <Link to={logo?.link} target="_blank">
-                    <Button size="sm" _hover={{ bg: "#fff", border: "2px solid #b9292f", color: "#b9292f" }} bg="#b9292f" border="2px solid #b9292f" color="#fff" p="2">
+                    <Button
+                      size="sm"
+                      _hover={{ bg: "#fff", border: "2px solid #b9292f", color: "#b9292f" }}
+                      bg="#b9292f"
+                      border="2px solid #b9292f"
+                      color="#fff"
+                      p="2"
+                    >
                       Read More
                     </Button>
                   </Link>
@@ -80,7 +110,13 @@ const Partners = () => {
                 </Flex>
               ))}
             </Grid>
-            <Button onClick={() => onOpen()} border="1px solid #b9292f" bg="#b9292f" color="#fff" _hover={{ bg: "#fff", color: "#b9292f" }}>
+            <Button
+              onClick={() => onOpen()}
+              border="1px solid #b9292f"
+              bg="#b9292f"
+              color="#fff"
+              _hover={{ bg: "#fff", color: "#b9292f" }}
+            >
               Explore Our Courses
             </Button>
           </Flex>

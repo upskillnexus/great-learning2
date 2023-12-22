@@ -1,8 +1,8 @@
 export const coursename = [
-  { name: "Digital Marketing  Science" },
-  { name: "Data Science" }, //
-  { name: "Cybersecurity" },
-  { name: "Employability Skills" },
+  { link: "/course/digital-marketing-science", name: "Digital Marketing  Science" },
+  { link: "/course/data-science", name: "Data Science" }, //
+  { link: "/course/cyber-security", name: "Cybersecurity" },
+  { link: "#", name: "Employability Skills" },
 ];
 
 export const allCourses = [
@@ -11,7 +11,8 @@ export const allCourses = [
     image: "/course/expert.png",
     name: "katill",
     programName: "Cybersecurity Expert Program",
-    para: "Cybersecurity is a rapidly growing field that uses technology and processes to protect computer systems and data from online attacks. Cybersecurity courses equip students with the knowledge and skills necessary to thrive in this critical domain.",
+    poweredBy: "Powered by Secure Nexus, a division of X-Biz Techventures.",
+    para: "",
     duration: "12 Months • Offline (In-Class Training)",
     badge: "DEDICATED CAREER SUPPORT",
     link: "cyber-security",
@@ -22,8 +23,9 @@ export const allCourses = [
     image: "/course/cyber1.png",
     name: "katill",
     programName: "Cybersecurity Professional Program",
-    para: "Cybersecurity is a rapidly growing field that uses technology and processes to protect computer systems and data from online attacks. Cybersecurity courses equip students with the knowledge and skills necessary to thrive in this critical domain.",
-    duration: "12 Months • Offline (In-Class Training)",
+    poweredBy: "Powered by Secure Nexus, a division of X-Biz Techventures.",
+    para: "",
+    duration: "6 Months • Offline (In-Class Training)",
     badge: "DEDICATED CAREER SUPPORT",
     link: "cyber-security",
   },
@@ -34,9 +36,8 @@ export const allCourses = [
     image: "/course/foundation.png",
     name: "katill",
     programName: "Foundational Employability Skills Program ",
-    para: "Anyone who takes the Digital Marketing Science Course will be able to learn about the complete science of digital marketing..",
-    duration: "3 Months • Offline (In-Class Training)",
-
+    para: "A specialized training program designed to empower individuals entering the workforce.",
+    duration: "4 Months • Offline (In-Class Training)",
     badge: "DEDICATED CAREER SUPPORT",
     link: "digital-marketing-science",
   },
@@ -44,7 +45,7 @@ export const allCourses = [
     id: "1",
     image: "/course/data-science.png",
     programName: "Master In Data Science ",
-    para: "Become a Data Scientist or Business Analyst. Learn Core Python, SQL, Tableau, Machine Learning, Predective Modeling and more from industry leaders and top faculty. Practical based traning.",
+    para: "",
     duration: "11 Months • Online / Offline",
 
     badge: "DEDICATED CAREER SUPPORT",
@@ -57,8 +58,8 @@ export const allCourses = [
     image: "/course/advanced.png",
     name: "katill",
     programName: "Advanced Employability Skills Mastery Program",
-    para: "Cybersecurity is a rapidly growing field that uses technology and processes to protect computer systems and data from online attacks. Cybersecurity courses equip students with the knowledge and skills necessary to thrive in this critical domain.",
-    duration: "12 Months • Offline (In-Class Training)",
+    para: "A specialized training program tailored to empower professionals at the mid-career stage.",
+    duration: "6 Months • Offline (In-Class Training)",
     badge: "DEDICATED CAREER SUPPORT",
     link: "cyber-security",
   },
@@ -69,8 +70,8 @@ export const allCourses = [
     image: "/course/digital-marketing.png",
     name: "katill",
     programName: "Digital Marketing Science ",
-    para: "Anyone who takes the Digital Marketing Science Course will be able to learn about the complete science of digital marketing..",
-    duration: "3 Months • Offline (In-Class Training)",
+    para: "Anyone who takes the Digital Marketing Science Course will be able to learn about the complete science of digital marketing.",
+    duration: "6 Months • Offline (In-Class Training)",
 
     badge: "DEDICATED CAREER SUPPORT",
     link: "digital-marketing-science",

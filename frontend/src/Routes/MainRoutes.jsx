@@ -16,6 +16,7 @@ import DataScienceCourse from "../Pages/Course/data.science";
 import Login from "../Pages/Login";
 import PrivateRoute from "./PrivateRoute";
 import Leads from "../Pages/Admin/Leads";
+import DirectorMsg from "../Pages/Director-message/directorMsg";
 
 export const MainRoutes = () => {
   return (
@@ -23,12 +24,15 @@ export const MainRoutes = () => {
       <Routes>
         <Route path="/" element={<Deshboard />} />
         <Route path="/privacy-policy" element={<Privacy />} />
+        {/* Courses */}
         <Route path="/course/digital-marketing-science" element={<SingleCourse />} />
         <Route path="/course/data-science" element={<DataScienceCourse />} />
         <Route path="/course/cyber-security" element={<CyberSecurityCourse />} />
 
-        <Route path="refund-policy" element={<RefundPolicy />} />
-        <Route path="term-conditions" element={<Term_condition />} />
+        {/* Courses */}
+
+        <Route path="/refund-policy" element={<RefundPolicy />} />
+        <Route path="/term-conditions" element={<Term_condition />} />
 
         {/* <Route path="/data-science" element={<Datascience />} /> */}
         {/* <Route path="/cyber-security" element={<Cybercourse />} /> */}
@@ -38,6 +42,7 @@ export const MainRoutes = () => {
         <Route path="/terms_of_use" element={<Terms />} />
         <Route path="/contact" element={<Contactus />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/director" element={<DirectorMsg />} />
 
         <Route
           path="/leads"

@@ -1,5 +1,15 @@
 import React, { useRef } from "react";
-import { Box, Heading, Text, Flex, Button, Image, Center, Grid, useDisclosure } from "@chakra-ui/react";
+import {
+  Box,
+  Heading,
+  Text,
+  Flex,
+  Button,
+  Image,
+  Center,
+  Grid,
+  useDisclosure,
+} from "@chakra-ui/react";
 import DigitalMarketingHighlights from "../../Components/Course/DigitalMar";
 import DynamicCard from "../../Components/Cards/DynamicCard";
 import CourseInformation from "../../Components/Course/CourseInfo";
@@ -27,6 +37,7 @@ import { IoIosAnalytics } from "react-icons/io";
 import InqueryFrms from "../../Components/Forms/InqueryFrms";
 import { hoverStyle } from "../../style/button.style";
 import { InquiryModal } from "../../Components/Modal/InquiryModal";
+import { FAQ } from "../Home/FAQ";
 
 const CyberSecurityCourse = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -89,12 +100,24 @@ const CyberSecurityCourse = () => {
   ];
 
   const cards = [
-    { img: "https://www.upgrad.com/_next/image/?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2FAdsManager_240X80_Color__1610623223234.png&w=256&q=75" },
-    { img: "https://www.upgrad.com/_next/image/?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2Ftwitter_ana_240X80__1610979088970.png&w=256&q=75" },
-    { img: "https://www.upgrad.com/_next/image/?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2Fbuzzsumo.png&w=256&q=75" }, //
-    { img: "https://www.upgrad.com/_next/image/?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2FAnsThePublic_240X80Color_With_BG__1610717179771.png&w=256&q=75" },
-    { img: "https://www.upgrad.com/_next/image/?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2FGTrends_240X80_Color_With_BG__1610717386040.png&w=256&q=75" },
-    { img: "https://www.upgrad.com/_next/image/?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2FSpyFu_240X80_BW_With_BG__1610721544937.png&w=256&q=75" },
+    {
+      img: "https://www.upgrad.com/_next/image/?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2FAdsManager_240X80_Color__1610623223234.png&w=256&q=75",
+    },
+    {
+      img: "https://www.upgrad.com/_next/image/?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2Ftwitter_ana_240X80__1610979088970.png&w=256&q=75",
+    },
+    {
+      img: "https://www.upgrad.com/_next/image/?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2Fbuzzsumo.png&w=256&q=75",
+    }, //
+    {
+      img: "https://www.upgrad.com/_next/image/?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2FAnsThePublic_240X80Color_With_BG__1610717179771.png&w=256&q=75",
+    },
+    {
+      img: "https://www.upgrad.com/_next/image/?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2FGTrends_240X80_Color_With_BG__1610717386040.png&w=256&q=75",
+    },
+    {
+      img: "https://www.upgrad.com/_next/image/?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2FSpyFu_240X80_BW_With_BG__1610721544937.png&w=256&q=75",
+    },
   ];
 
   const speakersData = [
@@ -149,17 +172,20 @@ const CyberSecurityCourse = () => {
 
   const cardData = [
     {
-      logoSrc: "https://www.upgrad.com/_next/image/?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2FTransition_1__1680530410305.png&w=16&q=75",
+      logoSrc:
+        "https://www.upgrad.com/_next/image/?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2FTransition_1__1680530410305.png&w=16&q=75",
       percentage: "300%",
       title: "Maximum Salary Hike",
     },
     {
-      logoSrc: "https://www.upgrad.com/_next/image/?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2FTransition_1__1680530410305.png&w=16&q=75",
+      logoSrc:
+        "https://www.upgrad.com/_next/image/?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2FTransition_1__1680530410305.png&w=16&q=75",
       percentage: "36%",
       title: "Average Salary Hike",
     },
     {
-      logoSrc: "https://www.upgrad.com/_next/image/?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2FTransition_1__1680530410305.png&w=16&q=75",
+      logoSrc:
+        "https://www.upgrad.com/_next/image/?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2FTransition_1__1680530410305.png&w=16&q=75",
       percentage: "300+",
       title: "Hiring Partners",
     },
@@ -168,38 +194,46 @@ const CyberSecurityCourse = () => {
   const creativityProjectsData = [
     {
       title: "Solve a range of industry-relevant projects",
-      description: "In this online Cyber Security course, you will work on a variety of industry-relevant projects, allowing you to apply theoretical knowledge to real-world scenarios.",
+      description:
+        "In this online Cyber Security course, you will work on a variety of industry-relevant projects, allowing you to apply theoretical knowledge to real-world scenarios.",
     },
     {
       title: "Run a 5-day social media marketing campaign and Google Ads campaign",
-      description: "Gain hands-on real-world experience by running a 5-day social media marketing campaign and a 5-day Google Ads campaign. This practical experience is essential for working as a digital marketer.",
+      description:
+        "Gain hands-on real-world experience by running a 5-day social media marketing campaign and a 5-day Google Ads campaign. This practical experience is essential for working as a digital marketer.",
     },
     {
       title: "Create Cyber Security strategies for different brands",
-      description: "Participate in multiple case studies within the program, where you will develop Cyber Security strategies for well-known brands such as Mamaearth, Zivame, cult.fit, and more.",
+      description:
+        "Participate in multiple case studies within the program, where you will develop Cyber Security strategies for well-known brands such as Mamaearth, Zivame, cult.fit, and more.",
     },
   ];
 
   const careefBenifitData = [
     {
       point: "Career Advancement:",
-      description: "By completing our 'Cyber Security' course, participants will be able to acquire more challenging roles and responsibilities in their current jobs or advance in their careers.",
+      description:
+        "By completing our 'Cyber Security' course, participants will be able to acquire more challenging roles and responsibilities in their current jobs or advance in their careers.",
     },
     {
       point: "Enhanced Creativity:",
-      description: "To stay ahead of the competition in Cyber Security, participants attending the 'Cyber Security' course will learn how to be more creative and innovative in their approach.",
+      description:
+        "To stay ahead of the competition in Cyber Security, participants attending the 'Cyber Security' course will learn how to be more creative and innovative in their approach.",
     },
     {
       point: "Increased Job Opportunities:",
-      description: "In the ever-growing field of Cyber Security, completing our 'Cyber Security' course can open up a whole new world of career opportunities for participants.",
+      description:
+        "In the ever-growing field of Cyber Security, completing our 'Cyber Security' course can open up a whole new world of career opportunities for participants.",
     },
     {
       point: "Networking Opportunities:",
-      description: "The 'Cyber Security' course will also provide participants with the opportunity to network with other industry professionals, which can lead to new job opportunities and business collaborations.",
+      description:
+        "The 'Cyber Security' course will also provide participants with the opportunity to network with other industry professionals, which can lead to new job opportunities and business collaborations.",
     },
     {
       point: "Great Earning Potential:",
-      description: "Participants who have completed the 'Cyber Security' course can negotiate higher salaries and better job benefits due to their updated skills and knowledge of Cyber Security.",
+      description:
+        "Participants who have completed the 'Cyber Security' course can negotiate higher salaries and better job benefits due to their updated skills and knowledge of Cyber Security.",
     },
   ];
 
@@ -259,7 +293,8 @@ const CyberSecurityCourse = () => {
       content: "Work on LIVE projects of agency clients and deliver results.",
     },
     {
-      content: "Stand out from other Cyber Security by learning the newest concepts of Cyber Security.",
+      content:
+        "Stand out from other Cyber Security by learning the newest concepts of Cyber Security.",
     },
     {
       content: "Get introduced to the latest Cyber Security tools and technologies.",
@@ -268,7 +303,8 @@ const CyberSecurityCourse = () => {
       content: "Get hired by the country’s most established Cyber Security Agencies.",
     },
     {
-      content: "Learn holistic curriculum, combining theoretical knowledge with hands-on practical experience.",
+      content:
+        "Learn holistic curriculum, combining theoretical knowledge with hands-on practical experience.",
     },
   ];
 
@@ -322,7 +358,13 @@ const CyberSecurityCourse = () => {
 
   return (
     <>
-      <InquiryModal isOpen={isOpen} onOpen={onOpen} onClose={onClose} initialRef={initialRef} finalRef={finalRef} />
+      <InquiryModal
+        isOpen={isOpen}
+        onOpen={onOpen}
+        onClose={onClose}
+        initialRef={initialRef}
+        finalRef={finalRef}
+      />
       <Box>
         <Flex flexDir={"column"} alignItems={"center"}>
           <Box
@@ -333,8 +375,23 @@ const CyberSecurityCourse = () => {
             backgroundPosition="center"
             backgroundRepeat="no-repeat"
           >
-            <Flex position={"relative"} minH={"20vh"} maxW={{ base: "100%", md: "90%" }} mx="auto" py="40px" px="20px" direction={{ base: "column", md: "column" }} align={{ base: "center", md: "start" }}>
-              <Box flex="1" border="4px solid none" w={{ base: "100%", lg: "65%" }} color="white" ml={{ base: "0", md: "20px" }}>
+            <Flex
+              position={"relative"}
+              minH={"20vh"}
+              maxW={{ base: "100%", md: "90%" }}
+              mx="auto"
+              py="40px"
+              px="20px"
+              direction={{ base: "column", md: "column" }}
+              align={{ base: "center", md: "start" }}
+            >
+              <Box
+                flex="1"
+                border="4px solid none"
+                w={{ base: "100%", lg: "65%" }}
+                color="white"
+                ml={{ base: "0", md: "20px" }}
+              >
                 <Heading fontSize="40px" fontWeight={"500"} color="#fff">
                   {topData?.title}
                 </Heading>
@@ -347,10 +404,22 @@ const CyberSecurityCourse = () => {
                 upGrad Results reviewed by Deloitte
               </Text> */}
                 <Flex mt="20px">
-                  <Button onClick={() => onOpen()} bg="#e95454" _hover={{ bg: "transparent", border: "1px solid #e95454" }} color="white" mr="10px">
+                  <Button
+                    onClick={() => onOpen()}
+                    bg="#e95454"
+                    _hover={{ bg: "transparent", border: "1px solid #e95454" }}
+                    color="white"
+                    mr="10px"
+                  >
                     Apply Now
                   </Button>
-                  <Button onClick={() => onOpen()} _hover={hoverStyle} variant="outline" borderColor="#e95454" color="#fff">
+                  <Button
+                    onClick={() => onOpen()}
+                    _hover={hoverStyle}
+                    variant="outline"
+                    borderColor="#e95454"
+                    color="#fff"
+                  >
                     Enquiry Now
                   </Button>
                 </Flex>
@@ -368,7 +437,18 @@ const CyberSecurityCourse = () => {
                   w="40px"
                 >
                   {topData?.logo?.map((ele, i) => (
-                    <Flex w="150px" rounded={"md"} bg="white" p="2" textAlign={"center"} justify={"center"} flexDir={"column"} align={"center"} key={i} border="2px solid white">
+                    <Flex
+                      w="150px"
+                      rounded={"md"}
+                      bg="white"
+                      p="2"
+                      textAlign={"center"}
+                      justify={"center"}
+                      flexDir={"column"}
+                      align={"center"}
+                      key={i}
+                      border="2px solid white"
+                    >
                       <Image src={ele?.img} alt="Company 1" boxSize="50px" mx="10px" />
                       <Heading fontSize={"12px"} color="black">
                         {ele?.heading}
@@ -386,7 +466,9 @@ const CyberSecurityCourse = () => {
           <Box mt="50px" w={{ base: "100%", md: "80%" }}>
             <DigitalMarketingHighlights //
               data={DigitalhighlightsData}
-              subTitle={"The Cyber Security course offered by Upskills Nexus is unlike any other course you have ever heard of before. This Cyber Security course in Delhi NCR has specifications that are unlike anything else you are likely to see in the Cyber Security education world.."}
+              subTitle={
+                "The Cyber Security course offered by Upskills Nexus is unlike any other course you have ever heard of before. This Cyber Security course in Delhi NCR has specifications that are unlike anything else you are likely to see in the Cyber Security education world.."
+              }
               title={"Cyber Security Training Specification"}
             />
           </Box>
@@ -396,7 +478,9 @@ const CyberSecurityCourse = () => {
               keyH="Key Highlights"
               data={courseInfoData}
               title={"Cyber Security Key Highlights"}
-              subTitle={"The key highlights of our Cyber Security course can be found below, which make it unique to any other Cyber Security Course in the country.."}
+              subTitle={
+                "The key highlights of our Cyber Security course can be found below, which make it unique to any other Cyber Security Course in the country.."
+              }
             />
           </Box>
 
@@ -435,7 +519,9 @@ const CyberSecurityCourse = () => {
               keyH="Chapters Highlights"
               data={chapterhighlights}
               title={"Chapter Highlights"}
-              subTitle={"UpskillNexus Covers 8+ Chapters that you will learn in the Cyber Security Program"}
+              subTitle={
+                "UpskillNexus Covers 8+ Chapters that you will learn in the Cyber Security Program"
+              }
             />
           </Box>
 
@@ -491,6 +577,13 @@ const CyberSecurityCourse = () => {
               <InqueryFrms />
             </Box>
           </Flex>
+
+          {/*  */}
+          <Flex justify={"center"} minH="70vh" py="8">
+            <FAQ />
+          </Flex>
+
+          {/*  */}
         </Flex>
       </Box>
     </>

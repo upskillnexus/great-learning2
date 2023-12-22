@@ -9,7 +9,7 @@ const { AllRoutes } = require("./routes/AllRoutes");
 const app = express();
 
 const corsOptions = {
-  origin: ["http://localhost:3000", "https://www.upskillnexus.com"],
+  origin: ["http://localhost:3000"],
   credentials: true,
 };
 
