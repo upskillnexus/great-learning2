@@ -28,14 +28,14 @@ const Partners = () => {
         "A transformational fintech company since 2012 of financial services by delivering the best of practices in fintech software development for a decade now.  We've been helping banks & businesses with the digital transformation.",
       link: "https://www.xbizventures.com/SecureNexus-ISS",
     },
-    {
-      img: "/skill.png", //
-      comp: "SKILLS SHIKSHA",
-      color: "blue",
-      content:
-        "Skillshiksha is India’s best online learning platform where you can have blended modules and learn at your own pace. Master the recent trends in the market to stay competitive as change occurs at a rapid pace.",
-      link: "https://www.skillshiksha.com/",
-    },
+    // {
+    //   img: "/skill.png", //
+    //   comp: "SKILLS SHIKSHA",
+    //   color: "blue",
+    //   content:
+    //     "Skillshiksha is India’s best online learning platform where you can have blended modules and learn at your own pace. Master the recent trends in the market to stay competitive as change occurs at a rapid pace.",
+    //   link: "https://www.skillshiksha.com/",
+    // },
   ];
 
   return (
@@ -65,7 +65,7 @@ const Partners = () => {
               templateColumns={{
                 base: "repeat(1, 1fr)",
                 md: "repeat(2, 1fr)",
-                lg: "repeat(3, 1fr)",
+                lg: "repeat(2, 1fr)",
               }}
               gap={4}
               justifyContent="center"
@@ -77,7 +77,7 @@ const Partners = () => {
                 <Flex
                   flexDir={"column"}
                   p="3"
-                  w="300px"
+                  w="400px"
                   alignItems="center"
                   key={index}
                   borderRadius={"10px"}
@@ -85,7 +85,7 @@ const Partners = () => {
                   bg="#fff"
                   boxShadow="0 0 3px rgba(0,0,0,0.2)"
                 >
-                  <Image width={"50%"} position="relative" objectFit={"cover"} src={logo.img} />
+                  <Image width={"50%"} position="relative" objectFit={"cover"} src={logo?.img} />
 
                   {/* <Link to={path}> */}
                   <Box p="4" textAlign={"center"}>

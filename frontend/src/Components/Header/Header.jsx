@@ -71,7 +71,7 @@ export const Header = ({ children }) => {
       ],
     },
     { text: "Career Support", to: "/" },
-    { text: "Admissions", to: "/" },
+    { text: "Admissions", to: "/admission" },
     { text: "Latest News", to: "/" },
     { text: "Contact Us", to: "/contact" },
   ];

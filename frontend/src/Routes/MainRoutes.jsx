@@ -17,6 +17,7 @@ import Login from "../Pages/Login";
 import PrivateRoute from "./PrivateRoute";
 import Leads from "../Pages/Admin/Leads";
 import DirectorMsg from "../Pages/Director-message/directorMsg";
+import Admission from "../Pages/Admission/Admission";
 
 export const MainRoutes = () => {
   return (
@@ -43,6 +44,7 @@ export const MainRoutes = () => {
         <Route path="/contact" element={<Contactus />} />
         <Route path="/login" element={<Login />} />
         <Route path="/director" element={<DirectorMsg />} />
+        <Route path="/admission" element={<Admission />} />
 
         <Route
           path="/leads"

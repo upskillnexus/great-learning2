@@ -31,10 +31,10 @@ export const Deshboard = () => {
             <Explore />
             <WhyChoose />
             <Partners />
-            
+
             <TrainingPrograms />
 
-            <Testimonials />
+            {/* <Testimonials /> */}
             <TalkToOurTema />
             {/*  */}
             {/* <FAQ /> */}

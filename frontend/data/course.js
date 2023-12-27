@@ -1,8 +1,25 @@
 export const coursename = [
-  { link: "/course/digital-marketing-science", name: "Digital Marketing  Science" },
-  { link: "/course/data-science", name: "Data Science" }, //
-  { link: "/course/cyber-security", name: "Cybersecurity" },
-  { link: "#", name: "Employability Skills" },
+  {
+    link: "/course/digital-marketing-science",
+    value: "digital-marketing-science",
+    name: "Digital Marketing  Science",
+  },
+  { link: "/course/data-science", value: "data-science", name: "Data Science" }, //
+  { link: "/course/cyber-security", value: "cyber-security", name: "Cybersecurity" },
+  { link: "#", value: "employability-skills", name: "Employability Skills" },
+];
+
+export const occupation = [
+  { name: "Student", value: "student" },
+  { name: "Job Seeker", value: "jobSeeker" },
+  { name: "Entrepreneur", value: "entrepreneur" },
+  { name: "Startup Business", value: "startupBusiness" },
+  { name: "Working Professional", value: "workingProfessional" },
+];
+
+export const genders = [
+  { name: "Male" },
+  { name: "Female" }, //
 ];
 
 export const allCourses = [
