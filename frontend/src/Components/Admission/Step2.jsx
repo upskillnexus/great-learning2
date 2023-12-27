@@ -130,7 +130,14 @@ const Step2 = ({ Controller, control, errors, onNext, prevStep, handleSubmit }) 
         <Controller
           control={control}
           name="mobileNumber"
-          rules={{ required: "Mobile Number is required*" }}
+          rules={{
+            required: "Mobile number is required",
+            pattern: {
+              value: /^\d{10}$/,
+              message: "Invalid Phone Number",
+            },
+          }}
+          type="number"
           render={({ field: { onChange, value } }) => (
             <div>
               <DyInput
@@ -147,55 +154,67 @@ const Step2 = ({ Controller, control, errors, onNext, prevStep, handleSubmit }) 
         <Controller
           control={control}
           name="phoneNumber"
-          rules={{ required: "Phone Number is required*" }}
+          rules={{
+            required: "phone number is required",
+            pattern: {
+              value: /^\d{10}$/,
+              message: "Invalid Phone Number",
+            },
+          }}
+          type="number"
           render={({ field: { onChange, value } }) => (
             <div>
               <DyInput
                 value={value}
                 onChange={onChange}
                 title={"Phone Number"}
-                type="textarea"
+                type="text"
                 placeholder="Your phone number"
               />
               <FormError err={errors} name="phoneNumber" />
             </div>
           )}
         />
+      </Grid>
+      {/*  */}
 
+      <Grid gridTemplateColumns={"repeat(1,1fr)"} mt="5" gap="0">
         <Controller
           control={control}
           name="address"
           rules={{ required: "Address is required*" }}
           render={({ field: { onChange, value } }) => (
             <div>
+              <Text fontWeight={"medium"}>Address</Text>
               <Textarea value={value} onChange={onChange} placeholder="Your Full Address." />
               <FormError err={errors} name="address" />
             </div>
           )}
         />
+
+        {/*  */}
+        <Controller
+          control={control}
+          name="leadFrom"
+          render={({ field: { onChange, value } }) => (
+            <Box mt="8">
+              <RadioGroup onChange={onChange} value={value}>
+                <Heading size="md" color="#b9292f">
+                  HOW DID YOU KNOW ABOUT UPSKILLNEXUS?
+                </Heading>
+                <Stack direction={"row"} gap="2">
+                  {leadFrom?.map((ele, i) => (
+                    <Radio value={ele?.name} key={i}>
+                      {ele?.name}
+                    </Radio>
+                  ))}
+                </Stack>
+              </RadioGroup>
+              <FormError err={errors} name="leadFrom" />
+            </Box>
+          )}
+        />
       </Grid>
-      <Controller
-        control={control}
-        name="leadFrom"
-        rules={{ required: "Reference is required*" }}
-        render={({ field: { onChange, value } }) => (
-          <Box mt="8">
-            <RadioGroup onChange={onChange} value={value}>
-              <Heading size="md" color="#b9292f">
-                HOW DID YOU KNOW ABOUT UPSKILLNEXUS?
-              </Heading>
-              <Stack direction={"row"} gap="2">
-                {leadFrom?.map((ele, i) => (
-                  <Radio value={ele?.name} key={i}>
-                    {ele?.name}
-                  </Radio>
-                ))}
-              </Stack>
-            </RadioGroup>
-            <FormError err={errors} name="leadFrom" />
-          </Box>
-        )}
-      />
 
       {/*  */}
       <Flex justify={"end"} p="2" mt="4" gap="2">

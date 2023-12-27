@@ -10,7 +10,7 @@ const DyInput = ({
   name,
   placeholder = "",
   title,
-  inpSize = "sm",
+  inpSize = "md",
   readOnly = false,
   defaultValue = "",
   lable = false,
@@ -21,7 +21,9 @@ const DyInput = ({
   return (
     <>
       <Flex w="full" flexDir={"column"}>
-        <Text lineHeight={1}>{title}</Text>
+        <Text fontWeight={"medium"} lineHeight={1}>
+          {title}
+        </Text>
         <Box w="full" mt="1px">
           <Input
             size={inpSize}

@@ -18,6 +18,7 @@ import PrivateRoute from "./PrivateRoute";
 import Leads from "../Pages/Admin/Leads";
 import DirectorMsg from "../Pages/Director-message/directorMsg";
 import Admission from "../Pages/Admission/Admission";
+import AdmissionProcess from "../Pages/Admission/AdmissionProcess";
 
 export const MainRoutes = () => {
   return (
@@ -45,6 +46,7 @@ export const MainRoutes = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/director" element={<DirectorMsg />} />
         <Route path="/admission" element={<Admission />} />
+        <Route path="/admission/process" element={<AdmissionProcess />} />
 
         <Route
           path="/leads"

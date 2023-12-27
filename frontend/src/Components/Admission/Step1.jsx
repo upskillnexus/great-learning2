@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Flex, FormControl, Grid } from "@chakra-ui/react";
+import { Button, Flex, FormControl, Grid, Text, Textarea } from "@chakra-ui/react";
 
 import FormError from "../../core/FormError";
 import DyInput from "../DynamicInputs/DyInput";
@@ -50,10 +50,10 @@ const Step1 = ({ Controller, control, errors, onNext, handleSubmit }) => {
           )}
         />
 
-        {/* Course name */}
+        {/* educational_institution */}
         <Controller
           control={control}
-          name="coursename"
+          name="educational_institution"
           rules={{ required: "Coruse is required*" }}
           render={({ field: { onChange, value } }) => (
             <div>
@@ -65,7 +65,7 @@ const Step1 = ({ Controller, control, errors, onNext, handleSubmit }) => {
                 values={coursename}
               />
 
-              <FormError err={errors} name="coursename" />
+              <FormError err={errors} name="educational_institution" />
             </div>
           )}
         />
@@ -111,57 +111,23 @@ const Step1 = ({ Controller, control, errors, onNext, handleSubmit }) => {
             </div>
           )}
         />
-
+      </Grid>
+      {/*  */}
+      <Grid gridTemplateColumns={"repeat(3,1fr)"} mt="5" gap="5">
         {/* if occupation is Student */}
-        {ocu == "student" ? (
+        {ocu == "" ? null : ocu == "student" ? (
           <>
             <Controller
               control={control}
               name="course"
-              rules={{ required: "Course is required*" }}
               render={({ field: { onChange, value } }) => (
                 <div>
                   <DyInput
                     value={value}
                     onChange={onChange}
-                    title="Course (Pursuing/Completed)"
+                    title="Educational Institution’s Name"
                     type="text"
                   />
-                  <FormError err={errors} name="course" />
-                </div>
-              )}
-            />
-
-            <Controller
-              control={control}
-              name="college"
-              rules={{ required: "College/University is required*" }}
-              render={({ field: { onChange, value } }) => (
-                <div>
-                  <DyInput
-                    value={value}
-                    onChange={onChange}
-                    title="College/University"
-                    type="text"
-                  />
-                  <FormError err={errors} name="college" />
-                </div>
-              )}
-            />
-
-            <Controller
-              control={control}
-              name="otherQualifications"
-              rules={{ required: "Other Qualifications is required*" }}
-              render={({ field: { onChange, value } }) => (
-                <div>
-                  <DyInput
-                    value={value}
-                    onChange={onChange}
-                    title="Other Qualifications"
-                    type="text"
-                  />
-                  <FormError err={errors} name="otherQualifications" />
                 </div>
               )}
             />
@@ -217,6 +183,11 @@ const Step1 = ({ Controller, control, errors, onNext, handleSubmit }) => {
             />
           </>
         )}
+        {/* Elase */}
+      </Grid>
+
+      {/* File */}
+      <Grid gridTemplateColumns={"repeat(2,1fr)"} mt="5" gap="5">
         <Controller
           control={control}
           name="passportphoto"
@@ -224,17 +195,57 @@ const Step1 = ({ Controller, control, errors, onNext, handleSubmit }) => {
           render={({ field: { onChange, value } }) => (
             <div>
               <DyInput
-                value={value}
+                // value={value}
                 onChange={onChange}
-                title="Your Passport size Photo"
+                title="Upload Passport size Photo*"
                 type="file"
               />
               <FormError err={errors} name="passportphoto" />
             </div>
           )}
         />
-        {/* Elase */}
+
+        <Controller
+          control={control}
+          name="cv"
+          rules={{ required: "CV is required*" }}
+          render={({ field: { onChange, value } }) => (
+            <div>
+              <DyInput
+                // value={value}
+                onChange={onChange}
+                title="Upload Your CV*"
+                type="file"
+              />
+              <FormError err={errors} name="cv" />
+            </div>
+          )}
+        />
       </Grid>
+
+      {/* File */}
+
+      <Grid gridTemplateColumns={"repeat(1,1fr)"} mt="8" gap="0">
+        <Controller
+          control={control}
+          name="reasontojoin"
+          render={({ field: { onChange, value } }) => (
+            <div>
+              <Text lineHeight={1} fontWeight={"medium"}>
+                Why do you want to take up this course?
+              </Text>
+              <Textarea
+                maxLength={500}
+                value={value}
+                onChange={onChange}
+                placeholder="Your Full Address."
+              />
+            </div>
+          )}
+        />
+      </Grid>
+
+      {/*  */}
       <Flex justify={"end"} p="2" mt="4" gap="2">
         <Button onClick={handleSubmit(onNext)}>Next</Button>
       </Flex>

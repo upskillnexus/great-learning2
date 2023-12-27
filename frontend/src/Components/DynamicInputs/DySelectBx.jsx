@@ -7,7 +7,7 @@ const DySelectBx = ({
   name,
   placeholder = "",
   title,
-  inpSize = "sm",
+  inpSize = "md",
   readOnly = false,
   value,
   defaultValue = "",
@@ -16,7 +16,9 @@ const DySelectBx = ({
   return (
     <>
       <Flex w="full" flexDir={"column"}>
-        <Text lineHeight={1}>{title}</Text>
+        <Text fontWeight={"medium"} lineHeight={1}>
+          {title}
+        </Text>
         <Box w="full" mt="1px">
           <Select
             onChange={onChange}

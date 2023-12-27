@@ -71,7 +71,14 @@ export const Header = ({ children }) => {
       ],
     },
     { text: "Career Support", to: "/" },
-    { text: "Admissions", to: "/admission" },
+
+    {
+      text: "Admissions",
+      subMenu: [
+        { text: "Admission Process", to: "/admission/process" },
+        { text: "Admission", to: "/admission" },
+      ],
+    },
     { text: "Latest News", to: "/" },
     { text: "Contact Us", to: "/contact" },
   ];
