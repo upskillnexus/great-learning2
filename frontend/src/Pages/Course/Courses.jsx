@@ -152,7 +152,7 @@ const Courses = () => {
             <Flex flexDir={"column"} align={"center"} textAlign={{ base: "justify", md: "center" }}>
               <Text w={{ base: "100%", md: "80%" }}>
                 <GetUpskillnexus text="UpskillNexus" />
-                is a higher education initiative invested in providing growth-oriented individuals
+                UpskillNexus is an organisation invested in providing growth-oriented individuals
                 with high-quality authentic and practical training in digital technology. With our
                 courses, career aspirants can develop their critical digital technology skills along
                 with employability skills for success in today’s business world.

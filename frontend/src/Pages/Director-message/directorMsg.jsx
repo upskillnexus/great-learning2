@@ -66,11 +66,10 @@ const DirectorMsg = () => {
             rounded={{ base: "none", lg: "md" }}
             p="3"
             borderWidth={"2"}
+            justify={{ base: "start", lg: "space-between" }}
+            // bg="red"
           >
-            <Box w={{ base: "full", lg: "50%" }}>
-              <Image rounded={"md"} h="full" w="full" src={"/img5.jpg"} />
-            </Box>
-            <Box rounded={"md"} w={{ base: "full", lg: "50%" }} p="3" textAlign={"justify"}>
+            <Box rounded={"md"} w={{ base: "full", lg: "60%" }} p="3" textAlign={"justify"}>
               {contentArray1.map((ele, i) => (
                 <Box key={i}>
                   <Heading color="#b9292f" size={"md"}>
@@ -79,14 +78,10 @@ const DirectorMsg = () => {
                   <Text>{ele?.content}</Text>
                 </Box>
               ))}
-              {/* {contentArray.map((ele, i) => (
-                <Box key={i}>
-                  <Heading color="#b9292f" size={"md"}>
-                    {ele?.heading}
-                  </Heading>
-                  <Text>{ele?.content}</Text>
-                </Box>
-              ))} */}
+            </Box>
+
+            <Box w={{ base: "full", lg: "40%" }}>
+              <Image rounded={"md"} h="full" w="full" src={"/img5.jpg"} />
             </Box>
           </Flex>
           {/*  */}

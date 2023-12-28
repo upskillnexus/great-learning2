@@ -77,12 +77,13 @@ const Partners = () => {
                 <Flex
                   flexDir={"column"}
                   p="3"
-                  w="400px"
+                  w="250px"
                   alignItems="center"
                   key={index}
                   borderRadius={"10px"}
                   overflow={"hidden"}
                   bg="#fff"
+                  bg="red"
                   boxShadow="0 0 3px rgba(0,0,0,0.2)"
                 >
                   <Image width={"50%"} position="relative" objectFit={"cover"} src={logo?.img} />
