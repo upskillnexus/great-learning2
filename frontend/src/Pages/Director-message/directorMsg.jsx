@@ -79,27 +79,14 @@ const DirectorMsg = () => {
                   <Text>{ele?.content}</Text>
                 </Box>
               ))}
-              {contentArray.map((ele, i) => (
+              {/* {contentArray.map((ele, i) => (
                 <Box key={i}>
                   <Heading color="#b9292f" size={"md"}>
                     {ele?.heading}
                   </Heading>
                   <Text>{ele?.content}</Text>
                 </Box>
-              ))}
-              <Flex justify={"start"}>
-                <Box w="auto">
-                  <Text lineHeight={0} mt="9">
-                    sincerely,
-                  </Text>
-                  <Image h="auto" w="100px" src="/director/signature.png" />
-                  <Text lineHeight={1.2} fontWeight={"bold"}>
-                    Deepa Nair
-                  </Text>
-                  <Text lineHeight={0}>Managing Director</Text>
-                  <GetUpskillnexus text="UpskillNexus" bold="500" />
-                </Box>
-              </Flex>
+              ))} */}
             </Box>
           </Flex>
           {/*  */}
@@ -113,21 +100,25 @@ const DirectorMsg = () => {
             bg="#fff"
             rounded={{ base: "none", lg: "md" }}
           >
-            {/* {contentArray?.map((ele, i) => (
+            {contentArray?.map((ele, i) => (
               <Box key={i}>
                 <Text>{ele?.content}</Text>
               </Box>
-            ))} */}
-            {/* <Box>
-              <Text lineHeight={0} mt="9">
-                sincerely,
-              </Text>
-              <Text lineHeight={1.2} fontWeight={"bold"}>
-                Deepa Nair
-              </Text>
-              <Text lineHeight={0}>Managing Director</Text>
-              <GetUpskillnexus text="UpskillNexus" bold="500" />
-            </Box> */}
+            ))}
+
+            <Flex justify={"start"}>
+              <Box w="auto">
+                <Text lineHeight={0} mt="9">
+                  sincerely,
+                </Text>
+                <Image h="auto" w="100px" src="/director/signature.png" />
+                <Text lineHeight={1.2} fontWeight={"bold"}>
+                  Deepa Nair
+                </Text>
+                <Text lineHeight={0}>Managing Director</Text>
+                <GetUpskillnexus text="UpskillNexus" bold="medium" />
+              </Box>
+            </Flex>
           </Box>
         </Flex>
       </Flex>

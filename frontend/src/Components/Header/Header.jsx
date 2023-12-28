@@ -70,7 +70,7 @@ export const Header = ({ children }) => {
         { text: "Director's Message", to: "/director" },
       ],
     },
-    { text: "Career Support", to: "/" },
+    { text: "Career Support", to: "/career-support" },
 
     {
       text: "Admissions",
@@ -236,8 +236,8 @@ export const Header = ({ children }) => {
                     </MenuButton>
                     <MenuList>
                       {link.subMenu.map((subLink, subIndex) => (
-                        <MenuItem as={Link} to={subLink.to} key={subIndex}>
-                          {subLink.text}
+                        <MenuItem as={Link} to={subLink?.to} key={subIndex}>
+                          {subLink?.text}
                         </MenuItem>
                       ))}
                     </MenuList>
