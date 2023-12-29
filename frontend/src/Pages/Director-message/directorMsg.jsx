@@ -80,8 +80,14 @@ const DirectorMsg = () => {
               ))}
             </Box>
 
-            <Box w={{ base: "full", lg: "40%" }}>
-              <Image rounded={"md"} h="full" w="full" src={"/img5.jpg"} />
+            <Box w={{ base: "full", lg: "50%" }}>
+              <Image
+                rounded={"md"}
+                h="full"
+                w="full"
+                objectFit={"cover"}
+                src={"/director/director.jpg"}
+              />
             </Box>
           </Flex>
           {/*  */}

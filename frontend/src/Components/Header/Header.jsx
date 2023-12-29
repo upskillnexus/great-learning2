@@ -28,7 +28,7 @@ import {
   useMediaQuery,
 } from "@chakra-ui/react";
 import { useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "/logo.png";
 import { hoverStyle } from "../../style/button.style";
 import {
@@ -42,13 +42,13 @@ import {
 import { MdOutlineEmail, MdOutlineWhatsapp } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
 import Footer from "../Footer";
-import { DynamicModal } from "../Modal/DynamicModal";
 import { InquiryModal } from "../Modal/InquiryModal";
 import { coursename } from "../../../data/course";
 
 export const Header = ({ children }) => {
   const [isSmallerThanMd] = useMediaQuery("(max-width: 1153px)");
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const { pathname } = useLocation();
 
   const [selectedValue, setSelectedValue] = useState(null);
 
@@ -79,7 +79,7 @@ export const Header = ({ children }) => {
         { text: "Admission", to: "/admission" },
       ],
     },
-    { text: "Latest News", to: "/" },
+    { text: "Latest News", to: "#" },
     { text: "Contact Us", to: "/contact" },
   ];
 
@@ -186,10 +186,7 @@ export const Header = ({ children }) => {
             marginTop={{ base: "1rem", md: "0" }}
             style={flexStyles || { display: "none" }}
           >
-            {/* <Link to=""> */}
-            {/* <Button _hover={hoverStyle} border={"1px solid #b9292f"} w="160px" bg="none" color="#b9292f">
-              Explore Programs
-            </Button> */}
+            {/*  */}
 
             <Menu>
               <MenuButton
@@ -225,18 +222,26 @@ export const Header = ({ children }) => {
                 link.subMenu ? (
                   <Menu key={index}>
                     <MenuButton
-                      rounded={"md"}
+                      rounded="md"
                       border="1px solid #cccc"
+                      bg={pathname === link?.subMenu.includes(pathname) ? "red" : "initial"}
                       p="5px 10px"
-                      fontWeight={"medium"}
+                      fontWeight="medium"
                     >
                       <Box display={"flex"} as="span" gap="2" alignItems="center">
                         {link.text} <FaChevronDown />
                       </Box>
                     </MenuButton>
+
                     <MenuList>
                       {link.subMenu.map((subLink, subIndex) => (
-                        <MenuItem as={Link} to={subLink?.to} key={subIndex}>
+                        <MenuItem
+                          bg={pathname === subLink?.to ? "#b9292f" : "initial"}
+                          color={pathname === subLink?.to ? "#fff" : "initial"}
+                          as={Link}
+                          to={subLink?.to}
+                          key={subIndex}
+                        >
                           {subLink?.text}
                         </MenuItem>
                       ))}
@@ -249,6 +254,8 @@ export const Header = ({ children }) => {
                       border: "1px solid #cccc",
                       borderRadius: "5px",
                       padding: "5px 10px",
+                      background: pathname === link?.to ? "#b9292f" : null,
+                      color: pathname === link?.to ? "#fff" : "#000",
                     }}
                     _hover={{ background: "blue" }}
                     to={link.to}
@@ -334,7 +341,13 @@ export const Header = ({ children }) => {
                       </MenuButton>
                       <MenuList>
                         {link.subMenu.map((subLink, subIndex) => (
-                          <MenuItem as={Link} to={subLink.to} key={subIndex}>
+                          <MenuItem
+                            bg={pathname === subLink?.to ? "#b9292f" : "initial"}
+                            color={pathname === subLink?.to ? "#fff" : "initial"}
+                            as={Link}
+                            to={subLink.to}
+                            key={subIndex}
+                          >
                             {subLink.text}
                           </MenuItem>
                         ))}
@@ -347,6 +360,8 @@ export const Header = ({ children }) => {
                         border: "1px solid #cccc",
                         borderRadius: "5px",
                         padding: "5px 10px",
+                        background: pathname === link?.to ? "#b9292f" : null,
+                        color: pathname === link?.to ? "#fff" : "#000",
                       }}
                       _hover={{ background: "blue" }}
                       to={link.to}

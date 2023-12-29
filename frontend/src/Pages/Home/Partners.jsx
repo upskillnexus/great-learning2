@@ -73,7 +73,7 @@ const Partners = () => {
               mx="auto"
               p={4}
             >
-              {logos.map((logo, index) => (
+              {logos?.map((logo, index) => (
                 <Flex
                   flexDir={"column"}
                   p={"3"}

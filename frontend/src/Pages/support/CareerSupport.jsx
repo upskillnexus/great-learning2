@@ -23,21 +23,13 @@ const CareerSupport = () => {
       id: 5,
       service: "Career Transition Support",
     },
-    {
-      id: 6,
-      service: "100% Career Placement Support",
-      arr: [
-        "Benefit from our extensive network and personalized guidance in landing your dream job or securing a well-deserved promotion.",
-        "For our selected programs, we offer internship programs leading to placements in reputed organisations.",
-      ],
-    },
   ];
 
   return (
     <>
       <Flex w="full" justify={"center"} align={"center"} minH={"80vh"}>
         <Box
-          w={{ base: "full", md: "80%", lg: "50%" }}
+          w={{ base: "full", md: "80%", lg: "70%" }}
           m="5"
           border="2px solid #b9292f"
           rounded={"md"}
@@ -58,20 +50,37 @@ const CareerSupport = () => {
                 <ListItem m="1">{ele?.service}</ListItem>
                 {ele?.arr &&
                   ele?.arr.map((el, ind) => (
-                    <ListItem w="95%" position={"relative"} left="40px" key={ind}>
+                    <ListItem w="full" position={"relative"} left="40px" key={ind}>
                       {el}
                     </ListItem>
                   ))}
               </Box>
             ))}
           </UnorderedList>
-          <Heading size="lg" color="#b9292f">
-            24/7 Career Support
-          </Heading>
-          <Text>
-            No matter what stage of your career you are in, we are always available to help you with
-            any issues pertaining to the training that you have taken from us.
-          </Text>
+
+          <Box>
+            <Heading size="lg" color="#b9292f">
+              100% Career Placment Support
+            </Heading>
+            <Text>
+              Benefit from our extensive network and personalized guidance in landing your dream job
+              or securing a well-deserved promotion.
+            </Text>
+            <Text>
+              For our selected programs, we offer internship programs leading to placements in
+              reputed organisations.
+            </Text>
+          </Box>
+
+          <Box>
+            <Heading size="lg" color="#b9292f">
+              24/7 Career Support
+            </Heading>
+            <Text>
+              No matter what stage of your career you are in, we are always available to help you
+              with any issues pertaining to the training that you have taken from us.
+            </Text>
+          </Box>
         </Box>
       </Flex>
     </>
