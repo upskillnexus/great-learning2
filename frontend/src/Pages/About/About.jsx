@@ -19,15 +19,26 @@ const About = () => {
   ];
   let text2 = `Our vision at UpskillNexus is to equip individuals with not only the functional knowledge and digital technological skills required for success in their careers but also critical employability skills to enable them to lead and innovate in their respective fields. We envision a world where our graduates are sought after by leading Corporates and are instrumental in driving a positive change, embracing challenges, and setting new standards of professional excellence. Through a commitment to continuous innovation, unwavering quality, and fostering a culture of lifelong learning, we aim to be the catalyst for transformative careers, creating a ripple effect of positive impact in workplaces and communities worldwide. At UpskillNexus, our vision is to empower individuals not just with skills but with the mindset and resilience to thrive in an ever-evolving professional landscape.`;
   return (
-    <Flex flexDirection={"column"} gap={0}>
+    <Flex align={"center"} flexDir={"column"} gap={0}>
       {/* heading  */}
       <AboutBanner data={data} />
 
-      <Flex flexDir={"column"} border="5px solid none" align={"center"} bg="#fff" py="8">
+      <Box mt="8" textAlign={"center"} w={{ base: "full", lg: "80%" }}>
+        <Text fontWeight={"medium"}>
+          We are UpskillNexus, a team of dedicated corporate industry leaders with a commitment to
+          skill and digitally empower professionals. We upskill people in digital technologies to
+          help them become prosperous. We provide high-quality authentic and practical training to
+          career aspirants to develop their critical technical and digital skills along with
+          employability skills for success in today’s business world.
+        </Text>
+      </Box>
+
+      <Flex flexDir={"column"} border="5px solid none" align={"center"} bg="#fff">
         <Box w="100%" minH={"20vh"} rounded={"lg"} overflow={"hidden"} bg={"#fff"}>
           <AboutCard
             heading="Our Vision" //
             text={text2}
+            // img="/Upskill-Nexus-favicon.png"
             img="/aboutus/about2.png"
             imgSide="right"
           />

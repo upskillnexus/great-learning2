@@ -60,7 +60,7 @@ const CareerSupport = () => {
 
           <Box>
             <Heading size="lg" color="#b9292f">
-              100% Career Placment Support
+              100% Career Placement port
             </Heading>
             <Text>
               Benefit from our extensive network and personalized guidance in landing your dream job

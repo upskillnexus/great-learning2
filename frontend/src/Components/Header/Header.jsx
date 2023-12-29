@@ -224,7 +224,6 @@ export const Header = ({ children }) => {
                     <MenuButton
                       rounded="md"
                       border="1px solid #cccc"
-                      bg={pathname === link?.subMenu.includes(pathname) ? "red" : "initial"}
                       p="5px 10px"
                       fontWeight="medium"
                     >
@@ -236,8 +235,8 @@ export const Header = ({ children }) => {
                     <MenuList>
                       {link.subMenu.map((subLink, subIndex) => (
                         <MenuItem
-                          bg={pathname === subLink?.to ? "#b9292f" : "initial"}
-                          color={pathname === subLink?.to ? "#fff" : "initial"}
+                          border={pathname === subLink?.to ? "2px solid #b9292f" : "2px solid gray"}
+                          color={pathname === subLink?.to ? "#b8292f" : "initial"}
                           as={Link}
                           to={subLink?.to}
                           key={subIndex}
@@ -254,8 +253,8 @@ export const Header = ({ children }) => {
                       border: "1px solid #cccc",
                       borderRadius: "5px",
                       padding: "5px 10px",
-                      background: pathname === link?.to ? "#b9292f" : null,
-                      color: pathname === link?.to ? "#fff" : "#000",
+                      border: pathname === link?.to ? "2px solid #b9292f" : "1px solid #ccc",
+                      color: pathname === link?.to ? "#b9292f" : "#000",
                     }}
                     _hover={{ background: "blue" }}
                     to={link.to}
@@ -342,8 +341,10 @@ export const Header = ({ children }) => {
                       <MenuList>
                         {link.subMenu.map((subLink, subIndex) => (
                           <MenuItem
-                            bg={pathname === subLink?.to ? "#b9292f" : "initial"}
-                            color={pathname === subLink?.to ? "#fff" : "initial"}
+                            border={
+                              pathname === subLink?.to ? "2px solid #b9292f" : "2px solid gray"
+                            }
+                            color={pathname === subLink?.to ? "#b8292f" : "initial"}
                             as={Link}
                             to={subLink.to}
                             key={subIndex}
@@ -360,8 +361,8 @@ export const Header = ({ children }) => {
                         border: "1px solid #cccc",
                         borderRadius: "5px",
                         padding: "5px 10px",
-                        background: pathname === link?.to ? "#b9292f" : null,
-                        color: pathname === link?.to ? "#fff" : "#000",
+                        border: pathname === link?.to ? "2px solid #b9292f" : "1px solid #ccc",
+                        color: pathname === link?.to ? "#b9292f" : "#000",
                       }}
                       _hover={{ background: "blue" }}
                       to={link.to}
