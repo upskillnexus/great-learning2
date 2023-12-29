@@ -2,6 +2,7 @@ import { Box, Button, Flex, Heading, Image, Text, useDisclosure } from "@chakra-
 import { hoverStyle } from "../../style/button.style";
 import { InquiryModal } from "../../Components/Modal/InquiryModal";
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 
 const Explore = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -40,7 +41,9 @@ const Explore = () => {
           </Text>
 
           <Button
-            onClick={() => onOpen()}
+            as={Link}
+            // to="" need to link this page with Our leader ship  Team
+            // onClick={() => onOpen()}
             border="1px solid #b9292f"
             bg="#b9292f"
             color="#fff"

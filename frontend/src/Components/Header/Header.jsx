@@ -76,7 +76,7 @@ export const Header = ({ children }) => {
       text: "Admissions",
       subMenu: [
         { text: "Admission Process", to: "/admission/process" },
-        { text: "Admission", to: "/admission" },
+        { text: "Application Form", to: "/admission" },
       ],
     },
     { text: "Latest News", to: "#" },
@@ -235,7 +235,7 @@ export const Header = ({ children }) => {
                     <MenuList>
                       {link.subMenu.map((subLink, subIndex) => (
                         <MenuItem
-                          border={pathname === subLink?.to ? "2px solid #b9292f" : "2px solid gray"}
+                          border={pathname === subLink?.to ? "2px solid #b9292f" : "2px solid none"}
                           color={pathname === subLink?.to ? "#b8292f" : "initial"}
                           as={Link}
                           to={subLink?.to}
@@ -342,7 +342,7 @@ export const Header = ({ children }) => {
                         {link.subMenu.map((subLink, subIndex) => (
                           <MenuItem
                             border={
-                              pathname === subLink?.to ? "2px solid #b9292f" : "2px solid gray"
+                              pathname === subLink?.to ? "2px solid #b9292f" : "2px solid none"
                             }
                             color={pathname === subLink?.to ? "#b8292f" : "initial"}
                             as={Link}

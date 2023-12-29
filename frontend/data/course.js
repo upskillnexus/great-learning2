@@ -20,6 +20,7 @@ export const occupation = [
 export const genders = [
   { name: "Male" },
   { name: "Female" }, //
+  { name: "Other" }, //
 ];
 
 export const allCourses = [

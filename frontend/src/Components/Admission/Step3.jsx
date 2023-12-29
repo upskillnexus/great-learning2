@@ -1,12 +1,20 @@
 import React, { useState } from "react";
-import { Box, Button, Flex, FormControl, Grid } from "@chakra-ui/react";
+import { Box, Button, Flex, FormControl, Grid, Text } from "@chakra-ui/react";
 
 import FormError from "../../core/FormError";
 import DyInput from "../DynamicInputs/DyInput";
 import { coursename, genders, occupation } from "../../../data/course";
 import DySelectBx from "../DynamicInputs/DySelectBx";
 
-const Step3 = ({ Controller, control, errors, prevStep, handleSubmit, handlOnSubmit }) => {
+const Step3 = ({
+  Controller,
+  control,
+  errors,
+  prevStep,
+  handleSubmit,
+  handlOnSubmit,
+  getValues,
+}) => {
   const modeOfPayment = [
     { name: "Cheque", value: "cheque" },
     { name: "NEFT/IMPS", value: "neft-imps" },
@@ -16,45 +24,27 @@ const Step3 = ({ Controller, control, errors, prevStep, handleSubmit, handlOnSub
     { name: "Paytm", value: "paytm" },
     { name: "Finance", value: "finance" },
   ];
+
+  console.log(getValues);
   return (
     <>
-      <Grid gridTemplateColumns={{ base: "repeat(1,1fr)", md: "repeat(4,1fr)" }} w="full" gap="5">
-        {/* Fullname */}
-        <Controller
-          control={control}
-          name="city"
-          rules={{ required: "City is required*" }}
-          render={({ field: { onChange, value } }) => (
-            <div>
-              <DyInput
-                value={value}
-                onChange={onChange}
-                title={"City/Town"}
-                placeholder="Your city/town"
-              />
-              <FormError err={errors} name="city" />
-            </div>
-          )}
-        />
-
-        {/*  */}
-        <Controller
-          control={control}
-          name="modeofpayment"
-          rules={{ required: "Payment Mode is required*" }}
-          render={({ field: { onChange, value } }) => (
-            <div>
-              <DySelectBx
-                value={value}
-                values={modeOfPayment}
-                onChange={onChange}
-                title={"Mode Of Payment"}
-                placeholder="--Select payment Mode--"
-              />
-              <FormError err={errors} name="modeofpayment" />
-            </div>
-          )}
-        />
+      <Grid
+        placeItems={"center"}
+        border="2px solid #b9292f"
+        gridTemplateColumns={"repeat(4,1fr)"}
+        p="5"
+        w="full"
+        gap="5"
+        rounded={"md"}
+      >
+        {/* */}
+        <Text>Full Name</Text>
+        <Text>{getValues?.fullname}</Text>
+        <Text>Full Name</Text>
+        <Text>Full Name</Text>
+        <Text>Full Name</Text>
+        <Text>Full Name</Text>
+        <Text>Full Name</Text>
       </Grid>
       <Flex justify={"end"} p="2" mt="4" gap="2">
         <Button onClick={() => prevStep()}>Back</Button>

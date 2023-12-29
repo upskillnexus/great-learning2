@@ -18,7 +18,7 @@ import DyInput from "../DynamicInputs/DyInput";
 import { coursename, genders, occupation } from "../../../data/course";
 import DySelectBx from "../DynamicInputs/DySelectBx";
 
-const Step2 = ({ Controller, control, errors, onNext, prevStep, handleSubmit }) => {
+const Step2 = ({ Controller, control, errors, onNext, prevStep, handleSubmit, handlePreview }) => {
   const leadFrom = [
     { name: "Reference" },
     { name: "Broucher" },
@@ -28,6 +28,7 @@ const Step2 = ({ Controller, control, errors, onNext, prevStep, handleSubmit }) 
     { name: "Website" },
     { name: "Sign Board" },
     { name: "IVR" },
+    { name: "Other" },
   ];
 
   return (
@@ -219,6 +220,7 @@ const Step2 = ({ Controller, control, errors, onNext, prevStep, handleSubmit }) 
       {/*  */}
       <Flex justify={"end"} p="2" mt="4" gap="2">
         <Button onClick={() => prevStep()}>Back</Button>
+        {/* <Button onClick={() => handlePreview()}>Preview</Button> */}
         <Button onClick={handleSubmit(onNext)}>Next</Button>
       </Flex>
     </>

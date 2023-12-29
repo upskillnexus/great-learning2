@@ -19,9 +19,10 @@ import {
 
 const AdmissionStapper = ({ step }) => {
   const steps = [
-    { title: "Step One", description: "Course" },
+    { title: "Step One", description: "Your Details" },
     { title: "Step Two", description: "Address & Mobile" },
-    { title: "Step Three", description: "Payment" },
+    { title: "Step Three", description: "Review & Submit" },
+    // { title: "Step Three", description: "Payment " },
   ];
   return (
     <>
@@ -37,8 +38,8 @@ const AdmissionStapper = ({ step }) => {
             </StepIndicator>
 
             <Box flexShrink="0">
-              <StepTitle>{step.title}</StepTitle>
-              <StepDescription>{step.description}</StepDescription>
+              <StepTitle>{step?.title}</StepTitle>
+              <StepDescription>{step?.description}</StepDescription>
             </Box>
 
             <StepSeparator />

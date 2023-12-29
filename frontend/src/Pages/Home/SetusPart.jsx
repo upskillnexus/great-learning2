@@ -45,7 +45,7 @@ function SetsUsApart() {
           text: "Assessments that align with the learning objectives. These include quizzes, assignments, labs, and final Project-Based Assesment.",
         },
         {
-          text: "We use both formative assessments (for learning), summative assessments (of learning) and constructive feedback mechanisms to assess and guide student learning outcomes.",
+          text: "We use both formative assessments (for learning), summative assessments (of learning), and constructive feedback mechanisms to assess and guide student learning outcomes.",
         },
       ],
     },
@@ -54,7 +54,7 @@ function SetsUsApart() {
       icon: MdCheckCircleOutline,
       content: [
         {
-          text: "100% Placement Assistance: After you complete your chosen training program with us, you will be able to perform the job role with expertise. In addition, we'll connect you with reputable employment opportunities.",
+          text: "After you complete your chosen training program with us, you will be able to perform the job role with expertise. In addition, we will connect you with reputable employment opportunities.",
         },
       ],
     },
@@ -63,7 +63,7 @@ function SetsUsApart() {
       icon: MdCheckCircleOutline,
       content: [
         {
-          text: "24/7 Career Support: No matter what stage of your career you are in, we are always available to help you with any issues pertaining to the training that you have taken from us.",
+          text: "No matter what stage of your career you are in, we are always available to help you with any issues pertaining to the training that you have taken from us.",
         },
       ],
     },
@@ -89,9 +89,9 @@ function SetsUsApart() {
             UpskillNexus Highlights
           </Heading>
           <Text w={{ base: "full", md: "70%" }} textAlign={{ base: "justify", md: "center" }}>
-            Here are the standout features that make <GetUpskillnexus text="UpskillNexus" /> unique
-            compared to other training providers. These are what set us apart and make us the go-to
-            choice for upskilling.
+            Here are the standout features that make
+            <GetUpskillnexus text="UpskillNexus" />
+            unique. These are what set us apart and make us the go-to choice for upskilling.
           </Text>
         </Flex>
 

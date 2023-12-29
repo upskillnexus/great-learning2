@@ -54,7 +54,7 @@ const Step1 = ({ Controller, control, errors, onNext, handleSubmit }) => {
         <Controller
           control={control}
           name="educational_institution"
-          rules={{ required: "Coruse is required*" }}
+          rules={{ required: "Course is required*" }}
           render={({ field: { onChange, value } }) => (
             <div>
               <DySelectBx
@@ -74,7 +74,7 @@ const Step1 = ({ Controller, control, errors, onNext, handleSubmit }) => {
         <Controller
           control={control}
           name="gender"
-          rules={{ required: "Coruse is required*" }}
+          rules={{ required: "Course is required*" }}
           render={({ field: { onChange, value } }) => (
             <div>
               <DySelectBx
@@ -94,7 +94,7 @@ const Step1 = ({ Controller, control, errors, onNext, handleSubmit }) => {
         <Controller
           control={control}
           name="occupation"
-          rules={{ required: "Coruse is required*" }}
+          rules={{ required: "Course is required*" }}
           render={({ field: { onChange, value } }) => (
             <div>
               <DySelectBx
@@ -238,7 +238,7 @@ const Step1 = ({ Controller, control, errors, onNext, handleSubmit }) => {
                 maxLength={500}
                 value={value}
                 onChange={onChange}
-                placeholder="Your Full Address."
+                placeholder="Write here..."
               />
             </div>
           )}

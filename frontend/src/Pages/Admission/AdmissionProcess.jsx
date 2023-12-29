@@ -12,12 +12,13 @@ const AdmissionProcess = () => {
       stepNumber: 2,
       stepName: "Screening Of Candidates",
       description:
-        "There will be a screening of candidates, once the candidates get the opportunity to participate in counseling sessions. Their resumes & cover letters will be reviewed.",
+        "There will be a screening of candidates. Candidates will get the opportunity to participate in counselling sessions.",
     },
     {
       stepNumber: 3,
       stepName: "Diagnostic Assessment",
-      description: "The candidates will undergo a diagnostic assessment and an interview.",
+      description:
+        "The candidates will undergo a diagnostic assessment and an interview. (Applies to some courses).",
     },
     {
       stepNumber: 4,
@@ -37,7 +38,15 @@ const AdmissionProcess = () => {
     },
   ];
   return (
-    <Flex justify={"center"} minH={"80vh"} align={"center"}>
+    <Flex justify={"center"} flexDir={"column"} minH={"80vh"} align={"center"}>
+      <Box w={{ base: "full", lg: "80%" }} p={{ base: 5, md: 0 }} mb="2">
+        <Text>
+          We are excited to guide you through our admission process, where your journey begins to
+          unfold new opportunities and possibilities. Our goal is to make the application process
+          seamless and transparent, ensuring that you have all the information and support you need
+          to embark on this exciting upskilling journey.
+        </Text>
+      </Box>
       <Grid
         w="80%"
         gridTemplateColumns={{

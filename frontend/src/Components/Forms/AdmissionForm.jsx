@@ -8,11 +8,12 @@ import AdmissionStapper from "../Admission/Stepper";
 import Step3 from "../Admission/Step3";
 
 const AdmissionForm = () => {
-  const [step, setStep] = useState(0);
+  const [step, setStep] = useState(2);
   const {
     handleSubmit,
     formState: { errors },
     control,
+    getValues,
   } = useForm();
 
   const nextStep = () => {
@@ -25,6 +26,10 @@ const AdmissionForm = () => {
 
   const handlOnSubmit = (data) => {
     console.log(data);
+  };
+
+  const handlePreview = () => {
+    // console.log(getValues());
   };
 
   return (
@@ -52,6 +57,7 @@ const AdmissionForm = () => {
               step={step}
               handleSubmit={handleSubmit}
               prevStep={prevStep}
+              handlePreview={handlePreview}
               onNext={nextStep}
             />
           )}
@@ -64,6 +70,7 @@ const AdmissionForm = () => {
               prevStep={prevStep}
               handleSubmit={handleSubmit}
               handlOnSubmit={handlOnSubmit}
+              getValues={getValues()}
             />
           )}
         </Box>

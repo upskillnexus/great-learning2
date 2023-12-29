@@ -140,7 +140,7 @@ const WhyChoose = () => {
             Why Choose <GetUpskillnexus text="UpskillNexus" />?
           </Heading>
           <Text w={{ base: "full", md: "90%" }} textAlign={{ base: "justify", md: "start" }}>
-            An individual’s success depends on all-round development. At{" "}
+            An individual’s success depends on all-round development. At
             <GetUpskillnexus text="UpskillNexus" />, we understand that a person should be able to
             apply their technical digital skills in a business domain to create opportunities and
             must hold the soft skills to manifest and maximize returns from the opportunity. So we

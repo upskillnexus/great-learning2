@@ -152,23 +152,25 @@ const Courses = () => {
             <Flex flexDir={"column"} align={"center"} textAlign={{ base: "justify", md: "center" }}>
               <Text w={{ base: "100%", md: "80%" }}>
                 <GetUpskillnexus text="UpskillNexus" />
-                UpskillNexus is an organisation invested in providing growth-oriented individuals
-                with high-quality authentic and practical training in digital technology. With our
+                is an organisation invested in providing growth-oriented individuals with
+                high-quality authentic and practical training in digital technology. With our
                 courses, career aspirants can develop their critical digital technology skills along
                 with employability skills for success in today’s business world.
               </Text>
               <Text w={{ base: "100%", md: "80%" }}>
-                <GetUpskillnexus text="UpskillNexus" /> provides training in the most significant
-                and demanding areas of Information Technology—
+                <GetUpskillnexus text="UpskillNexus" />
+                provides training in the most significant and demanding areas of Information
+                Technology—
                 <b>Cybersecurity, Data Science, and Digital Marketing Science.</b> Whether you are
                 experienced in these fields already or just starting out, we are here to help. Our
                 goal is to ensure that you have the skills and knowledge you need to succeed in the
                 world of information technology.
               </Text>
 
-              <Text w={{ base: "100%", md: "80%" }}>
-                Get upskilled with <GetUpskillnexus text="UpskillNexus" /> and get ready for a
-                rewarding IT career.
+              <Text fontSize={"24px"} w={{ base: "100%", md: "80%" }}>
+                Get upskilled with
+                <GetUpskillnexus text="UpskillNexus" />
+                and get ready for a rewarding IT career.
               </Text>
             </Flex>
           </Flex>

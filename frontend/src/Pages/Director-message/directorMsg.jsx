@@ -16,7 +16,7 @@ const DirectorMsg = () => {
     },
     {
       content:
-        "I am delighted to welcome you to UpskillNexus, a pioneering higher educational initiative committed to transforming lives through innovative upskilling programs in digital technology and employability skills.",
+        "I am delighted to welcome you to UpskillNexus, a pioneering organisation committed to transforming lives through innovative upskilling programs in digital technology and employability skills.",
     },
     {
       content:
@@ -31,7 +31,7 @@ const DirectorMsg = () => {
   const contentArray = [
     {
       content:
-        "As a pioneering institution, we are committed to fostering an environment where creativity, innovation and lifelong learning are at the core of our educational philosophy. Our dedicated trainers and industry experts bring real-world experience to the classroom, ensuring that our students are well-prepared to meet the challenges of the digitally enabled workspace.",
+        "As a pioneering training institution, we are committed to fostering an environment where creativity, innovation and lifelong learning are at the core of our educational philosophy. Our dedicated trainers and industry experts bring real-world experience to the classroom, ensuring that our students are well-prepared to meet the challenges of the digitally enabled workspace.",
     },
     {
       content:
@@ -56,7 +56,7 @@ const DirectorMsg = () => {
           flexDir={"column"}
           justify={"center"}
           p={{ base: "0", md: "8" }}
-          w={{ base: "95%", lg: "80%" }}
+          w={{ base: "95%", lg: "85%" }}
           gap={{ base: 0, md: "3" }}
         >
           <Flex
@@ -69,7 +69,7 @@ const DirectorMsg = () => {
             justify={{ base: "start", lg: "space-between" }}
             // bg="red"
           >
-            <Box rounded={"md"} w={{ base: "full", lg: "60%" }} p="3" textAlign={"justify"}>
+            <Box rounded={"md"} w={{ base: "full", lg: "65%" }} p="3" textAlign={"justify"}>
               {contentArray1.map((ele, i) => (
                 <Box key={i}>
                   <Heading color="#b9292f" size={"md"}>
@@ -94,7 +94,9 @@ const DirectorMsg = () => {
           {/*  */}
           <Box
             textAlign={"justify"}
-            mt={{ base: "0", md: 3 }}
+            mt={{ base: "0", md: 0 }}
+            position="relative"
+            top="-20px"
             // border={"2px solid #cccccc6e"}
             // shadow={"0 0 3px rgba(0,0,0,0.2)"}
             p="5"
@@ -110,7 +112,7 @@ const DirectorMsg = () => {
             <Flex justify={"start"}>
               <Box w="auto">
                 <Text lineHeight={0} mt="9">
-                  sincerely,
+                  Sincerely,
                 </Text>
                 <Image h="auto" w="100px" src="/director/signature.png" />
                 <Text lineHeight={1.2} fontWeight={"bold"}>
