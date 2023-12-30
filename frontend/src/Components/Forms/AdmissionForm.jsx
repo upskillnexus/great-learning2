@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import DyInput from "../DynamicInputs/DyInput";
 import { Box, Button, Flex } from "@chakra-ui/react";
 import { Controller, useForm } from "react-hook-form";
@@ -8,13 +8,16 @@ import AdmissionStapper from "../Admission/Stepper";
 import Step3 from "../Admission/Step3";
 
 const AdmissionForm = () => {
-  const [step, setStep] = useState(2);
+  const [step, setStep] = useState(0);
   const {
     handleSubmit,
     formState: { errors },
     control,
     getValues,
+    watch,
+    reset,
   } = useForm();
+  const formData = watch();
 
   const nextStep = () => {
     setStep(step + 1);
@@ -29,14 +32,29 @@ const AdmissionForm = () => {
   };
 
   const handlePreview = () => {
-    // console.log(getValues());
+    console.log(formData);
   };
+
+  useEffect(() => {
+    console.log(formData);
+    if (formData?.occupation == "student") {
+      reset({
+        designation: "",
+        educationalQualifications: "",
+        companyName: "",
+      });
+    } else if (formData?.occupation != "student") {
+      reset({
+        educational_institution: "",
+      });
+    }
+  }, [watch]);
 
   return (
     <>
-      <Flex justify={"center"} align={"center"} p="4">
+      <Flex justify={"center"} align={"center"} p={{ base: 2, md: "5" }}>
         {/* <form > */}
-        <Box w="80%" p="5">
+        <Box w={{ base: "full", md: "90%", lg: "80%" }} p={{ base: 2, md: "5" }}>
           <AdmissionStapper step={step} />
 
           {step == 0 && (
@@ -47,6 +65,7 @@ const AdmissionForm = () => {
               step={step}
               handleSubmit={handleSubmit}
               onNext={nextStep}
+              getValues={watch()}
             />
           )}
           {step == 1 && (
@@ -70,7 +89,7 @@ const AdmissionForm = () => {
               prevStep={prevStep}
               handleSubmit={handleSubmit}
               handlOnSubmit={handlOnSubmit}
-              getValues={getValues()}
+              getValues={watch()}
             />
           )}
         </Box>

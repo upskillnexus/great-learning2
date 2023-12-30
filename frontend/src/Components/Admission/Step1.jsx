@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Flex, FormControl, Grid, Text, Textarea } from "@chakra-ui/react";
 
 import FormError from "../../core/FormError";
@@ -6,12 +6,10 @@ import DyInput from "../DynamicInputs/DyInput";
 import { coursename, genders, occupation } from "../../../data/course";
 import DySelectBx from "../DynamicInputs/DySelectBx";
 
-const Step1 = ({ Controller, control, errors, onNext, handleSubmit }) => {
-  const [ocu, setOcu] = useState("");
-
+const Step1 = ({ Controller, control, errors, onNext, handleSubmit, getValues }) => {
   return (
     <>
-      <Grid gridTemplateColumns={"repeat(4,1fr)"} w="full" gap="5">
+      <Grid gridTemplateColumns={"repeat(3,1fr)"} w="full" gap="5">
         {/* Fullname */}
         <Controller
           control={control}
@@ -53,7 +51,7 @@ const Step1 = ({ Controller, control, errors, onNext, handleSubmit }) => {
         {/* educational_institution */}
         <Controller
           control={control}
-          name="educational_institution"
+          name="course"
           rules={{ required: "Course is required*" }}
           render={({ field: { onChange, value } }) => (
             <div>
@@ -99,9 +97,7 @@ const Step1 = ({ Controller, control, errors, onNext, handleSubmit }) => {
             <div>
               <DySelectBx
                 value={value}
-                onChange={(val) => {
-                  onChange(val), setOcu(val.target.value);
-                }}
+                onChange={onChange}
                 title={"Occupation"}
                 placeholder="--Select Occupation--"
                 values={occupation}
@@ -115,15 +111,15 @@ const Step1 = ({ Controller, control, errors, onNext, handleSubmit }) => {
       {/*  */}
       <Grid gridTemplateColumns={"repeat(3,1fr)"} mt="5" gap="5">
         {/* if occupation is Student */}
-        {ocu == "" ? null : ocu == "student" ? (
+        {getValues?.occupation == "" ? null : getValues?.occupation == "student" ? (
           <>
             <Controller
               control={control}
-              name="course"
+              name="institution_name"
               render={({ field: { onChange, value } }) => (
                 <div>
                   <DyInput
-                    value={value}
+                    value={getValues?.institution_name}
                     onChange={onChange}
                     title="Educational Institution’s Name"
                     type="text"
@@ -142,7 +138,12 @@ const Step1 = ({ Controller, control, errors, onNext, handleSubmit }) => {
               rules={{ required: "Designation is required*" }}
               render={({ field: { onChange, value } }) => (
                 <div>
-                  <DyInput value={value} onChange={onChange} title="Designation" type="text" />
+                  <DyInput
+                    value={getValues?.designation}
+                    onChange={onChange}
+                    title="Designation"
+                    type="text"
+                  />
                   <FormError err={errors} name="designation" />
                 </div>
               )}
@@ -155,7 +156,7 @@ const Step1 = ({ Controller, control, errors, onNext, handleSubmit }) => {
               render={({ field: { onChange, value } }) => (
                 <div>
                   <DyInput
-                    value={value}
+                    value={getValues?.companyName}
                     onChange={onChange}
                     title="Company/Organization Name"
                     type="text"
@@ -172,7 +173,7 @@ const Step1 = ({ Controller, control, errors, onNext, handleSubmit }) => {
               render={({ field: { onChange, value } }) => (
                 <div>
                   <DyInput
-                    value={value}
+                    value={getValues?.educationalQualifications}
                     onChange={onChange}
                     title="Educational Qualifications"
                     type="text"

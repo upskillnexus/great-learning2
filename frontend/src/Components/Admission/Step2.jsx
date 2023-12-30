@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import {
   Box,
   Button,
+  Checkbox,
   Flex,
   FormControl,
   Grid,
@@ -33,7 +34,7 @@ const Step2 = ({ Controller, control, errors, onNext, prevStep, handleSubmit, ha
 
   return (
     <>
-      <Grid gridTemplateColumns={{ base: "repeat(1,1fr)", md: "repeat(4,1fr)" }} w="full" gap="5">
+      <Grid gridTemplateColumns={"repeat(3,1fr)"} w="full" gap="5">
         {/* Fullname */}
 
         <Controller
@@ -179,7 +180,7 @@ const Step2 = ({ Controller, control, errors, onNext, prevStep, handleSubmit, ha
       </Grid>
       {/*  */}
 
-      <Grid gridTemplateColumns={"repeat(1,1fr)"} mt="5" gap="0">
+      <Grid gridTemplateColumns={"repeat(1,1fr)"} w="full" mt="5" gap="0">
         <Controller
           control={control}
           name="address"
@@ -215,6 +216,26 @@ const Step2 = ({ Controller, control, errors, onNext, prevStep, handleSubmit, ha
             </Box>
           )}
         />
+
+        {/*  */}
+        <Controller
+          control={control}
+          name="declaration"
+          rules={{
+            required: "Please check this field.",
+          }}
+          render={({ field: { onChange, value } }) => (
+            <Box mt="5">
+              <Checkbox onChange={(e) => onChange(e.target.checked)} checked={value}>
+                I certify that the information I have written on the application form and the
+                documents I have submitted are true and accurate.
+              </Checkbox>
+              <FormError err={errors} name="declaration" />
+            </Box>
+          )}
+        />
+
+        {/*  */}
       </Grid>
 
       {/*  */}
