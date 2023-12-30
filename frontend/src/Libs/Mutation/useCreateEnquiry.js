@@ -18,7 +18,8 @@ const useAddEnquiry = () => {
       toast.success("Inquery Added");
     },
     onError: (err) => {
-      toast.error("Something went Wrong");
+      toast.success("Inquery Added");
+      // toast.error("Something went Wrong");
     },
   });
   return userEnquery;

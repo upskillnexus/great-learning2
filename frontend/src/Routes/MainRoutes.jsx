@@ -37,9 +37,6 @@ export const MainRoutes = () => {
         <Route path="/refund-policy" element={<RefundPolicy />} />
         <Route path="/term-conditions" element={<Term_condition />} />
 
-        {/* <Route path="/data-science" element={<Datascience />} /> */}
-        {/* <Route path="/cyber-security" element={<Cybercourse />} /> */}
-        {/* <Route path="/ai-machine" element={<Aimachine />} /> */}
         <Route path="/about" element={<About />} />
         <Route path="/refund-policy" element={<Refund />} />
         <Route path="/terms_of_use" element={<Terms />} />
@@ -64,3 +61,13 @@ export const MainRoutes = () => {
 };
 
 // #f5dad7
+
+{
+  /* <Route path="/data-science" element={<Datascience />} /> */
+}
+{
+  /* <Route path="/cyber-security" element={<Cybercourse />} /> */
+}
+{
+  /* <Route path="/ai-machine" element={<Aimachine />} /> */
+}
