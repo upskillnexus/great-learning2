@@ -12,15 +12,13 @@ const useAddEnquiry = () => {
       const res = await axios.get(
         `https://crm.veblika.com/api/lead/custom/0105?name=${formdata?.fullname}&email=${formdata?.email}&mobileno=${formdata?.phone}&course=${formdata?.course}`
       );
-      console.log(res);
       return res?.data;
     },
     onSuccess: (data) => {
-      queryClient.invalidateQueries("enquiry");
-      toast.success(data?.message);
+      toast.success("Inquery Added");
     },
     onError: (err) => {
-      toast.error(err?.response?.data?.message);
+      toast.error("Something went Wrong");
     },
   });
   return userEnquery;
