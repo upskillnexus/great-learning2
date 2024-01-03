@@ -32,23 +32,31 @@ const AdmissionForm = () => {
   };
 
   const handlePreview = () => {
-    console.log(formData);
+    // console.log(formData);
   };
 
   useEffect(() => {
-    console.log(formData);
+    // console.log(formData);
+    if (formData?.occupation == "") {
+      reset({
+        designation: "",
+        educationalQualifications: "",
+        companyName: "",
+        institution_name: "",
+      });
+    }
     if (formData?.occupation == "student") {
       reset({
         designation: "",
         educationalQualifications: "",
         companyName: "",
       });
-    } else if (formData?.occupation != "student") {
+    } else {
       reset({
-        educational_institution: "",
+        institution_name: "",
       });
     }
-  }, [watch]);
+  }, [watch, reset]);
 
   return (
     <>

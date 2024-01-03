@@ -1,6 +1,6 @@
 export const digitalMarket = {
   title: "Digital Marketing Science Training Program in Delhi NCR",
-  text: "Anyone who takes the DIDM Digital Marketing Science Course will be able to learn about the complete science of digital marketing..",
+  text: "Anyone who takes the UpskillNexus Digital Marketing Science Course will be able to learn about the complete science of digital marketing..",
   logo: [
     {
       img: "https://didm.in/assets/upload/images/Untitled%20design.gif",
@@ -27,5 +27,5 @@ export const digitalMarket = {
 
 export const courseInfoDigital = {
   title: "Digital Marketing Science Training Specification",
-  subTitle: "The Digital Marketing Science course offered by DIDM is unlike any other course you have ever heard of before. This digital marketing course in Delhi NCR has specifications that are unlike anything else you are likely to see in the digital marketing education world..",
+  subTitle: "The Digital Marketing Science course offered by UpskillNexus is unlike any other course you have ever heard of before. This digital marketing course in Delhi NCR has specifications that are unlike anything else you are likely to see in the digital marketing education world..",
 };

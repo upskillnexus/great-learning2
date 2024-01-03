@@ -1,5 +1,5 @@
 import { AddIcon, MinusIcon } from "@chakra-ui/icons";
-import { Accordion, AccordionButton, AccordionItem, AccordionPanel, Box, Flex, Heading, Text } from "@chakra-ui/react";
+import { Accordion, AccordionButton, AccordionItem, AccordionPanel, Box, Flex, Heading, Text, UnorderedList } from "@chakra-ui/react";
 import React from "react";
 import { FaQuestionCircle } from "react-icons/fa";
 import InquiryFrms2 from "../Forms/InquiryFrms2";
@@ -37,7 +37,7 @@ const DynamicAccordians = ({ data, title, subTitle }) => {
                         {isExpanded ? <MinusIcon fontSize="12px" /> : <AddIcon color="white" fontSize="12px" />}
                       </AccordionButton>
                       <AccordionPanel color="white" pb={4}>
-                        {ele?.text}
+                            {ele?.text}
                       </AccordionPanel>
                     </Flex>
                   </>

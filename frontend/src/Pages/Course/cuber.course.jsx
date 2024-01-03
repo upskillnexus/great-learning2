@@ -9,6 +9,9 @@ import {
   Center,
   Grid,
   useDisclosure,
+  ListItem,
+  OrderedList,
+  UnorderedList,
 } from "@chakra-ui/react";
 import DigitalMarketingHighlights from "../../Components/Course/DigitalMar";
 import DynamicCard from "../../Components/Cards/DynamicCard";
@@ -80,11 +83,28 @@ const CyberSecurityCourse = () => {
     },
     {
       description: "Who Is This Course For?",
-      text: "If you’ve got a passion for technology and a curiosity about cybersecurity, this is where you need to be. Our course is designed for: IT professionals aiming to specialize in cybersecurity.  - Graduates from computer science, information technology, or related fields. System administrators, network engineers, and other tech roles seeking to bolster their security knowledge. Self-taught tech whizzes looking to formalize and expand their expertise.",
+      text: <>
+        <b>If you’ve got a passion for technology and a curiosity about cybersecurity, this is where you need to be:-</b>
+        <UnorderedList>
+          <ListItem>Our course is designed for: IT professionals aiming to specialize in cybersecurity.</ListItem>
+          <ListItem>Graduates from computer science, information technology, or related fields</ListItem>
+          <ListItem>System administrators, network engineers, and other tech roles seeking to bolster their security knowledge.</ListItem>
+          <ListItem>Self-taught tech whizzes looking to formalize and expand their expertise.</ListItem>
+        </UnorderedList>
+      </>
+  
     },
     {
       description: "Prerequisites:",
-      text: "Before you jump in, here's what we expect you to know: -          Basic understanding of computer networks and how the internet works. -          Comfort with common operating systems, primarily Windows and Linux. -          Fundamentals of programming are a bonus but not a deal-breaker. -          Eagerness to learn and a commitment to tackle complex challenges head-on",
+      text: <>
+        <b>Before you jump in, here's what we expect you to know:-</b>
+      <UnorderedList>
+        <ListItem>Basic understanding of computer networks and how the internet works.</ListItem>
+        <ListItem>Comfort with common operating systems, primarily Windows and Linux.</ListItem>
+        <ListItem>Fundamentals of programming are a bonus but not a deal-breaker</ListItem>
+        <ListItem>Eagerness to learn and a commitment to tackle complex challenges head-on</ListItem>
+      </UnorderedList>
+      </>
     },
   ];
 
@@ -420,7 +440,7 @@ const CyberSecurityCourse = () => {
                     borderColor="#e95454"
                     color="#fff"
                   >
-                    Enquiry Now
+                    Enquire Now
                   </Button>
                 </Flex>
                 <Grid
@@ -490,7 +510,7 @@ const CyberSecurityCourse = () => {
               onOpen={onOpen}
               bg="#b9292f"
               borderRadius="none"
-              button="Enquiry Now"
+              button="Enquire Now"
               title={"Best Certification Course on Cyber Security"}
               text="Best-in-class Cyber Security course content taught by leading faculty and industry leaders in the form of online marketing classes, recorded video lectures, case studies and live projects. Now integrated with Generative AI modules."
             />
@@ -542,7 +562,7 @@ const CyberSecurityCourse = () => {
               onOpen={onOpen}
               bg="#b9292f"
               borderRadius="none"
-              button="Enquiry Now"
+              button="Enquire Now"
               title={"Our Most Popular Cyber Security Courses"}
               text="Explore our top Cyber Security Courses and take the first step towards career success."
             />
@@ -567,7 +587,7 @@ const CyberSecurityCourse = () => {
               bg="#b9292f"
               borderRadius="none"
               title={"Still have questions? Call @999-095-2299 for answers"}
-              button={"Enquiry Now"}
+              button={"Enquire Now"}
             />
           </Box>
 

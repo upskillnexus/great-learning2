@@ -445,7 +445,7 @@ const DataScienceCourse = () => {
                     borderColor="#e95454"
                     color="#fff"
                   >
-                    Enquiry Now
+                    Enquire Now
                   </Button>
                 </Flex>
                 <Grid
@@ -525,7 +525,7 @@ const DataScienceCourse = () => {
               onOpen={onOpen}
               bg="#b9292f" //
               borderRadius="none"
-              button="Enquiry Now"
+              button="Enquire Now"
               title={"Best Certification Course on Data Science & Machine Learning"}
               text="Best-in-class content by leading faculty & industry experts in the form of industry projects, assignments & live sessions."
             />
@@ -559,7 +559,7 @@ const DataScienceCourse = () => {
               onOpen={onOpen}
               bg="#b9292f"
               borderRadius="none"
-              button="Enquiry Now"
+              button="Enquire Now"
               title={"Become a Data Science Expert"}
               text="Earn a verified Certificate after the completion of the Course covering the
               entire Data Science workflow. Novice or Expert, You'll gain vast
@@ -597,7 +597,7 @@ const DataScienceCourse = () => {
               bg="#b9292f"
               borderRadius="none"
               title={"Still have questions? Call @999-095-2299 for answers"}
-              button={"Enquiry Now"}
+              button={"Enquire Now"}
             />
           </Box>
 

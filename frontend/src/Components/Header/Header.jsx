@@ -46,7 +46,7 @@ import { InquiryModal } from "../Modal/InquiryModal";
 import { coursename } from "../../../data/course";
 
 export const Header = ({ children }) => {
-  const [isSmallerThanMd] = useMediaQuery("(max-width: 1153px)");
+  const [isSmallerThanMd] = useMediaQuery("(max-width: 1385px)");
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const { pathname } = useLocation();
 

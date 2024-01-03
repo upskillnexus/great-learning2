@@ -49,7 +49,7 @@ const About = () => {
         <Text fontWeight={"medium"}>
           We are
           <GetUpskillnexus text="UpskillNexus" />, a team of dedicated corporate industry leaders
-          with a committed to skill and digitally empower professionals. We upskill people in
+          with a commitment to skill and digitally empower professionals. We upskill people in
           digital technologies to help them become prosperous. We provide high-quality authentic and
           practical training to career aspirants to develop their critical technical and digital
           skills along with employability skills for success in today’s business world.

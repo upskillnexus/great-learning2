@@ -245,15 +245,15 @@ const Courses = () => {
                     minH={"250px"}
                   >
                     <Box p="2">
-                      <Link to={`/course/${ele?.link}`}>
-                        <Heading textAlign={"center"} size="md">
-                          {ele?.programName}
-                        </Heading>
-                        <Text>
-                          <GetUpskillnexus text={ele?.poweredBy} bold="500" />
-                          {ele?.para}
-                        </Text>
-                      </Link>
+                      {/* <Link to={`/course/${ele?.link}`}> */}
+                      <Heading textAlign={"center"} size="md">
+                        {ele?.programName}
+                      </Heading>
+                      <Text>
+                        <GetUpskillnexus text={ele?.poweredBy} bold="500" />
+                        {ele?.para}
+                      </Text>
+                      {/* </Link> */}
 
                       <Text>{ele.duration}</Text>
                     </Box>
@@ -265,26 +265,27 @@ const Courses = () => {
                       alignItems="center"
                       justify={"space-between"}
                     >
-                      <a
+                      {/* <a
                         style={{
                           border: "4px solid none",
                         }}
                         href={`/course/${ele?.link}`}
+                      > */}
+                      <Button
+                        _hover={{
+                          bg: "none",
+                        }}
+                        w="full"
+                        h="full"
+                        borderRadius={"0"}
+                        border={"1px solid none"}
+                        bg="none"
+                        color="#b9292f"
+                        onClick={() => onOpen()}
                       >
-                        <Button
-                          _hover={{
-                            bg: "none",
-                          }}
-                          w="full"
-                          h="full"
-                          borderRadius={"0"}
-                          border={"1px solid none"}
-                          bg="none"
-                          color="#b9292f"
-                        >
-                          View Program
-                        </Button>
-                      </a>
+                        View Program
+                      </Button>
+                      {/* </a> */}
                       <Button
                         d="flex"
                         align={"center"}

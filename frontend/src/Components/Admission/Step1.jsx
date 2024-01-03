@@ -63,7 +63,7 @@ const Step1 = ({ Controller, control, errors, onNext, handleSubmit, getValues })
                 values={coursename}
               />
 
-              <FormError err={errors} name="educational_institution" />
+              <FormError err={errors} name="course" />
             </div>
           )}
         />
@@ -111,13 +111,14 @@ const Step1 = ({ Controller, control, errors, onNext, handleSubmit, getValues })
       {/*  */}
       <Grid gridTemplateColumns={"repeat(3,1fr)"} mt="5" gap="5">
         {/* if occupation is Student */}
-        {getValues?.occupation == "" ? null : getValues?.occupation == "student" ? (
+
+        {getValues?.occupation === "student" && (
           <>
             <Controller
               control={control}
               name="institution_name"
               render={({ field: { onChange, value } }) => (
-                <div>
+                <div className="">
                   <DyInput
                     value={getValues?.institution_name}
                     onChange={onChange}
@@ -128,62 +129,65 @@ const Step1 = ({ Controller, control, errors, onNext, handleSubmit, getValues })
               )}
             />
           </>
-        ) : (
-          <>
-            {/* if occupation is Student */}
-
-            <Controller
-              control={control}
-              name="designation"
-              rules={{ required: "Designation is required*" }}
-              render={({ field: { onChange, value } }) => (
-                <div>
-                  <DyInput
-                    value={getValues?.designation}
-                    onChange={onChange}
-                    title="Designation"
-                    type="text"
-                  />
-                  <FormError err={errors} name="designation" />
-                </div>
-              )}
-            />
-
-            <Controller
-              control={control}
-              name="companyName"
-              rules={{ required: "Company/Organization Name is required*" }}
-              render={({ field: { onChange, value } }) => (
-                <div>
-                  <DyInput
-                    value={getValues?.companyName}
-                    onChange={onChange}
-                    title="Company/Organization Name"
-                    type="text"
-                  />
-                  <FormError err={errors} name="companyName" />
-                </div>
-              )}
-            />
-
-            <Controller
-              control={control}
-              name="educationalQualifications"
-              rules={{ required: "Educational Qualifications is required*" }}
-              render={({ field: { onChange, value } }) => (
-                <div>
-                  <DyInput
-                    value={getValues?.educationalQualifications}
-                    onChange={onChange}
-                    title="Educational Qualifications"
-                    type="text"
-                  />
-                  <FormError err={errors} name="educationalQualifications" />
-                </div>
-              )}
-            />
-          </>
         )}
+        {getValues?.occupation == "" || getValues?.occupation == null
+          ? null
+          : getValues?.occupation !== "student" && (
+              <>
+                {/* if occupation is Student */}
+
+                <Controller
+                  control={control}
+                  name="designation"
+                  rules={{ required: "Designation is required*" }}
+                  render={({ field: { onChange, value } }) => (
+                    <div>
+                      <DyInput
+                        value={getValues?.designation}
+                        onChange={onChange}
+                        title="Designation"
+                        type="text"
+                      />
+                      <FormError err={errors} name="designation" />
+                    </div>
+                  )}
+                />
+
+                <Controller
+                  control={control}
+                  name="companyName"
+                  rules={{ required: "Company/Organization Name is required*" }}
+                  render={({ field: { onChange, value } }) => (
+                    <div>
+                      <DyInput
+                        value={getValues?.companyName}
+                        onChange={onChange}
+                        title="Company/Organization Name"
+                        type="text"
+                      />
+                      <FormError err={errors} name="companyName" />
+                    </div>
+                  )}
+                />
+
+                <Controller
+                  control={control}
+                  name="educationalQualifications"
+                  rules={{ required: "Educational Qualifications is required*" }}
+                  render={({ field: { onChange, value } }) => (
+                    <div>
+                      <DyInput
+                        value={getValues?.educationalQualifications}
+                        onChange={onChange}
+                        title="Educational Qualifications"
+                        type="text"
+                      />
+                      <FormError err={errors} name="educationalQualifications" />
+                    </div>
+                  )}
+                />
+              </>
+            )}
         {/* Elase */}
       </Grid>
 

@@ -242,7 +242,7 @@ const Step2 = ({ Controller, control, errors, onNext, prevStep, handleSubmit, ha
       <Flex justify={"end"} p="2" mt="4" gap="2">
         <Button onClick={() => prevStep()}>Back</Button>
         {/* <Button onClick={() => handlePreview()}>Preview</Button> */}
-        <Button onClick={handleSubmit(onNext)}>Next</Button>
+        <Button onClick={handleSubmit(onNext)}>Preview</Button>
       </Flex>
     </>
   );

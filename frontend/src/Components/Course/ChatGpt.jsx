@@ -36,7 +36,7 @@ const ChatGPTComponent = ({ onOpen, title, subTitle, data }) => {
           ))}
         </Flex>
         <Button onClick={() => onOpen()} border="1px solid #b9292f" bg="transparent" color="#b9292f" _hover={{ bg: "#b9292f", color: "#fff" }}>
-          Enquiry Now
+        Enquire Now
         </Button>
       </Flex>
     </Flex>

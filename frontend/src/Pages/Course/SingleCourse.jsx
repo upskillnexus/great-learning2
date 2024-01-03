@@ -62,7 +62,7 @@ const SingleCourse = () => {
     {
       description:
         "For every individual chapter of the course, you will learn from a specific 'specialized' trainer.",
-      text: "At DIDM, we understand that every digital marketer has a different specialty, and that is why in our digital marketing science course, each individual chapter will be taught by a different trainer who has specialized skills in that field. This means that each student will benefit from the expertise of a wide range of professionals and gain a comprehensive understanding of digital marketing. From performance marketing to programmatic advertising, the digital marketing agency professionals who we have appointed as trainers will ensure that every student gets a well-rounded education in the field. With this unique approach, we are confident that our trainees will be equipped with the necessary skills and knowledge to succeed in the digital marketing industry.",
+      text: "At UpskillNexus, we understand that every digital marketer has a different specialty, and that is why in our digital marketing science course, each individual chapter will be taught by a different trainer who has specialized skills in that field. This means that each student will benefit from the expertise of a wide range of professionals and gain a comprehensive understanding of digital marketing. From performance marketing to programmatic advertising, the digital marketing agency professionals who we have appointed as trainers will ensure that every student gets a well-rounded education in the field. With this unique approach, we are confident that our trainees will be equipped with the necessary skills and knowledge to succeed in the digital marketing industry.",
     },
     {
       description: "Any of the agencies your trainers work for can hire you.",
@@ -193,7 +193,7 @@ const SingleCourse = () => {
 
   const topData = {
     title: "Digital Marketing Science Training Program in Delhi NCR",
-    text: "Anyone who takes the DIDM Digital Marketing Science Course will be able to learn about the complete science of digital marketing..",
+    text: "Anyone who takes the UpskillNexus Digital Marketing Science Course will be able to learn about the complete science of digital marketing..",
     logo: [
       {
         img: "https://didm.in/assets/upload/images/Untitled%20design.gif",
@@ -458,7 +458,7 @@ const SingleCourse = () => {
                     borderColor="#e95454"
                     color="#fff"
                   >
-                    Enquiry Now
+                    Enquire Now
                   </Button>
                 </Flex>
                 <Grid
@@ -505,7 +505,7 @@ const SingleCourse = () => {
             <DigitalMarketingHighlights
               data={DigitalhighlightsData}
               subTitle={
-                "The Digital Marketing Science course offered by DIDM is unlike any other course you have ever heard of before. This digital marketing course in Delhi NCR has specifications that are unlike anything else you are likely to see in the digital marketing education world.."
+                "The Digital Marketing Science course offered by UpskillNexus is unlike any other course you have ever heard of before. This digital marketing course in Delhi NCR has specifications that are unlike anything else you are likely to see in the digital marketing education world.."
               }
               title={"Digital Marketing Science Training Specification"}
             />
@@ -528,7 +528,7 @@ const SingleCourse = () => {
               onOpen={onOpen}
               bg="#b9292f"
               borderRadius="none"
-              button="Enquiry Now"
+              button="Enquire Now"
               title={"Best Certification Course on Digital Marketing"}
               text="Best-in-class digital marketing course content taught by leading faculty and industry leaders in the form of online marketing classes, recorded video lectures, case studies and live projects. Now integrated with Generative AI modules."
             />
@@ -580,9 +580,9 @@ const SingleCourse = () => {
               onOpen={onOpen}
               bg="#b9292f"
               borderRadius="none"
-              button="Enquiry Now"
+              button="Enquire Now"
               title={"Eligibility Criteria"}
-              text="The eligibility criteria for DIDM’s digital marketing science course is, the applicant must have at least one year of experience working in a digital marketing role."
+              text="The eligibility criteria for UpskillNexus's digital marketing science course is, the applicant must have at least one year of experience working in a digital marketing role."
             />
           </Box>
           {/*  */}
@@ -602,7 +602,7 @@ const SingleCourse = () => {
               bg="#b9292f"
               borderRadius="none"
               title={"Still have questions? Call @999-095-2299 for answers"}
-              button={"Enquiry Now"}
+              button={"Enquire Now"}
             />
           </Box>
 

@@ -29,12 +29,12 @@ const InqueryFrms = () => {
   return (
     <Box width="100%" minH="550px" bg="#fff" display={{ base: "block", md: "flex" }} rounded={"md"}>
       {/* Left Part */}
-      <Box width={{ base: "100%", md: "60%" }} py="0" bg="#e95454" color="#fff" roundedLeft={{ base: "none", md: "md" }}>
-        <Image h="full" w="full" objectFit={"cover"} src="/inquery/form-image2.png" />
+      <Box width={{ base: "100%", md: "50%" }} py="0" bg="#e95454" color="#fff" roundedLeft={{ base: "none", md: "md" }}>
+        <Image h="full" w="full" objectFit={"contain"} src="/inquery/form-image2.png" />
       </Box>
 
       {/* Right Part */}
-      <Flex flexDir={"column"} justify={"center"} width={{ base: "100%", md: "60%" }} p={4}>
+      <Flex flexDir={"column"} justify={"center"} width={{ base: "100%", md: "50%" }} p={4}>
         <Heading size={{ base: "20px", md: "lg" }} fontWeight={"medium"} mb={4}>
           Confused? Why not let us help!
         </Heading>

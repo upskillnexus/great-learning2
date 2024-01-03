@@ -6,20 +6,7 @@ import { FaPlay } from "react-icons/fa6";
 const Reason_to_Join = () => {
   return (
     <>
-      {/* Box 1 */}
-      {/* <Box p={4} w="60%" mb={{ base: 4, md: 0 }}>
-          <Heading as="h2" size="md" mb={4} bg="#b9292f" color="#fff" p="5" textAlign={"center"}>
-            150+ Reason to Join DIDM
-          </Heading>
-          <Box>
-            <Image w="full" src="https://didm.in/assets/upload/images/Digital%20Marketing%20Science%20Fees%20by%20DIDM.jpg" />
-          </Box>
-          <Box my="3" textAlign={"center"}>
-            <Button colorScheme="red" bg="#b9292f">
-              Watch More Reviews
-            </Button>
-          </Box>
-        </Box> */}
+     
 
       {/* Box 2 */}
       {/* Box with Image */}
@@ -33,7 +20,7 @@ const Reason_to_Join = () => {
           {/*  */}
           <Flex w="80%" p={4} shadow={"sm"} rounded={"sm"} borderWidth={"1"} border={"1px solid rgba(0,0,0,0.2)"} bg="white" gap="3">
             <Box h="full" w="30%">
-              <Image src="https://didm.in/assets/upload/images/Digital%20Marketing%20Science%20Fees%20by%20DIDM.jpg" alt="Digital Marketing Science Fees by DIDM" style={{ width: "100%", height: "auto" }} />
+              <Image src="https://didm.in/assets/upload/images/Digital%20Marketing%20Science%20Fees%20by%20DIDM.jpg" alt="Digital Marketing Science Fees by UpskillNexus" style={{ width: "100%", height: "auto" }} />
             </Box>
             <Box>
               <Text fontSize="md" mb={4}>
@@ -53,14 +40,14 @@ const Reason_to_Join = () => {
           {/*  */}
           <Flex flexDir={"column"} w="20%" p={4} shadow="sm" rounded="sm" borderWidth="1" border="1px solid rgba(0,0,0,0.2)" bg="white" gap="3" position="relative">
             <Box w="ful" position={"relative"}>
-              <Image src="https://didm.in/assets/upload/images/Digital%20Marketing%20Science%20Fees%20by%20DIDM.jpg" alt="Digital Marketing Science Fees by DIDM" style={{ width: "100%", height: "auto" }} />
+              <Image src="https://didm.in/assets/upload/images/Digital%20Marketing%20Science%20Fees%20by%20DIDM.jpg" alt="Digital Marketing Science Fees by UpskillNexus" style={{ width: "100%", height: "auto" }} />
               <Box position="absolute" top="50%" left="50%" transform="translate(-50%, -50%)">
                 <Button colorScheme="red" bg="#b9292f">
                   <FaPlay />
                 </Button>
               </Box>
             </Box>
-            <Heading size={"sm"}>150+ Reason to Join DIDM</Heading>
+            <Heading size={"sm"}>150+ Reason to Join UpskillNexus</Heading>
           </Flex>
           {/*  */}
         </Flex>
