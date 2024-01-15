@@ -24,7 +24,7 @@ const DyInput = ({
         <Text fontWeight={"medium"} lineHeight={1}>
           {title}
         </Text>
-        <Box w="full" mt="1px">
+        <Flex align={'center'} w="full" mt="1px" >
           <Input
             size={inpSize}
             lable={lable}
@@ -34,16 +34,14 @@ const DyInput = ({
             readOnly={readOnly}
             placeholder={placeholder}
             name={name}
-            endContent={
-              type == "password" && (
-                <Button bg="red" type="button" onClick={toggleVisibility}>
-                  {isVisible ? <IoEyeOutline /> : <IoIosEyeOff />}
-                </Button>
-              )
-            }
             type={type == "password" ? (isVisible ? "text" : "password") : type}
           />
-        </Box>
+          {type == "password" && (
+            <Button position={'absolute'} zIndex={'3'} right={2} size={'sm'} type="button" onClick={toggleVisibility}>
+              {isVisible ? <IoEyeOutline /> : <IoIosEyeOff />}
+            </Button>
+          )}
+        </Flex>
       </Flex>
     </>
   );

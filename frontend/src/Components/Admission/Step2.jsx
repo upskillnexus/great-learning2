@@ -19,7 +19,7 @@ import DyInput from "../DynamicInputs/DyInput";
 import { coursename, genders, occupation } from "../../../data/course";
 import DySelectBx from "../DynamicInputs/DySelectBx";
 
-const Step2 = ({ Controller, control, errors, onNext, prevStep, handleSubmit, handlePreview }) => {
+const Step2 = ({ Controller, control, errors, onNext, prevStep, handleSubmit }) => {
   const leadFrom = [
     { name: "Reference" },
     { name: "Broucher" },

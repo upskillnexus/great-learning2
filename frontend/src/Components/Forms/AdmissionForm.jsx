@@ -6,9 +6,18 @@ import Step1 from "../Admission/Step1";
 import Step2 from "../Admission/Step2";
 import AdmissionStapper from "../Admission/Stepper";
 import Step3 from "../Admission/Step3";
+import useCreateAdmission from "../../Libs/Mutation/Admisson/useCreateAdmission";
+
+// import useWindowSize from 'react-use/lib/useWindowSize'
+import Confetti from 'react-confetti'
+import Success from "../Admission/Success";
 
 const AdmissionForm = () => {
+  const [conQty, setConQty] = useState(0)
   const [step, setStep] = useState(0);
+  const {mutate: handleCreateAd, isPending: creating, isSuccess: created} = useCreateAdmission()
+
+
   const {
     handleSubmit,
     formState: { errors },
@@ -19,24 +28,27 @@ const AdmissionForm = () => {
   } = useForm();
   const formData = watch();
 
+  const handlOnSubmit = (data) => {
+    let sendData = new FormData();
+
+    for (let i in data) {
+      sendData.append(i, data[i]);
+    }
+
+    handleCreateAd(sendData)
+  };
+
+
+
+
   const nextStep = () => {
     setStep(step + 1);
-    // console.log(errors.email.message);
   };
   const prevStep = () => {
     setStep(step - 1);
   };
 
-  const handlOnSubmit = (data) => {
-    console.log(data);
-  };
-
-  const handlePreview = () => {
-    // console.log(formData);
-  };
-
   useEffect(() => {
-    // console.log(formData);
     if (formData?.occupation == "") {
       reset({
         designation: "",
@@ -58,8 +70,34 @@ const AdmissionForm = () => {
     }
   }, [watch, reset]);
 
+
+  useEffect(() => {
+    if(created){
+      reset()
+      setStep(step + 1);
+      setConQty(200)
+    }
+
+    console.log(step )
+
+  },[created])
+
+
+  useEffect(() => {
+    if(created){
+      setConQty(200)
+    }
+    const setTime = setTimeout(() => {
+      setConQty(0)
+    },6000)
+
+    return () => clearTimeout(setTime)
+  },[created, reset, setStep, setConQty, step])
+  
+
   return (
     <>
+    <Confetti numberOfPieces={conQty} />
       <Flex justify={"center"} align={"center"} p={{ base: 2, md: "5" }}>
         {/* <form > */}
         <Box w={{ base: "full", md: "90%", lg: "80%" }} p={{ base: 2, md: "5" }}>
@@ -84,7 +122,6 @@ const AdmissionForm = () => {
               step={step}
               handleSubmit={handleSubmit}
               prevStep={prevStep}
-              handlePreview={handlePreview}
               onNext={nextStep}
             />
           )}
@@ -98,7 +135,11 @@ const AdmissionForm = () => {
               handleSubmit={handleSubmit}
               handlOnSubmit={handlOnSubmit}
               getValues={watch()}
+              creating={creating}
             />
+          )}
+          {step == 3 && (
+            <Success />
           )}
         </Box>
         {/* </form> */}
