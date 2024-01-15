@@ -21,6 +21,7 @@ import Admission from "../Pages/Admission/Admission";
 import AdmissionProcess from "../Pages/Admission/AdmissionProcess";
 import CareerSupport from "../Pages/support/CareerSupport";
 import Leadership from "../Pages/Home/Leadership";
+import NotFound from "../Pages/PageNotfound";
 
 export const MainRoutes = () => {
   return (
@@ -58,6 +59,10 @@ export const MainRoutes = () => {
             </PrivateRoute>
           }
         />
+
+
+        
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   );

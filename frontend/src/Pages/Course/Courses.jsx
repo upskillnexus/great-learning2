@@ -125,31 +125,32 @@ const Courses = () => {
               />
               <Flex flexDir={{ base: "column", lg: "row" }} align="center">
                 <Heading
-                  fontSize={{ base: "35px", md: "40px" }}
+                  fontSize={{ base: "30px", md: "40px" }}
                   mb={0}
                   textAlign={{ base: "center", md: "center" }}
                 >
-                  Get Upskilled
+                  Get Upskilled with
                 </Heading>
 
-                <Heading fontSize={{ base: "35px", md: "40px" }} lineHeight={8} as="span" m="2">
+                {/* <Heading fontSize={{ base: "30px", md: "40px" }} lineHeight={8} as="span" m="2">
                   with
-                </Heading>
+                </Heading> */}
                 <Heading
-                  fontSize={{ base: "35px", md: "40px" }}
-                  color="#b9292f"
-                  display={{
-                    base: "none",
-                    md: "block",
-                  }}
+                  fontSize={{ base: "30px", md: "40px" }}
+                  // color="#b9292f"
+                  // display={{
+                  //   base: "none",
+                  //   md: "block",
+                  // }}
                 >
-                  UpskillNexus
+                  
+                  <GetUpskillnexus text={'UpskillNexus'} />
                 </Heading>
               </Flex>
             </Flex>
 
             {/*  */}
-            <Flex flexDir={"column"} align={"center"} textAlign={{ base: "justify", md: "center" }}>
+            <Flex flexDir={"column"} align={"center"} textAlign={{ base: "center", md: "center" }}>
               <Text w={{ base: "100%", md: "80%" }}>
                 <GetUpskillnexus text="UpskillNexus" />
                 is an organisation invested in providing growth-oriented individuals with

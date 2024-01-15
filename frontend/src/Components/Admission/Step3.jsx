@@ -11,6 +11,7 @@ import {
   useMediaQuery,
   Grid,
   Checkbox,
+  Spinner,
 } from "@chakra-ui/react";
 
 import FormError from "../../core/FormError";
@@ -26,6 +27,7 @@ const Step3 = ({
   handleSubmit,
   handlOnSubmit,
   getValues,
+  creating
 }) => {
   const modeOfPayment = [
     { name: "Cheque", value: "cheque" },
@@ -208,7 +210,7 @@ const Step3 = ({
       </Box>
       <Flex justify={"end"} p="2" mt="4" gap="2">
         <Button onClick={() => prevStep()}>Back</Button>
-        <Button onClick={handleSubmit(handlOnSubmit)}>Submit</Button>
+        <Button isDisabled={creating} onClick={handleSubmit(handlOnSubmit)}>{creating ? <Spinner /> : "Submit"}</Button>
       </Flex>
     </>
   );

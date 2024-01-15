@@ -2,6 +2,7 @@ import {
   Box,
   Flex,
   Heading,
+  Image,
   ListItem,
   Text,
   UnorderedList,
@@ -10,6 +11,7 @@ import React from "react";
 import GetUpskillnexus from "../../Components/Text/GetUpskillnexus";
 
 const Leadership = () => {
+  
   const initiatives = [
     {
       text: "Mobility - India’s first digital mobility app for Insurance on Palm OS and WinCE (2001)",
@@ -27,24 +29,27 @@ const Leadership = () => {
 
   const personDetails = [
     {
-      text: "A passionate cyber security researcher with 15+ years of experience, he enjoys the opportunities which often lead him to explore the toughest of breakthroughs in the Cybersecurity domain."
+      text: "A passionate cyber security researcher with 15+ years of experience, he enjoys the opportunities which often lead him to explore the toughest of breakthroughs in the Cybersecurity domain.",
     },
     {
-      text: "A renowned figure in cyber security, Sunil has presented at conferences like Black Hat USA and OWASP App Sec Europe."
+      text: "A renowned figure in cyber security, Sunil has presented at conferences like Black Hat USA and OWASP App Sec Europe.",
     },
     {
-      text: "Sunil also specializes in developing AI-driven cyber security and computer vision products, showcasing a broad range of expertise."
+      text: "Sunil also specializes in developing AI-driven cyber security and computer vision products, showcasing a broad range of expertise.",
     },
     {
-      text: "Over the years, his work around identifying and reporting security vulnerabilities has earned him credits and accolades from major brands, including Microsoft, LinkedIn, Yahoo, Nokia, Apache, PayPal, and Oracle."
+      text: "Over the years, his work around identifying and reporting security vulnerabilities has earned him credits and accolades from major brands, including Microsoft, LinkedIn, Yahoo, Nokia, Apache, PayPal, and Oracle.",
     },
     {
-      text: "He has hands-on experience building AI-driven Computer Vision and Cyber Security Products (Attack Surface Monitoring, Software Composition Analysis, Vulnerability Management, GRC, v-KYC auditor, Document Management, Payment Systems, and many more!)"
-    }
+      text: "He has hands-on experience building AI-driven Computer Vision and Cyber Security Products (Attack Surface Monitoring, Software Composition Analysis, Vulnerability Management, GRC, v-KYC auditor, Document Management, Payment Systems, and many more!)",
+    },
   ];
 
   return (
-    <Flex w="full" justify={"center"} minH={"80vh"}>
+    <Flex w="full" flexDir={'column'} align={"center"} minH={"80vh"} py="50px">
+      <Heading color="#b9292f">
+        Our Technology Curriculum Partners and Expert Leadership Team
+      </Heading>
       <Box
         w={{ base: "full", md: "90%", lg: "80%" }}
         m="5"
@@ -52,12 +57,13 @@ const Leadership = () => {
         rounded={"md"}
         p={{ base: 5, md: "8" }}
       >
+        <Flex justify={'center'} mb='30px'>
+          <Image height={'350px'} width={'auto'}  objectFit={'cover'} src='/leadership/img.jpg' />
+        </Flex>
+
         <Box>
-          <Heading color="#b9292f">
-            Our Technology Curriculum Partners and Expert Leadership Team
-          </Heading>
           <GetUpskillnexus text={"Dipak Nair"} />
-          <Text  fontWeight={"medium"}>
+          <Text fontWeight={"medium"}>
             {"Founder & Managing Director – X-Biz TechVentures"}
           </Text>
 
@@ -89,7 +95,7 @@ const Leadership = () => {
             was among the youngest to grow up the career ladder eventually
             becoming one of the youngest CTOs (Large enterprise) within the Tata
             Group after being among the fast-growing young leaders within ICICI
-            Group.{" "}
+            Group.
           </Text>
           <Text>
             His zeal to make a larger impact beyond boundaries lead him to
@@ -100,6 +106,7 @@ const Leadership = () => {
             industry-leading capabilities in Computer vision, AI, information
             security, Digital SFA and low-code platforms among others
           </Text>
+
 
           <Box marginTop={"8"}>
             <UnorderedList textAlign={"start"}>
@@ -114,6 +121,11 @@ const Leadership = () => {
         </Box>
 
         <Box>
+
+        <Flex justify={'center'} my='30px'>
+          <Image height={'350px'} width={'auto'}  objectFit={'cover'} src='/leadership/img2.png' />
+        </Flex>
+
           <GetUpskillnexus text={"Sunil Yadav"} />
           <Text fontWeight={"bold"}>
             Managing Director – SecureNexus; Co-Founder x-Biz TechVentures
@@ -139,12 +151,12 @@ const Leadership = () => {
               ))}
             </UnorderedList>
           </Box>
-
         </Box>
 
-          <Text fontWeight={'bold'}>Course Curriculum and Lab Challenges have been designed by our Experts.</Text>
-
-
+        <Text fontWeight={"bold"}>
+          Course Curriculum and Lab Challenges have been designed by our
+          Experts.
+        </Text>
       </Box>
     </Flex>
   );
