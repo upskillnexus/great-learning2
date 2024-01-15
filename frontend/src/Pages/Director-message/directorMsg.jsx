@@ -69,7 +69,7 @@ const DirectorMsg = () => {
             justify={{ base: "start", lg: "space-between" }}
             // bg="red"
           >
-            <Box rounded={"md"} w={{ base: "full", lg: "65%" }} p="3" textAlign={"justify"}>
+            <Box rounded={"md"} w={{ base: "full", lg: "65%" }} p="3" textAlign={{base:"center", md: "start"}}>
               {contentArray1.map((ele, i) => (
                 <Box key={i}>
                   <Heading color="#b9292f" size={"md"}>
@@ -93,7 +93,7 @@ const DirectorMsg = () => {
           {/*  */}
           {/*  */}
           <Box
-            textAlign={"justify"}
+            textAlign={{base:"center", md: "start"}}
             mt={{ base: "0", md: 0 }}
             position="relative"
             top="-20px"

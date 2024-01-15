@@ -66,7 +66,7 @@ export const Header = ({ children }) => {
       text: "About Us",
       subMenu: [
         { text: "Who We Are", to: "/about" },
-        { text: "Our Leadership Team", to: "#" },
+        { text: "Our Tech Leadership Team", to: "/leadership" },
         { text: "Director's Message", to: "/director" },
       ],
     },
@@ -318,9 +318,9 @@ export const Header = ({ children }) => {
                 <Button
                   onClick={() => onOpen()}
                   border={"1px solid #b9292f"}
-                  bg="none"
+                  bg="#b9292f"
                   _hover={hoverStyle}
-                  color="#b9292f"
+                  color="#fff"
                 >
                   Request Call Back
                 </Button>
@@ -328,26 +328,19 @@ export const Header = ({ children }) => {
                 {navLinks.map((link, index) =>
                   link.subMenu ? (
                     <Menu key={index}>
-                      <MenuButton
-                        rounded={"md"}
-                        border="1px solid #cccc"
-                        p="5px 10px"
-                        fontWeight={"medium"}
-                      >
-                        <Box display={"flex"} as="span" gap="2" alignItems="center">
+                      <MenuButton rounded={"md"} border="1px solid #cccc" p="5px 10px">
+                        <Box color='black' display={"flex"} justifyContent={'space-between'} as="span" gap="2" alignItems="center">
                           {link.text} <FaChevronDown />
                         </Box>
                       </MenuButton>
                       <MenuList>
                         {link.subMenu.map((subLink, subIndex) => (
                           <MenuItem
-                            border={
-                              pathname === subLink?.to ? "2px solid #b9292f" : "2px solid none"
-                            }
-                            color={pathname === subLink?.to ? "#b8292f" : "initial"}
+                            color={pathname === subLink?.to ? "#b9292f" : "#000"}
                             as={Link}
-                            to={subLink.to}
+                            to={subLink?.to}
                             key={subIndex}
+                            onClick={() => setIsDrawerOpen(false)}
                           >
                             {subLink.text}
                           </MenuItem>
@@ -361,9 +354,10 @@ export const Header = ({ children }) => {
                         border: "1px solid #cccc",
                         borderRadius: "5px",
                         padding: "5px 10px",
-                        border: pathname === link?.to ? "2px solid #b9292f" : "1px solid #ccc",
+                        // border: pathname === link?.to ? "2px solid #b9292f" : "1px solid #ccc",
                         color: pathname === link?.to ? "#b9292f" : "#000",
                       }}
+                      onClick={() => setIsDrawerOpen(false)}
                       _hover={{ background: "blue" }}
                       to={link.to}
                     >

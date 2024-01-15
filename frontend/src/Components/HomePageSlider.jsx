@@ -6,42 +6,11 @@ import { Link } from "react-router-dom";
 
 const HomePageSlider = () => {
   const data = [
-    // {
-    //   title: "RISE ABOVE THE REST",
-    //   heading: "Your Path To A Digitech-Driven Successful Career Starts Here",
-    //   pera: "Our Mission: To Create the Digitech Leaders of Tomorrow",
-    //   img: "/slider/video.mp4",
-    //   buttonText: "Learn More",
-    //   link: "/about",
-    // },
-    {
-      title: "RISE ABOVE THE REST",
-      heading: "Your Path To A Digitech-Driven Successful Career Starts Here",
-      pera: "Our Mission: To Create the Digitech Leaders of Tomorrow",
-      img: "/slider/img4.jpg",
-      buttonText: "Learn More",
-      link: "/about",
-    },
-    {
-      title: "BUILD EXPERTISE WITH",
-      heading: "The Most Trusted Name in Cybersecurity Training",
-      img: "/slider/img5.jpg",
-      buttonText: "Explore More",
-      link: "/about",
-    },
-    {
-      title: "GAIN CONFIDENCE WITH",
-      heading: "The Best Employability Skills Program",
-      img: "/slider/img6.jpg",
-      buttonText: "Explore More",
-      link: "/programs",
-    },
-    // {
-    //   title: "ACCELERATE YOUR CAREER",
-    //   heading: "Learn AI & ML from top universities",
-    //   pera: "Get the promotion you deserve with latest skills in Artificial Intelligence & Machine Learning.",
-    //   img: "/img3.jpg",
-    // },
+    {img: "/slider/img4.jpg",},
+    {img: "/slider/img5.jpg",},
+    {img: "/slider/img6.jpg",},
+    {img: "/slider/ban1.jpeg",},
+    {img: "/slider/ban2.jpeg",},
   ];
 
   return (
