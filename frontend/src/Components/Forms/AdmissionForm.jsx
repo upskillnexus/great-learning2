@@ -78,7 +78,6 @@ const AdmissionForm = () => {
       setConQty(200)
     }
 
-    console.log(step )
 
   },[created])
 
