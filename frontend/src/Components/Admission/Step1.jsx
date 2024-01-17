@@ -5,6 +5,7 @@ import FormError from "../../core/FormError";
 import DyInput from "../DynamicInputs/DyInput";
 import { coursename, genders, occupation } from "../../../data/course";
 import DySelectBx from "../DynamicInputs/DySelectBx";
+import DyInputFile from "../DynamicInputs/DyInputFile";
 
 const Step1 = ({ Controller, control, errors, onNext, handleSubmit, getValues }) => {
   return (
@@ -193,17 +194,14 @@ const Step1 = ({ Controller, control, errors, onNext, handleSubmit, getValues })
 
       {/* File */}
       <Grid gridTemplateColumns={"repeat(2,1fr)"} mt="5" gap="5">
-        <Controller
+      <Controller
           control={control}
           name="passportphoto"
           rules={{ required: "Passport size Photo is required*" }}
           render={({ field: { onChange, value } }) => (
             <div>
-              <DyInput
-                // value={value}
+              <DyInputFile value={value} title={'Upload Passport size Photo'} id='passportPhoto'
                 onChange={onChange}
-                title="Upload Passport size Photo*"
-                type="file"
               />
               <FormError err={errors} name="passportphoto" />
             </div>
@@ -216,11 +214,8 @@ const Step1 = ({ Controller, control, errors, onNext, handleSubmit, getValues })
           rules={{ required: "CV is required*" }}
           render={({ field: { onChange, value } }) => (
             <div>
-              <DyInput
-                // value={value}
+              <DyInputFile value={value} title="Upload Your CV*" id='cv'
                 onChange={onChange}
-                title="Upload Your CV*"
-                type="file"
               />
               <FormError err={errors} name="cv" />
             </div>

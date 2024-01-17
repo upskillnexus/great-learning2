@@ -14,6 +14,7 @@ import useLogin from "../Libs/Mutation/Login/useLogin";
 
 import { Controller, useForm } from "react-hook-form";
 import InputError from "../Components/Errors/InputError";
+import DyInput from "../Components/DynamicInputs/DyInput";
 
 function Login() {
   const {
@@ -38,14 +39,13 @@ function Login() {
                 Login
               </Heading>
               <FormControl id="email">
-                <FormLabel>Email</FormLabel>
                 <Controller
                   control={control}
                   rules={{ required: "Email is required." }}
                   name="email"
                   render={({ field: { onChange, value } }) => (
                     <>
-                      <Input onChange={onChange} value={value} type="text" />
+                      <DyInput title={'email'} onChange={onChange} value={value} type="text" />
                       <InputError err={errors} name="email" />
                     </>
                   )}
@@ -53,7 +53,6 @@ function Login() {
               </FormControl>
               {/*  */}
               <FormControl id="password">
-                <FormLabel>Password</FormLabel>
 
                 <Controller
                   control={control}
@@ -61,7 +60,7 @@ function Login() {
                   name="password"
                   render={({ field: { onChange, value } }) => (
                     <>
-                      <Input onChange={onChange} value={value} type="text" />
+                      <DyInput title={'Password'} type='password' onChange={onChange} value={value} />
                       <InputError err={errors} name="password" />
                     </>
                   )}

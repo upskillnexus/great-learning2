@@ -20,6 +20,8 @@ import DirectorMsg from "../Pages/Director-message/directorMsg";
 import Admission from "../Pages/Admission/Admission";
 import AdmissionProcess from "../Pages/Admission/AdmissionProcess";
 import CareerSupport from "../Pages/support/CareerSupport";
+import Leadership from "../Pages/Home/Leadership";
+import NotFound from "../Pages/PageNotfound";
 
 export const MainRoutes = () => {
   return (
@@ -36,6 +38,8 @@ export const MainRoutes = () => {
 
         <Route path="/refund-policy" element={<RefundPolicy />} />
         <Route path="/term-conditions" element={<Term_condition />} />
+
+        <Route path="/leadership" element={<Leadership />} />
 
         <Route path="/about" element={<About />} />
         <Route path="/refund-policy" element={<Refund />} />
@@ -55,6 +59,10 @@ export const MainRoutes = () => {
             </PrivateRoute>
           }
         />
+
+
+        
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   );
