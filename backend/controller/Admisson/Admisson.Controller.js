@@ -1,19 +1,43 @@
+const { admissionTemp } = require('../../mail.templets/admissionTemplet');
 const AdmissionModal = require('../../modals/Admission/Admission.modal');
+const { smtpModal } = require('../../modals/smtp/smtp.modal');
+const { sendMailFunction } = require('../mail/sendMail');
 
 
 // Create a new admission record
 const createAdmission = async (req, res) => {
-    const admissionData = req.body;
-    const cvFiles = req.files['cv'][0].path;
-    const passportPhotoFiles = req.files['passportphoto'][0].path;
+  const admissionData = req.body;
+  
+    const cvFiles = {
+      location: req.files.cv[0].location,
+      key: req.files.cv[0].key
+    }
+    passportPhotoFiles = { 
+      location: req.files.passportphoto[0].location,
+      key: req.files.passportphoto[0].key
+    }
 
     admissionData.cv = cvFiles
     admissionData.passportphoto = passportPhotoFiles;
 
+
     try {
+      const smtp = await smtpModal.findOne({orgNumber: "0001"})
       const newAdmission = await AdmissionModal(admissionData);
       await newAdmission.save()
-      return res.status(201).json({ data: newAdmission, message: 'Admission successfully created', status: true });
+      if(newAdmission){
+        const html = admissionTemp({admissionData: newAdmission}) // admission html template
+        const mail = await sendMailFunction({
+          subject: `Admission Request from ${newAdmission?.fullname}`, 
+          html, 
+          emailFrom: newAdmission.email
+        });
+
+        if(mail.status)
+        return res.status(201).json({ data: newAdmission, message: 'Admission successfully created', status: true });
+      }else{
+        return res.status(201).json({ message: 'Server error', status: false });
+      }
     } catch (error) {
       res.status(500).json({ message: error.message, status: false });
     }
@@ -46,7 +70,6 @@ const createAdmission = async (req, res) => {
         status: true,
       });
     } catch (error) {
-      console.error(error);
       res.status(500).json({ message: 'Internal Server Error', status: false });
     }
   };

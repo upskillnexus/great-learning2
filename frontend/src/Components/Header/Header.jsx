@@ -177,13 +177,7 @@ export const Header = ({ children }) => {
           </Link>
           {/* </Box> */}
           {/* <Spacer /> */}
-          <Flex
-            align="center"
-            w="100%"
-            fontWeight={"600"}
-            justifyContent={"space-between"}
-            textAlign="center"
-            marginTop={{ base: "1rem", md: "0" }}
+          <Flex align="center" w="100%" fontWeight={"600"} justifyContent={"space-between"} textAlign="center" marginTop={{ base: "1rem", md: "0" }}
             style={flexStyles || { display: "none" }}
           >
             {/*  */}
@@ -199,7 +193,7 @@ export const Header = ({ children }) => {
                   {selectedValue || "Explore Program"} <FaChevronDown />
                 </Box>
               </MenuButton>
-              <MenuList>
+              {/* <MenuList>
                 <MenuItem to="/" as={Link} onClick={() => setSelectedValue(null)}>
                   Home
                 </MenuItem>
@@ -213,7 +207,7 @@ export const Header = ({ children }) => {
                     {ele.name}
                   </MenuItem>
                 ))}
-              </MenuList>
+              </MenuList> */}
             </Menu>
 
             {/* </Link> */}

@@ -37,11 +37,11 @@ const admissionSchema = new mongoose.Schema({
   },
   // File fields
   passportphoto: {
-    type: String,
+    type: Object,
     required: [true, 'Passport size Photo is required'],
   },
   cv: {
-    type: String,
+    type: Object,
     required: [true, 'CV is required'],
   },
   
