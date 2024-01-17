@@ -17,7 +17,7 @@ const Partners = () => {
       comp: "DIDM",
       color: "#be0002",
       content:
-        "DIDM makes our candidates gratifying when it comes to infusing skills with practical knowledge and recent trends in the industry. We are a reputed and the best digital marketing institute in Delhi/NCR & across India. By MSME | ISO Certified.",
+        "The Delhi Institute of Digital Marketing is a premier partner of Google and has become a leading company for digital marketing and data analytics training. Founded in 2015 as a subsidiary of Dayitwa Consultancy Services Pvt Ltd, DIDM is now India's No. 1 Digital Marketing Training Brand.",
       link: "https://www.didm.in/",
     },
     {
