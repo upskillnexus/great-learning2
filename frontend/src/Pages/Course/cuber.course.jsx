@@ -32,6 +32,7 @@ import Reason_to_Join from "../../Components/Course/Reason_to_Join";
 import TrendingBlogs from "../../Components/Course/Trending_Blog";
 import { FaFacebook } from "react-icons/fa6";
 import { MdCheck } from "react-icons/md";
+import { RiLiveFill } from "react-icons/ri";
 
 import { BiLogoGraphql } from "react-icons/bi";
 import { TbSettingsCog } from "react-icons/tb";
@@ -49,7 +50,11 @@ const CyberSecurityCourse = () => {
 
   const topData = {
     title: "Mastering Cybersecurity Essentials",
-    text: "Welcome to our comprehensive six-month Cybersecurity Training Course, designed to equip aspiring professionals with the knowledge and skills necessary to thrive in the ever-evolving field of cybersecurity.",
+    text: "Welcome to our comprehensive Cybersecurity Training Courses, designed to equip aspiring professionals with the knowledge and skills necessary to thrive in the ever-evolving field of cybersecurity. We offer two courses: ",
+    points: [
+      'Cybersecurity Professional Program (6 months)',
+      'Cybersecurity Expert Program (12 months including 3 months of internship)'
+    ],
     logo: [
       {
         // img: "https://didm.in Nexus.in/assets/upload/images/Untitled%20design.gif",
@@ -79,7 +84,7 @@ const CyberSecurityCourse = () => {
   const accordianData = [
     {
       description: "Course Journey",
-      text: "Our training program is designed by industry experts and offers a holistic curriculum, combining theoretical knowledge with hands-on practical experience. Students will gain insights into the latest cybersecurity trends, tools, and best practices, ensuring they are well-prepared for a successful career in the field.",
+      text: "Our training program is designed by industry experts and offers a holistic curriculum, combining theoretical knowledge with hands-on practical experience. Students will gain insights into the latest cybersecurity trends, tools, and best practices, ensuring they are well-prepared for a successful career in the field.",
     },
     {
       description: "Who Is This Course For?",
@@ -89,7 +94,7 @@ const CyberSecurityCourse = () => {
           <ListItem>Our course is designed for: IT professionals aiming to specialize in cybersecurity.</ListItem>
           <ListItem>Graduates from computer science, information technology, or related fields</ListItem>
           <ListItem>System administrators, network engineers, and other tech roles seeking to bolster their security knowledge.</ListItem>
-          <ListItem>Self-taught tech whizzes looking to formalize and expand their expertise.</ListItem>
+          <ListItem>Self-taught tech whizzes looking to formalize and expand their expertise.</ListItem>
         </UnorderedList>
       </>
   
@@ -166,7 +171,7 @@ const CyberSecurityCourse = () => {
       name: "John DigitalStrategist",
       role: "Digital Strategist, WebSolutions",
       company: "WebSolutions",
-      bio: "John DigitalStrategist is a Cyber Security guru, bringing cutting-edge strategies to WebSolutions.",
+      bio: "John DigitalStrategist is a Cybersecurity guru, bringing cutting-edge strategies to WebSolutions.",
       imageSrc: "URL_TO_JOHN_IMAGE",
     },
     {
@@ -180,9 +185,9 @@ const CyberSecurityCourse = () => {
   ];
 
   const list1 = [
-    "Solve a range of industry-relevant projects in this online Cyber Security course", //
+    "Solve a range of industry-relevant projects in this online Cybersecurity course", //
     "Run a 5-day social media marketing campaign, and a 5-day Google Ads campaign to gain hands-on real-world experience of working as a digital marketer",
-    "Create Cyber Security strategies for different brands such as Mamaearth, Zivame, cult.fit, and more for the multiple case studies in the program",
+    "Create Cybersecurity strategies for different brands such as Mamaearth, Zivame, cult.fit, and more for the multiple case studies in the program",
   ];
   const list2 = [
     "Run live marketing campaigns",
@@ -215,7 +220,7 @@ const CyberSecurityCourse = () => {
     {
       title: "Solve a range of industry-relevant projects",
       description:
-        "In this online Cyber Security course, you will work on a variety of industry-relevant projects, allowing you to apply theoretical knowledge to real-world scenarios.",
+        "In this online Cybersecurity course, you will work on a variety of industry-relevant projects, allowing you to apply theoretical knowledge to real-world scenarios.",
     },
     {
       title: "Run a 5-day social media marketing campaign and Google Ads campaign",
@@ -223,9 +228,9 @@ const CyberSecurityCourse = () => {
         "Gain hands-on real-world experience by running a 5-day social media marketing campaign and a 5-day Google Ads campaign. This practical experience is essential for working as a digital marketer.",
     },
     {
-      title: "Create Cyber Security strategies for different brands",
+      title: "Create Cybersecurity strategies for different brands",
       description:
-        "Participate in multiple case studies within the program, where you will develop Cyber Security strategies for well-known brands such as Mamaearth, Zivame, cult.fit, and more.",
+        "Participate in multiple case studies within the program, where you will develop Cybersecurity strategies for well-known brands such as Mamaearth, Zivame, cult.fit, and more.",
     },
   ];
 
@@ -233,27 +238,27 @@ const CyberSecurityCourse = () => {
     {
       point: "Career Advancement:",
       description:
-        "By completing our 'Cyber Security' course, participants will be able to acquire more challenging roles and responsibilities in their current jobs or advance in their careers.",
+        "By completing our 'Cybersecurity' course, participants will be able to acquire more challenging roles and responsibilities in their current jobs or advance in their careers.",
     },
     {
       point: "Enhanced Creativity:",
       description:
-        "To stay ahead of the competition in Cyber Security, participants attending the 'Cyber Security' course will learn how to be more creative and innovative in their approach.",
+        "To stay ahead of the competition in Cybersecurity, participants attending the 'Cybersecurity' course will learn how to be more creative and innovative in their approach.",
     },
     {
       point: "Increased Job Opportunities:",
       description:
-        "In the ever-growing field of Cyber Security, completing our 'Cyber Security' course can open up a whole new world of career opportunities for participants.",
+        "In the ever-growing field of Cybersecurity, completing our 'Cybersecurity' course can open up a whole new world of career opportunities for participants.",
     },
     {
       point: "Networking Opportunities:",
       description:
-        "The 'Cyber Security' course will also provide participants with the opportunity to network with other industry professionals, which can lead to new job opportunities and business collaborations.",
+        "The 'Cybersecurity' course will also provide participants with the opportunity to network with other industry professionals, which can lead to new job opportunities and business collaborations.",
     },
     {
       point: "Great Earning Potential:",
       description:
-        "Participants who have completed the 'Cyber Security' course can negotiate higher salaries and better job benefits due to their updated skills and knowledge of Cyber Security.",
+        "Participants who have completed the 'Cybersecurity' course can negotiate higher salaries and better job benefits due to their updated skills and knowledge of Cybersecurity.",
     },
   ];
 
@@ -265,7 +270,7 @@ const CyberSecurityCourse = () => {
     },
     {
       heading: "Course Durations",
-      text: "6 Months",
+      text: "6 Months; 12 Months",
       icon: <MdCheck />,
     },
     {
@@ -275,17 +280,17 @@ const CyberSecurityCourse = () => {
     },
     {
       heading: "Training Session",
-      text: "Live Session",
+      text: "Live In-Classroom Sessions",
       icon: <MdCheck />,
     },
     {
       heading: "Practical Learning",
-      text: "Assignment | Case Studies",
+      text: "Assignment | Case Studies | Projects",
       icon: <MdCheck />,
     },
     {
       heading: "Placement Session",
-      text: "Job Preperation & Placements",
+      text: "Job Preparation & Placements",
       icon: <MdCheck />,
     },
     {
@@ -300,58 +305,68 @@ const CyberSecurityCourse = () => {
     },
     {
       heading: "Certifications",
-      text: "Completion Certificate upon fulfilling course requirements",
+      text: "Completion Certificate upon fulfilling graduation requirements.",
       icon: <MdCheck />,
     },
   ];
 
   const courseInfoData = [
     {
-      content: "Our training program is designed by industry experts.",
+      content: "Our training program is designed by top industry experts.",
     },
     {
-      content: "Work on LIVE projects of agency clients and deliver results.",
+      content: "Work on LIVE projects and deliver results.",
     },
     {
-      content:
-        "Stand out from other Cyber Security by learning the newest concepts of Cyber Security.",
+      content:"Stand out from other Cybersecurity training providers by learning the latest concepts and tools of Cybersecurity.",
     },
     {
-      content: "Get introduced to the latest Cyber Security tools and technologies.",
+      content: "Get introduced to the latest Cybersecurity trends and technologies.",
     },
     {
-      content: "Get hired by the country’s most established Cyber Security Agencies.",
+      content: "Get hired by the country’s most established companies.",
     },
     {
       content:
         "Learn holistic curriculum, combining theoretical knowledge with hands-on practical experience.",
     },
+    {
+      content: "Get skilled through a holistic curriculum, combining the latest technical knowledge with hands-on practical experience"
+    }
   ];
 
   const chapterhighlights = [
-    { content: "Chapter 1: Security Fundamentals" },
-    { content: "Chapter 2: Infrastructure Security & Penetration Testing" }, //
-    { content: "Chapter 3: Programming" },
-    { content: "Chapter 4: Web Application Security" },
-    { content: "Chapter 5: Mobile Application Security" },
-    { content: "Chapter 6: DevSecOps" },
-    { content: "Chapter 7: Cloud Security" },
-    { content: "Chapter 8: Attack Surface Management" },
+    { content: "Module 1: Security Fundamentals [40 hours]" },
+    { content: "Module 2: Programming [ 80 hours]" }, //
+    { content: "Module 3: Infrastructure Security & Penetration Testing [70 hours]" },
+    { content: "Module 4: Web Application Security [70 hours]" },
+    { content: "Module 5: Mobile Application Security [80 hours]" },
+    { content: "Module 6: Attack Surface Management [30 hours]" },
+    { content: "Module 7: Cloud Security [60 hours]" },
+    { content: "Module 8: DevSecOps [50 hours]" },
+    { content: "Module 9: Advanced Web Application Security [30 hours]" },
+    { content: "Module 10: Advanced Infrastructure Security & Penetration Testing [30 hours]" },
+    { content: "Module 11: Internship and Real-life Assignments and Projects" },
   ];
   const digital_Course = [
     {
-      title: "Cyber Security",
-      arr: ["8+ Chapters", "500+ Hrs of Training"],
+      title: "Cybersecurity",
+      arr: ["8+ Modules", "720+ Hrs of Training"],
       icon: <IoIosAnalytics />,
     },
     {
-      title: "Special Session",
+      title: "Live Training",
+      arr : ['In-person Classroom Sessions'],
+      icon: <RiLiveFill />,
+    },
+    {
+      title: "Special Lab Session",
       arr: ["Doubt-Clearing Sessions", "Personalized Sessions"],
       icon: <BiLogoGraphql />,
     },
     {
       title: "Tools & Software / LMS",
-      arr: ["Latest Tools & Softwares Support", "100% Placement Assistance"],
+      arr: ["Latest Tools & Software Support", "100% Placement Assistance"],
       icon: <TbSettingsCog />,
     },
     {
@@ -418,11 +433,13 @@ const CyberSecurityCourse = () => {
                 <Text fontSize="md" color="#fff">
                   {topData?.text}
                 </Text>
-                {/* <Text mt="20px" fontSize="md" color="#fff">
-                5 out of 6 learners get positive career growth
-                <br />
-                upGrad Results reviewed by Deloitte
-              </Text> */}
+                {/*  */}
+                <OrderedList>
+                  {topData?.points?.map((ele,i) => (
+                    <ListItem key={i}>{ele}</ListItem>
+                  ))}
+                </OrderedList>
+              
                 <Flex mt="20px">
                   <Button
                     onClick={() => onOpen()}
@@ -482,14 +499,12 @@ const CyberSecurityCourse = () => {
               </Box>
             </Flex>
           </Box>
-          {/* Cyber Security Course Highlights */}
+          {/* Cybersecurity Course Highlights */}
           <Box mt="50px" w={{ base: "100%", md: "80%" }}>
             <DigitalMarketingHighlights //
               data={DigitalhighlightsData}
-              subTitle={
-                "The Cyber Security course offered by Upskills Nexus is unlike any other course you have ever heard of before. This Cyber Security course in Delhi NCR has specifications that are unlike anything else you are likely to see in the Cyber Security education world.."
-              }
-              title={"Cyber Security Training Specification"}
+              subTitle={"The Cybersecurity course offered by UpskillsNexus is unlike any other course you have ever heard of before. This Cybersecurity course in Delhi NCR has specifications that are unlike anything else you are likely to see in the Cybersecurity education world. These courses are completely industry-led and relevant to today’s requirements"}
+              title={"Cybersecurity Training Specifications"}
             />
           </Box>
 
@@ -497,39 +512,37 @@ const CyberSecurityCourse = () => {
             <CourseInformation //
               keyH="Key Highlights"
               data={courseInfoData}
-              title={"Cyber Security Key Highlights"}
-              subTitle={
-                "The key highlights of our Cyber Security course can be found below, which make it unique to any other Cyber Security Course in the country.."
-              }
+              title={"Cybersecurity Key Highlights"}
+              subTitle={"The Our training program is designed by top industry experts.an be found below, which make it unique to any other Cybersecurity Course in the country."}
             />
           </Box>
 
-          {/* Best Certification Course on Cyber Security */}
+          {/* Best Certification Course on Cybersecurity */}
           <Box>
             <DynamicCard //
               onOpen={onOpen}
               bg="#b9292f"
               borderRadius="none"
               button="Enquire Now"
-              title={"Best Certification Course on Cyber Security"}
-              text="Best-in-class Cyber Security course content taught by leading faculty and industry leaders in the form of online marketing classes, recorded video lectures, case studies and live projects. Now integrated with Generative AI modules."
+              title={"Best Certification Course on Cybersecurity"}
+              text="Best-in-class Cybersecurity course content taught by leading faculty and industry leaders. Assured internships and placements upon meeting the graduation requirements"
             />
           </Box>
 
           {/* Only Image Slider */}
           {/* <Flex justify={"center"} alignItems={"center"} minH={"250px"} w="85%" bg="#ffff">
           <Box w={{ base: "100%", md: "90%" }} minH={"auto"} py="5">
-            <DynamicSlider showPerPage={4} title={"Cyber Security Platforms and Tools"} cards={cards} />
+            <DynamicSlider showPerPage={4} title={"Cybersecurity Platforms and Tools"} cards={cards} />
           </Box>
         </Flex> */}
 
-          {/* Cyber Security Course */}
+          {/* Cybersecurity Course */}
           <Box w="full" bg="#fff" py="8">
             <ChatGPTComponent //
               onOpen={onOpen}
               data={digital_Course}
-              title={"Cyber Security Course"}
-              subTitle="In our Cyber Security course, we provide agency-based training to beginner and intermediate-level Cyber Security in highly advanced concepts of Cyber Security, so that they can become the most uniquely skilled Cyber Security possible."
+              title={"Cybersecurity Course"}
+              subTitle="In our Cybersecurity course, we provide training from beginners to highly advanced concepts of Cybersecurity, so that you can become the highly-skilled Cybersecurity professionals."
             />
           </Box>
 
@@ -538,20 +551,18 @@ const CyberSecurityCourse = () => {
             <CourseInformation //
               keyH="Chapters Highlights"
               data={chapterhighlights}
-              title={"Chapter Highlights"}
-              subTitle={
-                "UpskillNexus Covers 8+ Chapters that you will learn in the Cyber Security Program"
-              }
+              title={"Course Highlights"}
+              subTitle={"UpskillNexus Covers 10+ Modules from basics to advance level in the Cybersecurity Program."}
             />
           </Box>
 
-          {/* Reason to choose Upskill Cyber Security course */}
-          <Flex w="full" justify={"center"} bg="#fff" py="8">
+          {/* Reason to choose Upskill Cybersecurity course */}
+          <Flex w="full" maxW={'1500px'} justify={"center"} bg="#fff" py="8">
             <Box w="90%">
               <DynamicAccordians //
                 data={accordianData}
-                title="Reasons To Choose UpskillNexus Cyber Security Course"
-                subTitle="Welcome to our comprehensive six-month Cybersecurity Training Course, designed to equip aspiring professionals with the knowledge and skills necessary to thrive in the ever-evolving field of cybersecurity. This program covers a wide array of fundamental and advanced topics in cybersecurity, providing a structured learning path for individuals aiming to kickstart their career as cybersecurity analysts."
+                title="Reasons To Choose UpskillNexus Cybersecurity Course"
+                subTitle="Welcome to our comprehensive Cybersecurity Training Courses, designed to equip aspiring professionals with the knowledge and skills necessary to thrive in the ever-evolving field of cybersecurity. This program covers a wide array of fundamental and advanced topics in cybersecurity, providing a structured learning path for individuals aiming to kickstart their careers as cybersecurity analysts and consultants."
               />
             </Box>
           </Flex>
@@ -563,8 +574,8 @@ const CyberSecurityCourse = () => {
               bg="#b9292f"
               borderRadius="none"
               button="Enquire Now"
-              title={"Our Most Popular Cyber Security Courses"}
-              text="Explore our top Cyber Security Courses and take the first step towards career success."
+              title={"Our Most Popular Cybersecurity Courses"}
+              text="Explore our top Cybersecurity Courses and take the first step towards career success."
             />
           </Box>
           {/*  */}
