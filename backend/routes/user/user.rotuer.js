@@ -2,6 +2,7 @@ const express = require("express");
 const { userLogin } = require("../../controller/user/login.controller");
 const isAuth = require("../../midlewares/isAuth");
 const { checkAuth } = require("../../controller/user/check");
+const { isLogin } = require("../../controller/user/isLogin");
 const userRouter = express.Router();
 
 userRouter.post("/login", userLogin);

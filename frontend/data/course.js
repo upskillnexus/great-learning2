@@ -2,7 +2,7 @@ export const coursename = [
   { link: "/course/cyber-security", value: "cyber-security", name: "Cybersecurity" },
   // { link: "/course/data-science", value: "data-science", name: "Data Science" }, //
   { link: "/", value: "data-science", name: "Data Science" }, //
-  { link: "#", value: "employability-skills", name: "Employability Skills" },
+  { link: "/course/employability-skills", value: "employability-skills", name: "Employability Skills" },
   { link: "/course/digital-marketing-science", value: "digital-marketing-science", name: "Digital Marketing  Science"},
 ];
 
@@ -20,12 +20,24 @@ export const genders = [
   { name: "Other" }, //
 ];
 
+export const branch = [
+  {
+    name: "Rajouri Gaurden"
+  },
+  {
+    name: "Dashrathpuri"
+  },
+  {
+    name: "Mirzapur"
+  }
+]
+
 export const allCourses = [
   {
     id: "3",
     image: "/course/expert.png",
     name: "katill",
-    programName: "Cybersecurity Expert Program",
+    programName: "Cybersecurity Experts Program",
     poweredBy: "Powered by Secure Nexus, a division of X-Biz Techventures.",
     para: "",
     duration: "12 Months • Offline (In-Class Training)",
@@ -37,7 +49,7 @@ export const allCourses = [
     id: "3",
     image: "/course/cyber1.png",
     name: "katill",
-    programName: "Cybersecurity Professional Program",
+    programName: "Cybersecurity Professionals Program",
     poweredBy: "Powered by Secure Nexus, a division of X-Biz Techventures.",
     para: "",
     duration: "6 Months • Offline (In-Class Training)",

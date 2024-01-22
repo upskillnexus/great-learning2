@@ -45,8 +45,10 @@ const createAdmission = async (req, res) => {
   
   // Get all admission records
   const getAllAdmissions = async (req, res) => {
+    const { limit } = req.query;
+    
     try {
-      const admissions = await AdmissionModal.find();
+      const admissions = await AdmissionModal.find().limit(limit).sort({createdAt: -1});
       res.status(200).json({ data: admissions, message: 'Admissions retrieved successfully', status: true });
 
     } catch (error) {

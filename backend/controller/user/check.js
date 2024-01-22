@@ -2,7 +2,7 @@ const { UserModel } = require("../../modals/user/user.modal");
 
 const checkAuth = async (req, res) => {
   try {
-    const data = await UserModel.findOne({ _id: req.profile.id });
+    const data = await UserModel.findOne({ _id: req.profile.id })
 
     if (data) {
       const newdata = {
@@ -11,7 +11,7 @@ const checkAuth = async (req, res) => {
         role: data.role,
         name: data.name,
       };
-      return res.status(200).send({ message: "You are loggedin", data: newdata, isAuth: true, status: true });
+      return res.status(200).send({ message: "You are Loggedin", data: newdata, isAuth: true, status: true });
     }
   } catch (err) {
     return res.status(500).send({ message: err.message, status: false });

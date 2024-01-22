@@ -1,11 +1,12 @@
+// 
 import { useQuery } from "@tanstack/react-query";
-import api from "../../api";
+import api from "../../../api";
 
-const isAuth = () => {
+const useGetAdmissions = ({limit}) => {
   const check = useQuery({
-    queryKey: ["isAuth"],
+    queryKey: ["admissions"],
     queryFn: async () => {
-      const res = await api.get("user/check");
+      const res = await api.get(`admission/fetch?limit=${limit}`);
       return res?.data;
     },
     staleTime: Infinity,
@@ -16,4 +17,4 @@ const isAuth = () => {
   });
   return check;
 };
-export default isAuth;
+export default useGetAdmissions;

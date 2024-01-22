@@ -42,6 +42,8 @@ import InqueryFrms from "../../Components/Forms/InqueryFrms";
 import { hoverStyle } from "../../style/button.style";
 import { InquiryModal } from "../../Components/Modal/InquiryModal";
 import { FAQ } from "../Home/FAQ";
+import { FaRegCheckCircle } from "react-icons/fa";
+import SecurityService from "../../Components/Course/SecurityService";
 
 const CyberSecurityCourse = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -275,7 +277,7 @@ const CyberSecurityCourse = () => {
     },
     {
       heading: "Course Materials",
-      text: "E-Notes",
+      text: "Notes, Videos, Classromm Learning Material",
       icon: <MdCheck />,
     },
     {
@@ -327,11 +329,7 @@ const CyberSecurityCourse = () => {
       content: "Get hired by the country’s most established companies.",
     },
     {
-      content:
-        "Learn holistic curriculum, combining theoretical knowledge with hands-on practical experience.",
-    },
-    {
-      content: "Get skilled through a holistic curriculum, combining the latest technical knowledge with hands-on practical experience"
+      content: "Get skilled through a holistic curriculum, combining the latest technical knowledge with hands-on practical experience."
     }
   ];
 
@@ -342,16 +340,27 @@ const CyberSecurityCourse = () => {
     { content: "Module 4: Web Application Security [70 hours]" },
     { content: "Module 5: Mobile Application Security [80 hours]" },
     { content: "Module 6: Attack Surface Management [30 hours]" },
-    { content: "Module 7: Cloud Security [60 hours]" },
-    { content: "Module 8: DevSecOps [50 hours]" },
-    { content: "Module 9: Advanced Web Application Security [30 hours]" },
-    { content: "Module 10: Advanced Infrastructure Security & Penetration Testing [30 hours]" },
-    { content: "Module 11: Internship and Real-life Assignments and Projects" },
+
+    {content: (
+      <Box p='3' rounded={'md'} bg='#b52828' color={'#fff'} border="2px solid #b52828">  
+        <Text> Module 7: Cloud Security [60 hours]</Text>
+        <Text> Module 8: DevSecOps [50 hours]</Text>
+        <Text> Module 9: Advanced Web Application Security [30 hours]</Text>
+        <Text> Module 10: Advanced Infrastructure Security & Penetration Testing [30 hours]</Text>
+        <Text> Module 11: Internship and Real-life Assignments and Projects.</Text>
+      </Box>
+    )},
+
+    // { content: "Module 7: Cloud Security [60 hours]" },
+    // { content: "Module 8: DevSecOps [50 hours]" },
+    // { content: "Module 9: Advanced Web Application Security [30 hours]" },
+    // { content: "Module 10: Advanced Infrastructure Security & Penetration Testing [30 hours]" },
+    // { content: "Module 11: Internship and Real-life Assignments and Projects." },
   ];
   const digital_Course = [
     {
       title: "Cybersecurity",
-      arr: ["8+ Modules", "720+ Hrs of Training"],
+      arr: ["10+ Modules", "720+ Hrs of Training"],
       icon: <IoIosAnalytics />,
     },
     {
@@ -436,7 +445,7 @@ const CyberSecurityCourse = () => {
                 {/*  */}
                 <OrderedList>
                   {topData?.points?.map((ele,i) => (
-                    <ListItem key={i}>{ele}</ListItem>
+                    <ListItem fontWeight={900} key={i}>{ele}</ListItem>
                   ))}
                 </OrderedList>
               
@@ -503,7 +512,7 @@ const CyberSecurityCourse = () => {
           <Box mt="50px" w={{ base: "100%", md: "80%" }}>
             <DigitalMarketingHighlights //
               data={DigitalhighlightsData}
-              subTitle={"The Cybersecurity course offered by UpskillsNexus is unlike any other course you have ever heard of before. This Cybersecurity course in Delhi NCR has specifications that are unlike anything else you are likely to see in the Cybersecurity education world. These courses are completely industry-led and relevant to today’s requirements"}
+              subTitle={"The Cybersecurity course offered by UpskillsNexus is unlike any other course you have ever heard of before. This Cybersecurity course in Delhi NCR has specifications that are unlike anything else you are likely to see in the Cybersecurity education world. These courses are completely industry-led and relevant to today’s requirements."}
               title={"Cybersecurity Training Specifications"}
             />
           </Box>
@@ -525,7 +534,7 @@ const CyberSecurityCourse = () => {
               borderRadius="none"
               button="Enquire Now"
               title={"Best Certification Course on Cybersecurity"}
-              text="Best-in-class Cybersecurity course content taught by leading faculty and industry leaders. Assured internships and placements upon meeting the graduation requirements"
+              text="Best-in-class Cybersecurity course content taught by leading faculty and industry leaders. Assured internships and placements upon meeting the graduation requirements."
             />
           </Box>
 
@@ -542,7 +551,7 @@ const CyberSecurityCourse = () => {
               onOpen={onOpen}
               data={digital_Course}
               title={"Cybersecurity Course"}
-              subTitle="In our Cybersecurity course, we provide training from beginners to highly advanced concepts of Cybersecurity, so that you can become the highly-skilled Cybersecurity professionals."
+              subTitle="In our Cybersecurity course, we provide training from beginners to highly advanced concepts of Cybersecurity, so that you can become highly-skilled Cybersecurity professionals."
             />
           </Box>
 
@@ -560,6 +569,7 @@ const CyberSecurityCourse = () => {
           <Flex w="full" maxW={'1500px'} justify={"center"} bg="#fff" py="8">
             <Box w="90%">
               <DynamicAccordians //
+                headComp={<SecurityService />}
                 data={accordianData}
                 title="Reasons To Choose UpskillNexus Cybersecurity Course"
                 subTitle="Welcome to our comprehensive Cybersecurity Training Courses, designed to equip aspiring professionals with the knowledge and skills necessary to thrive in the ever-evolving field of cybersecurity. This program covers a wide array of fundamental and advanced topics in cybersecurity, providing a structured learning path for individuals aiming to kickstart their careers as cybersecurity analysts and consultants."

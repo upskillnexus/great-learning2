@@ -9,6 +9,8 @@ import {
   Center,
   Grid,
   useDisclosure,
+  UnorderedList,
+  ListItem,
 } from "@chakra-ui/react";
 import DigitalMarketingHighlights from "../../Components/Course/DigitalMar";
 import DynamicCard from "../../Components/Cards/DynamicCard";
@@ -193,7 +195,7 @@ const SingleCourse = () => {
 
   const topData = {
     title: "Digital Marketing Science Training Program in Delhi NCR",
-    text: "Anyone who takes the UpskillNexus Digital Marketing Science Course will be able to learn about the complete science of digital marketing..",
+    text: "A digital marketing program at UpskillNexus is a specialized educational program designed in collaboration with professionals and experts from the digital marketing industry. The program is crafted to provide participants with practical, hands-on experience and insights directly relevant to the current needs and trends within the digital marketing sector. Overall, the program is designed to bridge the gap between academic learning and the practical demands of the digital marketing industry, ensuring that participants are well-equipped for success in their careers. Additionally, participants will have access to a network of professionals within the digital marketing sector, allowing them to form valuable connections.",
     logo: [
       {
         img: "https://didm.in/assets/upload/images/Untitled%20design.gif",
@@ -254,12 +256,12 @@ const SingleCourse = () => {
     },
     {
       heading: "Course Durations",
-      text: "3 | 5 Months",
+      text: "6 Months",
       icon: <MdCheck />,
     },
     {
       heading: "Course Materials",
-      text: "E-Notes",
+      text: "Notes, Videos, Classromm Learning Material",
       icon: <MdCheck />,
     },
     {
@@ -269,7 +271,7 @@ const SingleCourse = () => {
     },
     {
       heading: "Practical Learning",
-      text: "Assignment | Case Studies",
+      text: "Projects | Assignment | Case Studies ",
       icon: <MdCheck />,
     },
     {
@@ -289,77 +291,163 @@ const SingleCourse = () => {
     },
     {
       heading: "Certifications & Exams",
-      text: "10+ Certifications",
+      text: "20+ Certifications",
       icon: <MdCheck />,
     },
   ];
 
   const courseInfoData = [
-    {
-      content:
-        "Course created by professionals who work for some of the country's most reputable digital marketing agencies.",
-    },
-    {
-      content: "Work on LIVE projects of agency clients and deliver results.",
-    },
-    {
-      content:
-        "Stand out from other digital marketers by learning the newest concepts of digital marketing.",
-    },
-    {
-      content: "Get introduced to the latest digital marketing tools and technologies.",
-    },
-    {
-      content: "Get hired by the country’s most established Digital Marketing Agencies.",
-    },
-    {
-      content:
-        "Learn every individual chapter of the course from a specific ‘specialized’ trainer.",
-    },
+    { content: "Module 1 : Introduction to Marketing (10hrs)" },
+    { content: "Module 2 : Fundamentals of Marketing (10hrs)" },
+    { content: "Module 3 : Product Marketing & Positioning (12hrs)" },
+    { content: "Module 4 : Digital Marketing Fundamentals (10hrs)" },
+    { content: "Module 5 : Designing & Building Web Presence (12hrs)" },
+    { content: "Module 6 : Behavioural Marketing (8hrs)" },
+    { content: "Module 7 : Social Media Marketing (20hrs)" },
+    { content: "Module 8 : Content Marketing & Strategy (12hrs)" },
+    { content: "Module 9 : Search Engine Optimization (20hrs)" },
+    { content: "Module 10: Performance Marketing (30hrs)" },
+    { content: "Module 11: Blogging & its Essentials (6hrs)" },
+    { content: "Module 12: Funnel Marketing (10hrs)" },
+    { content: "Module 13: Native Advertising (14hrs)" },
+    { content: "Module 14: WhatsApp Marketing (12hrs)" },
+    { content: "Module 15: Email & SMS Marketing (10hrs)" },
+    { content: "Module 16: Media Buying (12hrs)" },
+    { content: "Module 17: Analytics Strategy (12hrs)" },
+    { content: "Module 18: Introduction to CRM (Customer Relationship Management) (12hrs)" },
+    { content: "Module 19: Latest trends & Tools (8hrs)" },
   ];
 
   const chapterhighlights = [
     {
-      content: "Chapter 1. Digital Marketing Planning & Strategy",
+      content: (
+        <>
+          <b>Practical Focus :</b> 
+          <Text>
+              Emphasis on practical skills and real-world applications, allowing participants to work on industry-relevant projects and case studies.
+          </Text>
+        </>
+      )
     },
     {
-      content: "Chapter 2. Magnet Marketing",
+      content: (
+        <>
+          <b>Industry Collaborations :</b>
+          <Text>
+            Collaboration with professionals, practitioners, and experts from Digital Marketing industry who contribute their knowledge, experiences, and insights to the curriculum.
+          </Text>
+        </>
+      )
     },
     {
-      content: "Chapter 3. Performance Marketing",
+      content: (
+        <>
+          <b>Current Industry Trends :</b>
+          <Text>
+            Alignment with the latest trends, technologies, and best practices in the dynamic field of Digital Marketing.
+          </Text>
+        </>
+      )
     },
     {
-      content: "Chapter 4. Funnel Marketing",
+      content: (
+        <>
+          <b>Professional Development :</b>
+          <Text>
+            Aimed at developing participants into industry-ready professionals with the skills and knowledge required by employers.
+          </Text>
+        </>
+      )
     },
     {
-      content: "Chapter 5. Product Marketing",
+      content: (
+        <>
+          <b>Hands-on Experience :</b>
+          <Text>
+            Opportunities for hands-on experience with industry-standard tools and platforms commonly used in Digital Marketing campaigns.
+          </Text>
+        </>
+      )
     },
     {
-      content: "Chapter 6. Media Buying",
+      content: (
+        <>
+          <b>Industry-Validated Certifications :</b>
+          <Text>
+            Participants will earn dual certifications from UpskillNexus and a Digital Marketing Agency, enhancing their credibility and employability in the job market.
+          </Text>
+        </>
+      )
     },
     {
-      content: "Chapter 7. Analytical Strategy",
+      content: (
+        <>
+          <b>Project Based Learning :</b>
+          <Text>
+            Project-based assignments and simulations that mirror real-world digital marketing scenarios, allowing participants to apply theoretical knowledge in practical contexts.
+          </Text>
+        </>
+      )
     },
     {
-      content: "Chapter 8. Start Up Marketing",
+      content: (
+        <>
+          <b>Networking Opportunities :</b>
+          <Text>
+            Networking events, guest lectures, and interactions with industry professionals, providing participants with valuable connections and potential job opportunities.
+          </Text>
+        </>
+      )
     },
-    {
-      content: "Chapter 9. Programmatic Advertisement",
-    },
-    {
-      content: "Chapter 10. Target Marketing",
-    },
-    {
-      content: "Chapter 11. Organic Marketing",
-    },
-    {
-      content: "Chapter 12. Get Hired",
-    },
+    //   {
+    //     content: (
+    //       <>
+    //         <b>Program Outcomes:</b>
+    //         <Text>
+    //             At Upskill Nexus, the Digital Marketing program is tailored to prepare students to contribute
+    //             effectively in a professional setting after completing the course. The program offers an in-depth
+    //             understanding of the various digital marketing channels and industry. Additionally, the course offers
+    //             hands-on learning and career guidance. Here are potential program outcomes for such a program:
+    //         </Text>
+    //         <UnorderedList>
+    //           <ListItem>
+    //             Successful trainees will be able to fetch jobs and compete with peers in the Digital Marketing
+    //             domain by learning the industry trends and emerging technologies in Digital Marketing.
+    //           </ListItem>
+    //           <ListItem>
+    //             Students will gain practical, real-world experience in digital marketing strategies using
+    //             industry-standard tools and platforms.
+    //             The program will prepare students to plan, execute, and analyse digital marketing
+    //             campaigns.
+    //           </ListItem>
+    //           <ListItem>
+    //             The program offers students a chance to develop the skills necessary for success in a digital
+    //             marketing role.
+    //           </ListItem>
+
+    //           <ListItem>
+    //             The program offers students a chance to develop the skills necessary for success in a digital
+    //             marketing role.
+    //           </ListItem>
+    //           <ListItem>
+    //             Students will develop a comprehensive understanding of digital marketing strategy,
+    //             including target audience analysis, goal setting, and the development of effective
+    //             and collaborate with fellow students and industry professionals.
+    //           </ListItem>
+    //           <ListItem>
+    //             By focusing on real-world applications and industry best practices, students will gain a
+    //             competitive edge and unlock a wide range of career opportunities in Digital Marketing.
+    //           </ListItem>
+    //         </UnorderedList>
+    //       </>
+    //   )
+    // }
   ];
+  
   const digital_Course = [
     {
       title: "Digital Marketing Course",
-      arr: ["10+ Chapters", "100+ Hrs of Training"],
+      arr: ["19 Modules", "240 Hrs of Training"],
       icon: <IoIosAnalytics />,
     },
     {
@@ -369,7 +457,7 @@ const SingleCourse = () => {
     },
     {
       title: "Tools & Software / LMS",
-      arr: ["Latest Tools & Softwares Support", "LMS by Skill Shiksha"],
+      arr: ["Latest Tools & Softwares Support", "LMS Access"],
       icon: <TbSettingsCog />,
     },
     {
@@ -517,7 +605,7 @@ const SingleCourse = () => {
               data={courseInfoData}
               title={"Digital Marketing Science Key Highlights"}
               subTitle={
-                "The key highlights of our Digital Marketing Science course can be found below, which make it unique to any other Digital Marketing Course in the country.."
+                "The key highlights of our Digital Marketing Science course can be found below, which make it unique from any other Digital Marketing Course in the country.."
               }
             />
           </Box>
@@ -547,18 +635,18 @@ const SingleCourse = () => {
               onOpen={onOpen}
               data={digital_Course}
               title={"Digital Marketing Science Course"}
-              subTitle="In our digital marketing science course, we provide agency-based training to beginner and intermediate-level digital marketers in highly advanced concepts of digital marketing, so that they can become the most uniquely skilled digital marketers possible."
+              subTitle="In our digital marketing science course, we provide agency-based training to beginner and intermediate-level digital marketers with highly advanced concepts of digital marketing, so that they can become the most uniquely skilled digital marketers possible."
             />
           </Box>
 
-          {/* Chapter Highlights */}
+          {/* Program Highlights: */}
           <Box w="full" py="8" bg="#f4f5f7">
             <CourseInformation
-              keyH="Chapters Highlights"
+              keyH="Program Highlights"
               data={chapterhighlights}
-              title={"Chapter Highlights"}
+              title={"Program Highlights:"}
               subTitle={
-                "UpskillNexus Covers 10+ Chapters that you will learn in the Digital Marketing Science Program"
+                "UpskillNexus Covers 19 Chapters that you will learn in the Digital Marketing Science Program"
               }
             />
           </Box>

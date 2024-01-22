@@ -35,6 +35,11 @@ const admissionSchema = new mongoose.Schema({
   educationalQualifications: {
     type: String,
   },
+
+  branch: {
+    type: String,
+    required: [true, 'Branch is required'],
+  },
   // File fields
   passportphoto: {
     type: Object,
@@ -91,6 +96,11 @@ const admissionSchema = new mongoose.Schema({
   declaration: {
     type: Boolean,
     required: [true, 'Please check this field.'],
+  },
+  createdAt: {
+    type: Date,
+    default: new Date(),
+    required: [true, 'Created date is required.']
   },
 });
 

@@ -81,6 +81,7 @@ export const Header = ({ children }) => {
     },
     { text: "Latest News", to: "#" },
     { text: "Contact Us", to: "/contact" },
+    { text: "Login", to: "/login" },
   ];
 
   return (
@@ -193,7 +194,7 @@ export const Header = ({ children }) => {
                   {selectedValue || "Explore Program"} <FaChevronDown />
                 </Box>
               </MenuButton>
-              {/* <MenuList>
+              <MenuList>
                 <MenuItem to="/" as={Link} onClick={() => setSelectedValue(null)}>
                   Home
                 </MenuItem>
@@ -207,7 +208,7 @@ export const Header = ({ children }) => {
                     {ele.name}
                   </MenuItem>
                 ))}
-              </MenuList> */}
+              </MenuList>
             </Menu>
 
             {/* </Link> */}
@@ -244,7 +245,6 @@ export const Header = ({ children }) => {
                   <Link
                     key={index}
                     style={{
-                      border: "1px solid #cccc",
                       borderRadius: "5px",
                       padding: "5px 10px",
                       border: pathname === link?.to ? "2px solid #b9292f" : "1px solid #ccc",
@@ -273,7 +273,7 @@ export const Header = ({ children }) => {
             style={flexStyles}
             p="0 15px"
           >
-            Request Call Back
+            Free Demo
           </Button>
 
           {/*  */}
@@ -316,7 +316,7 @@ export const Header = ({ children }) => {
                   _hover={hoverStyle}
                   color="#fff"
                 >
-                  Request Call Back
+                  Free Demo
                 </Button>
                 {/*  */}
                 {navLinks.map((link, index) =>

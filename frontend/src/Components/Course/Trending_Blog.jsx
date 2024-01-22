@@ -1,40 +1,31 @@
 import React from "react";
-import { Box, Heading, Text, Link, VStack } from "@chakra-ui/react";
+import { Box, Heading, Text, Link, VStack, Grid, UnorderedList, ListItem } from "@chakra-ui/react";
 
-const TrendingBlogs = () => {
-  // Data: Trending blog posts
-  const trendingBlogs = [
-    {
-      title: "Blog Post 1",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-      link: "https://blog.didm.in/blogpost1",
-    },
-    {
-      title: "Blog Post 2",
-      content: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...",
-      link: "https://blog.didm.in/blogpost2",
-    },
-    // Add more blog entries as needed
-  ];
-
+const TrendingBlogs = ({arr,title}) => {
+  
   return (
-    <VStack spacing={4} align="stretch">
-      <Heading as="h2" size="lg">
-        Trending Blogs
-      </Heading>
+    <>
+      <Heading textAlign={'center'} color={'#b52828'} size="lg">{title}</Heading>
 
-      {trendingBlogs.map((blog, index) => (
-        <Box key={index} p={4} borderWidth="1px" borderRadius="lg">
-          <Heading as="h3" size="md" mb={2}>
-            {blog.title}
-          </Heading>
-          <Text>{blog.content}</Text>
-          <Link color="teal.500" href={blog.link} target="_blank" mt={2} display="block">
-            Read More
-          </Link>
-        </Box>
-      ))}
-    </VStack>
+      <Grid mt='9' templateColumns={"repeat(2,1fr)"} spacing={4} align="stretch" gap='3'>
+        {arr.map((blog, index) => (
+          <Box key={index} p={4} borderWidth="1px" borderRadius="lg">
+            <UnorderedList as="h3" size="md" mb={2}>
+              <ListItem>
+                <Text m='0' color={'#b52828'} fontWeight={'bold'}>{blog.title}</Text>
+                <UnorderedList>
+                  <ListItem>
+                    {blog.content?.map((el,ind) => (
+                      <Text m='0' index={ind}>{el}</Text>
+                    ))}
+                  </ListItem>
+                </UnorderedList>
+              </ListItem>
+            </UnorderedList>
+          </Box>
+        ))}
+      </Grid>
+    </>
   );
 };
 

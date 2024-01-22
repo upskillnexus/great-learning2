@@ -1,17 +1,18 @@
 import { useLocation } from "react-router-dom";
 import { Header } from "./Header";
+import isAuth from "../../Libs/Quirys/isAuth";
+import ScreenHeader from "./ScreenHeader";
 
 export const AppWithHeader = ({ children }) => {
-  const location = useLocation();
+  const location = useLocation();  
+  const paths = ['/login']
 
   return (
     <>
-      {/*  */}
-      {location.pathname == "/login" ? (
+      {paths?.includes(location?.pathname) ? (
         <>{children}</>
       ) : (
-        <Header>{children}</Header>
-        //
+        <ScreenHeader>{children}</ScreenHeader>
       )}
     </>
   );
