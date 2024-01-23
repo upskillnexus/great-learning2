@@ -456,7 +456,7 @@ const SingleCourse = () => {
       icon: <IoIosAnalytics />,
     },
     {
-      title: "Special Session",
+      title: "Special Sessions",
       arr: ["Doubt-Clearing Sessions", "Personalized Sessions"],
       icon: <BiLogoGraphql />,
     },
