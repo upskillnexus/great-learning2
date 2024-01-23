@@ -13,6 +13,7 @@ import {
   IconButton,
   Image,
   Input,
+  Link,
   Menu,
   MenuButton,
   MenuItem,
@@ -28,7 +29,7 @@ import {
   useMediaQuery,
 } from "@chakra-ui/react";
 import { useRef, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import {  useLocation } from "react-router-dom";
 import logo from "/logo.png";
 import { hoverStyle } from "../../style/button.style";
 import {
@@ -81,6 +82,7 @@ export const Header = ({ children }) => {
     },
     { text: "Latest News", to: "#" },
     { text: "Contact Us", to: "/contact" },
+    { text: "Login", to: "/login" },
   ];
 
   return (
@@ -108,25 +110,25 @@ export const Header = ({ children }) => {
             alignItems={{ base: "center", md: "center" }}
             color="white"
           >
-            <Link target="_blank" to="https://www.facebook.com/upskillnexus/">
+            <Link target="_blank" href="https://www.facebook.com/upskillnexus/">
               <Button _hover={{ bg: "rgba(0,0,0,0.1)" }} bg="none" color="white" size="sm">
                 <FaFacebookF />
               </Button>
             </Link>
 
-            <Link target="_blank" to="https://www.instagram.com/upskillnexus/">
+            <Link target="_blank" href="https://www.instagram.com/upskillnexus/">
               <Button _hover={{ bg: "rgba(0,0,0,0.1)" }} bg="none" color="white" size="sm">
                 <FaInstagram />
               </Button>
             </Link>
 
-            <Link target="_blank" to="https://www.youtube.com/@upskillnexus">
+            <Link target="_blank" href="https://www.youtube.com/@upskillnexus">
               <Button _hover={{ bg: "rgba(0,0,0,0.1)" }} color="white" bg="md" size="sm">
                 <FaYoutube />
               </Button>
             </Link>
 
-            <Link target="_blank" to="https://in.pinterest.com/upskillnexus/">
+            <Link target="_blank" href="https://in.pinterest.com/upskillnexus/">
               <Button _hover={{ bg: "rgba(0,0,0,0.1)" }} color="white" bg="md" size="sm">
                 <FaPinterestP />
               </Button>
@@ -170,26 +172,20 @@ export const Header = ({ children }) => {
       >
         <Flex gap={"15px"} w="100%">
           {/* <Box> */}
-          <Link to="/">
+          <Link href="/">
             <Box>
               <Image width={{ base: "150px", md: "250px" }} src={logo} />
             </Box>
           </Link>
           {/* </Box> */}
           {/* <Spacer /> */}
-          <Flex
-            align="center"
-            w="100%"
-            fontWeight={"600"}
-            justifyContent={"space-between"}
-            textAlign="center"
-            marginTop={{ base: "1rem", md: "0" }}
+          <Flex align="center" w="100%" fontWeight={"600"} justifyContent={"space-between"} textAlign="center" marginTop={{ base: "1rem", md: "0" }}
             style={flexStyles || { display: "none" }}
           >
             {/*  */}
 
-            <Menu>
-              <MenuButton
+            <Menu> 
+              <MenuButton  // explore programs's in header
                 rounded={"md"}
                 border="1px solid #cccc"
                 p="5px 10px"
@@ -200,14 +196,14 @@ export const Header = ({ children }) => {
                 </Box>
               </MenuButton>
               <MenuList>
-                <MenuItem to="/" as={Link} onClick={() => setSelectedValue(null)}>
+                <MenuItem href="/" as={Link} onClick={() => setSelectedValue(null)}>
                   Home
                 </MenuItem>
                 {coursename?.map((ele, i) => (
                   <MenuItem
                     key={i}
                     as={Link}
-                    to={ele?.link}
+                    href={ele?.link}
                     onClick={() => setSelectedValue(ele.name)}
                   >
                     {ele.name}
@@ -220,9 +216,10 @@ export const Header = ({ children }) => {
             <Flex gap="15px">
               {navLinks?.map((link, index) =>
                 link.subMenu ? (
-                  <Menu key={index}>
-                    <MenuButton
-                      rounded="md"
+                  <Menu key={index} bg='green'>
+                    <MenuButton // drop down menu of header's
+                      _hover={{border: '2px solid #b52828'}}
+                      rounded="sm"
                       border="1px solid #cccc"
                       p="5px 10px"
                       fontWeight="medium"
@@ -238,8 +235,8 @@ export const Header = ({ children }) => {
                           border={pathname === subLink?.to ? "2px solid #b9292f" : "2px solid none"}
                           color={pathname === subLink?.to ? "#b8292f" : "initial"}
                           as={Link}
-                          to={subLink?.to}
-                          key={subIndex}
+                          href={subLink?.to}
+                          key={subIndex}    
                         >
                           {subLink?.text}
                         </MenuItem>
@@ -249,15 +246,13 @@ export const Header = ({ children }) => {
                 ) : (
                   <Link
                     key={index}
-                    style={{
-                      border: "1px solid #cccc",
-                      borderRadius: "5px",
-                      padding: "5px 10px",
-                      border: pathname === link?.to ? "2px solid #b9292f" : "1px solid #ccc",
-                      color: pathname === link?.to ? "#b9292f" : "#000",
-                    }}
-                    _hover={{ background: "blue" }}
-                    to={link.to}
+                    border={`${pathname === link?.to ? "2px solid #b9292f" : "1px solid #ccc"}`}
+                    color={`${pathname === link?.to ? "#b9292f" : "#000"}`}
+                    rounded={'md'}
+                    p='1'
+                    px='3'
+                    href={link.to}
+                    _hover={{border: '2px solid #b52828'}}
                   >
                     {link.text}
                   </Link>
@@ -279,7 +274,7 @@ export const Header = ({ children }) => {
             style={flexStyles}
             p="0 15px"
           >
-            Request Call Back
+            Free Demo
           </Button>
 
           {/*  */}
@@ -322,13 +317,13 @@ export const Header = ({ children }) => {
                   _hover={hoverStyle}
                   color="#fff"
                 >
-                  Request Call Back
+                  Free Demo
                 </Button>
                 {/*  */}
                 {navLinks.map((link, index) =>
                   link.subMenu ? (
                     <Menu key={index}>
-                      <MenuButton rounded={"md"} border="1px solid #cccc" p="5px 10px">
+                      <MenuButton _hover={{ border: '2px solid #b52828' }} rounded={"sm"} border="1px solid #cccc" p="5px 10px">
                         <Box color='black' display={"flex"} justifyContent={'space-between'} as="span" gap="2" alignItems="center">
                           {link.text} <FaChevronDown />
                         </Box>
@@ -338,7 +333,7 @@ export const Header = ({ children }) => {
                           <MenuItem
                             color={pathname === subLink?.to ? "#b9292f" : "#000"}
                             as={Link}
-                            to={subLink?.to}
+                            href={subLink?.to}
                             key={subIndex}
                             onClick={() => setIsDrawerOpen(false)}
                           >
@@ -350,16 +345,13 @@ export const Header = ({ children }) => {
                   ) : (
                     <Link
                       key={index}
-                      style={{
-                        border: "1px solid #cccc",
-                        borderRadius: "5px",
-                        padding: "5px 10px",
-                        // border: pathname === link?.to ? "2px solid #b9292f" : "1px solid #ccc",
-                        color: pathname === link?.to ? "#b9292f" : "#000",
-                      }}
+                      
+                      padding= "5px 10px"
+                      color= {`${pathname === link?.to ? "#b9292f" : "#000"}`}
+                      border={'2px solid #ccc'}
                       onClick={() => setIsDrawerOpen(false)}
-                      _hover={{ background: "blue" }}
-                      to={link.to}
+                      _hover={{ border: '2px solid #b52828' }}
+                      href={link.to}
                     >
                       {link.text}
                     </Link>

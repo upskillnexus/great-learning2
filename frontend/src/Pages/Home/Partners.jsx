@@ -21,7 +21,7 @@ const Partners = () => {
       link: "https://www.didm.in/",
     },
     {
-      img: "/partners/nexus.png", //
+      img: "/partners/xbiz.png", //
       comp: "NEXUS",
       color: "#ffca04",
       content:
@@ -69,7 +69,6 @@ const Partners = () => {
               }}
               gap={4}
               justifyContent="center"
-              // alignItems="center"
               mx="auto"
               p={4}
             >
@@ -87,11 +86,10 @@ const Partners = () => {
                 >
                   <Image width={"50%"} position="relative" objectFit={"cover"} src={logo?.img} />
 
-                  {/* <Link to={path}> */}
                   <Box p="4" textAlign={"center"}>
-                    <Heading style={{ color: `${logo.color}` }} size="md">
-                      {/* {logo.comp} */}
-                    </Heading>
+                    {/* <Heading style={{ color: `${logo.color}` }} size="md">
+                      {logo.comp}
+                    </Heading> */}
                     <Text textAlign={"center"}>{logo.content}</Text>
                   </Box>
                   <Link to={logo?.link} target="_blank">
@@ -110,13 +108,7 @@ const Partners = () => {
                 </Flex>
               ))}
             </Grid>
-            <Button
-              onClick={() => onOpen()}
-              border="1px solid #b9292f"
-              bg="#b9292f"
-              color="#fff"
-              _hover={{ bg: "#fff", color: "#b9292f" }}
-            >
+            <Button onClick={() => onOpen()} border="1px solid #b9292f" bg="#b9292f" color="#fff" _hover={{ bg: "#fff", color: "#b9292f" }}>
               Explore Our Courses
             </Button>
           </Flex>

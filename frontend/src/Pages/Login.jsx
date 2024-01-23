@@ -9,6 +9,8 @@ import {
   Stack,
   Heading,
   Spinner,
+  Image,
+  Flex,
 } from "@chakra-ui/react";
 import useLogin from "../Libs/Mutation/Login/useLogin";
 
@@ -35,8 +37,11 @@ function Login() {
         <Box p={8} maxW="600px" w="550px" borderWidth={1} rounded={8} boxShadow="lg" bg="white">
           <form onSubmit={handleSubmit(onSUbmit)}>
             <Stack spacing={4}>
+              <Flex justify='center'>
+                <Image w='200px' src="/Upskill-Nexus-favicon.png" />
+              </Flex>
               <Heading fontSize="2xl" textAlign="center" color="#bd2c22">
-                Login
+                Login With UpskillNexus
               </Heading>
               <FormControl id="email">
                 <Controller
@@ -45,7 +50,7 @@ function Login() {
                   name="email"
                   render={({ field: { onChange, value } }) => (
                     <>
-                      <DyInput title={'email'} onChange={onChange} value={value} type="text" />
+                      <DyInput title={'Email'} onChange={onChange} value={value} type="email" />
                       <InputError err={errors} name="email" />
                     </>
                   )}

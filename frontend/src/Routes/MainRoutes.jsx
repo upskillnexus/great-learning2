@@ -22,6 +22,12 @@ import AdmissionProcess from "../Pages/Admission/AdmissionProcess";
 import CareerSupport from "../Pages/support/CareerSupport";
 import Leadership from "../Pages/Home/Leadership";
 import NotFound from "../Pages/PageNotfound";
+import StudentAdmission from "../Pages/Admin/Admission/StudentAdmission";
+import EmpyobilitySkills from "../Pages/Course/EmpyobilitySkills";
+import isAuth from "../Libs/Quirys/isAuth";
+import AdminDeshboard from "../Pages/Admin/Deshboard/Deshboard";
+import AddProgramForm from "../Pages/Admin/course/AddCourse";
+import AllCourses from "../Pages/Admin/course/Courses";
 
 export const MainRoutes = () => {
   return (
@@ -33,6 +39,7 @@ export const MainRoutes = () => {
         <Route path="/course/digital-marketing-science" element={<SingleCourse />} />
         <Route path="/course/data-science" element={<DataScienceCourse />} />
         <Route path="/course/cyber-security" element={<CyberSecurityCourse />} />
+        <Route path='/course/employability-skills' element={<EmpyobilitySkills />} />
 
         {/* Courses */}
 
@@ -51,16 +58,14 @@ export const MainRoutes = () => {
         <Route path="/admission/process" element={<AdmissionProcess />} />
         <Route path="/career-support" element={<CareerSupport />} />
 
-        <Route
-          path="/leads"
-          element={
-            <PrivateRoute>
-              <Leads />
-            </PrivateRoute>
-          }
-        />
-
-
+      {/* Admin */}
+        <Route path="/admin" element={<PrivateRoute />}>
+          <Route path="" element={<AdminDeshboard />}/>
+          <Route path='leads' element={<Leads />} />
+          <Route path='students-admission' element={<StudentAdmission />} />
+          <Route path='course/create' element={<AddProgramForm />} />
+          <Route path='course' element={<AllCourses />} />
+        </Route>
         
         <Route path="*" element={<NotFound />} />
       </Routes>

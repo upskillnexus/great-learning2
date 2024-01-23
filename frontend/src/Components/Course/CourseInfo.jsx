@@ -27,10 +27,10 @@ const CourseInformation = ({ title, subTitle, data, keyH }) => {
             mt="5"
           >
             {data?.map((info, index) => (
-              <Flex align={"center"} gap="2" px="2" rounded={"md"} key={index} m="0" textAlign="left">
-                <Text fontSize={"18px"} color="#b52828">
+              <Flex align={"start"} gap="2" px="2" rounded={"md"} key={index} m="0" textAlign="left">
+                {/* <Text fontSize={"18px"} mt='2' color="#b52828">
                   <FaRegCheckCircle />
-                </Text>
+                </Text> */}
                 <Text fontWeight={"medium"} fontSize="15px">
                   {info.content}
                 </Text>
@@ -39,7 +39,9 @@ const CourseInformation = ({ title, subTitle, data, keyH }) => {
           </Grid>
         </Box>
         {/* Form */}
-        <InquiryFrms2 />
+        <Box w={{base: 'full', lg:'50%'}}>
+          <InquiryFrms2 />
+        </Box>
       </Flex>
     </Flex>
   );

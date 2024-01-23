@@ -29,3 +29,6 @@ export const courseInfoDigital = {
   title: "Digital Marketing Science Training Specification",
   subTitle: "The Digital Marketing Science course offered by UpskillNexus is unlike any other course you have ever heard of before. This digital marketing course in Delhi NCR has specifications that are unlike anything else you are likely to see in the digital marketing education world..",
 };
+
+
+

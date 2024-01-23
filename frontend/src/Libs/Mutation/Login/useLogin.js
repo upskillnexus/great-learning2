@@ -13,7 +13,7 @@ const useLogin = () => {
       return res?.data;
     },
     onSuccess: (data) => {
-      navigate("/");
+      navigate("/admin");
       toast.success(data?.message);
     },
     onError: (err) => {

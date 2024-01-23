@@ -15,10 +15,10 @@ const useAddEnquiry = () => {
       return res?.data;
     },
     onSuccess: (data) => {
-      toast.success("Inquery Added");
+      toast.success("THANK YOU, \n We will get in touch with you soon. ");
     },
     onError: (err) => {
-      toast.success("Inquery Added");
+      toast.success("THANK YOU, \n We will get in touch with you soon. ");
       // toast.error("Something went Wrong");
     },
   });

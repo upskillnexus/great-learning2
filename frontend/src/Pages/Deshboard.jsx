@@ -15,6 +15,7 @@ import Footer from "../Components/Footer";
 import { FAQ } from "./Home/FAQ";
 import TalkToOurTema from "./Home/TalkToOurTema";
 import SliderTestimonial from "../Components/Text";
+import { Outlet } from "react-router-dom";
 
 export const Deshboard = () => {
   return (

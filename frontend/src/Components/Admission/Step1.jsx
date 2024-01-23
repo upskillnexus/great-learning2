@@ -3,7 +3,7 @@ import { Button, Flex, FormControl, Grid, Text, Textarea } from "@chakra-ui/reac
 
 import FormError from "../../core/FormError";
 import DyInput from "../DynamicInputs/DyInput";
-import { coursename, genders, occupation } from "../../../data/course";
+import { branch, coursename, genders, occupation } from "../../../data/course";
 import DySelectBx from "../DynamicInputs/DySelectBx";
 import DyInputFile from "../DynamicInputs/DyInputFile";
 
@@ -87,6 +87,26 @@ const Step1 = ({ Controller, control, errors, onNext, handleSubmit, getValues })
               <FormError err={errors} name="gender" />
             </div>
           )}
+        />
+
+      {/* Branch */}
+      <Controller
+        control={control}
+        name="branch"
+        rules={{ required: "Course is required*" }}
+        render={({ field: { onChange, value } }) => (
+          <div>
+            <DySelectBx
+              value={value}
+              onChange={onChange}
+              title={"Branch"}
+              placeholder="--Select branch--"
+              values={branch}
+            />
+
+            <FormError err={errors} name="branch" />
+          </div>
+        )}
         />
 
         {/* Occupation */}

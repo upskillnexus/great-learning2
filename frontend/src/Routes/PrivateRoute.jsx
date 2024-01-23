@@ -1,25 +1,29 @@
 import React, { useEffect, useState } from "react";
-import { Navigate } from "react-router-dom";
+import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import api from "../api";
 import { Box, Flex, Spinner } from "@chakra-ui/react";
 import isAuth from "../Libs/Quirys/isAuth";
 
 const PrivateRoute = ({ children }) => {
+  const navigate = useNavigate()
   const { data: check, isPending: loading, isSuccess: success } = isAuth();
+  
 
-  console.log(check);
-
-  if (!check?.isAuth && success) {
-    return <Navigate to="/login" />;
-  }
+  useEffect(() => {
+    if (!check?.isAuth && !loading) {
+      return navigate("/login");
+    }
+  },[!loading, success])
 
   return loading ? (
     <Flex align={"center"} justify={"center"} minH="100vh" w="full">
       <Spinner size={"xl"} />
     </Flex>
   ) : (
-    <>{children}</>
-  );
-};
-
-export default PrivateRoute;
+      <Outlet />
+    );
+  };
+  
+  export default PrivateRoute;
+  
+  // <>{children}</>
