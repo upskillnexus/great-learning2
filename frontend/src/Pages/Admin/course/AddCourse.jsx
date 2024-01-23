@@ -122,30 +122,29 @@ const AddProgramForm = () => {
 
                     <FormControl id="registrationFee">
                         <Controller
-                        control={control}
-                        rules={{
-                            required: 'Registration Fee is required.',
-                            pattern: {
-                            value: /^\d+$/,
-                            message: 'Please enter a valid number.',
-                            },
-                        }}
-                        name="registrationFee"
-                        render={({ field: { onChange, value } }) => (
-                            <>
-                            <DyInput
-                                title={'Registration Fee'}
-                                type="number"
-                                onChange={onChange}
-                                value={value}
-                            />
-                            <InputError err={errors} name="registrationFee" />
-                            </>
-                        )}
+                            control={control}
+                            rules={{
+                                required: 'Registration Fee is required.',
+                                pattern: {
+                                value: /^\d+$/,
+                                message: 'Please enter a valid number.',
+                                },
+                            }}
+                            name="registrationFee"
+                            render={({ field: { onChange, value } }) => (
+                                <>
+                                <DyInput
+                                    title={'Registration Fee'}
+                                    type="number"
+                                    onChange={onChange}
+                                    value={value}
+                                />
+                                <InputError err={errors} name="registrationFee" />
+                                </>
+                            )}
                         />
                     </FormControl>
                 </Grid>
-
                 <Button isLoading={creating} type="submit" colorScheme="red" bg='#b52828' mt={4}>
                     Add Program
                 </Button>

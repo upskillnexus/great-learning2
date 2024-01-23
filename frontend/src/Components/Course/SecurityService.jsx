@@ -56,9 +56,9 @@ const SecurityService = () => {
   return (
     <>
         <Box py="20px" >
-            <Flex textAlign={'center'} align={'center'} flexDir={''} >
-                <Box h='250px' w='500px' border={'2px solid black'}>
-                    <Image objectFit={'cover'} w='full' h='full'  src='/partners/xbiz.png' />
+            <Flex textAlign={'center'} align={'center'}  >
+                <Box h='250px' w='500px'>
+                    <Image objectFit={'contain'} w='full' h='full'  src='/course/xbiz.png' />
                 </Box>
                 <Box>
                     <Heading fontSize={'28px'} color={'#b52828'}>UPSKILLNEXUS LAUNCHES CYBERSECURITY EXPERT TRAINING AND INTERNSHIP PROGRAM WITH SECURENEXUS.</Heading>
@@ -78,8 +78,8 @@ const SecurityService = () => {
                         ))}
                     </Flex>
                 </Box>
-                <Box h='250px' w='500px' border={'2px solid black'}>
-                    <Image objectFit={'cover'} w='full' h='full'  src='/partners/xbiz.png' />
+                <Box h='250px' w='500px' >
+                    <Image objectFit={'contain'} w='full' h='full'  src='/course/secure.png' />
                 </Box>
             </Flex>
 
