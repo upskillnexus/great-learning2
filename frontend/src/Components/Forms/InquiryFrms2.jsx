@@ -25,7 +25,7 @@ const InquiryFrms2 = () => {
   };
   return (
     <>
-      <Box mb={{ base: "5", lg: "0" }} w={{ base: "full", lg: "40%" }}>
+      <Box mb={{ base: "5", lg: "0" }} w={{ base: "full", lg: "full" }}>
         <Flex gap="2" py={6} h="full" flexDir={"column"} justify={"space-around"} border="1px solid #cccc" p="5" rounded={"lg"}>
           <Box textAlign={"center"} textTransform={"uppercase"}>
             <Heading color="#b9292f" fontSize={"28px"} as="h4">

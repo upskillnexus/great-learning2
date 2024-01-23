@@ -3,8 +3,9 @@ import { Accordion, AccordionButton, AccordionItem, AccordionPanel, Box, Flex, H
 import React from "react";
 import { FaQuestionCircle } from "react-icons/fa";
 import InquiryFrms2 from "../Forms/InquiryFrms2";
+import SecurityService from "../Course/SecurityService";
 
-const DynamicAccordians = ({ data, title, subTitle }) => {
+const DynamicAccordians = ({ data, title, subTitle, headComp }) => {
   return (
     <>
       <Box textAlign={"center"} mb="8">
@@ -15,6 +16,9 @@ const DynamicAccordians = ({ data, title, subTitle }) => {
         )}
         {subTitle && <Text>{subTitle}</Text>}
       </Box>
+      {/* Head component  */}
+        {headComp}
+      {/* Head component  */}
       <Flex flexDir={{ base: "column", lg: "row" }} justify={"space-between"} gap="3">
         <Box w={{ base: "full", lg: "70%" }}>
           <Accordion allowToggle border={"none"}>
@@ -46,7 +50,9 @@ const DynamicAccordians = ({ data, title, subTitle }) => {
             ))}
           </Accordion>
         </Box>
-        <InquiryFrms2 />
+        <Box w={{base: 'full', lg:'50%'}}>
+          <InquiryFrms2 />
+        </Box>
       </Flex>
     </>
   );

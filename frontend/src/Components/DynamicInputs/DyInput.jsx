@@ -12,6 +12,7 @@ const DyInput = ({
   title,
   inpSize = "md",
   readOnly = false,
+  isInvalid,
   defaultValue = "",
   lable = false,
 }) => {
@@ -30,6 +31,7 @@ const DyInput = ({
             lable={lable}
             defaultValue={defaultValue}
             onChange={onChange}
+            isInvalid={isInvalid}
             value={value}
             readOnly={readOnly}
             placeholder={placeholder}

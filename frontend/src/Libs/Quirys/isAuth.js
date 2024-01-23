@@ -8,6 +8,11 @@ const isAuth = () => {
       const res = await api.get("user/check");
       return res?.data;
     },
+    staleTime: Infinity,
+    retry: (failureCount, error) => {
+      return failureCount < 1;
+    },
+    refetchOnWindowFocus: false,
   });
   return check;
 };
