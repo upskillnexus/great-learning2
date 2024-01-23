@@ -1,7 +1,6 @@
 let jwt = require("jsonwebtoken");
 
 const isAuth = async (req, res, next) => {
-  console.log("isauth expected")
 
   try {
     const authToken = req.cookies.upskillnexus;

@@ -48,8 +48,12 @@ const createAdmission = async (req, res) => {
     const { limit } = req.query;
     
     try {
-      const admissions = await AdmissionModal.find().limit(limit).sort({createdAt: -1});
-      res.status(200).json({ data: admissions, message: 'Admissions retrieved successfully', status: true });
+      const [admissions, count] = await Promise.all([
+        AdmissionModal.find().limit(parseInt(limit)).sort({createdAt: -1}),
+        AdmissionModal.countDocuments()
+      ])
+      // const admissions = await ;
+      res.status(200).json({ data: admissions,count, message: 'Admissions retrieved successfully', status: true });
 
     } catch (error) {
       res.status(500).json({ message: 'Internal Server Error', status: false });

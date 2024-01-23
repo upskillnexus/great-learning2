@@ -56,23 +56,31 @@ const SecurityService = () => {
   return (
     <>
         <Box py="20px" >
-            <Flex textAlign={'center'} align={'center'} flexDir={'column'} >
-                <Heading fontSize={'28px'} color={'#b52828'}>UPSKILLNEXUS LAUNCHES CYBERSECURITY EXPERT TRAINING AND INTERNSHIP PROGRAM WITH SECURENEXUS.</Heading>
-                <Heading size='md'>
-                    SECURENEXUS IS A PREMIER CYBER SECURITY SERVICE PROVIDER TO TOP BANKS AND CORPORATES
-                </Heading>
-                <Flex flexWrap={'wrap'} justify={'center'} align={'center'}>
-                    {data.map((item, index) => (
-                        <Flex key={index} align={'end'} gap='2' px='2' rounded={'md'}>
-                            <Text fontSize={'18px'} mt='2' >
-                                <FaRegCheckCircle color={item?.color} />
-                            </Text>
-                            <Text fontWeight={'medium'} fontSize='15px'>
-                                {item.text}
-                            </Text>
-                        </Flex>
-                    ))}
-                </Flex>
+            <Flex textAlign={'center'} align={'center'} flexDir={''} >
+                <Box h='250px' w='500px' border={'2px solid black'}>
+                    <Image objectFit={'cover'} w='full' h='full'  src='/partners/xbiz.png' />
+                </Box>
+                <Box>
+                    <Heading fontSize={'28px'} color={'#b52828'}>UPSKILLNEXUS LAUNCHES CYBERSECURITY EXPERT TRAINING AND INTERNSHIP PROGRAM WITH SECURENEXUS.</Heading>
+                    <Heading size='md'>
+                        SECURENEXUS IS A PREMIER CYBER SECURITY SERVICE PROVIDER TO TOP BANKS AND CORPORATES
+                    </Heading>
+                    <Flex flexWrap={'wrap'} justify={'center'} align={'center'}>
+                        {data.map((item, index) => (
+                            <Flex key={index} align={'end'} gap='2' px='2' rounded={'md'}>
+                                <Text fontSize={'18px'} mt='2' >
+                                    <FaRegCheckCircle color={item?.color} />
+                                </Text>
+                                <Text fontWeight={'medium'} fontSize='15px'>
+                                    {item.text}
+                                </Text>
+                            </Flex>
+                        ))}
+                    </Flex>
+                </Box>
+                <Box h='250px' w='500px' border={'2px solid black'}>
+                    <Image objectFit={'cover'} w='full' h='full'  src='/partners/xbiz.png' />
+                </Box>
             </Flex>
 
             <Grid gridTemplateColumns={{
@@ -83,7 +91,7 @@ const SecurityService = () => {
                 }} gap='3' p='3' my="20px"
             >
                 {securityData.map((ele,i) => (
-                    <Card key={i} p='2' textAlign={'center'} align='center' border={'2px solid #E7E5E5'} shadow={'sm'}>
+                    <Card bg='#' key={i} p='2' textAlign={'center'} align='center' border={'2px solid #E7E5E5'} shadow={'sm'}>
                         <Heading color='#b52828' size={{md: 'md', base:'sm'}}>{ele?.title}</Heading>
                         <Text>{ele?.content} </Text>
                     </Card>

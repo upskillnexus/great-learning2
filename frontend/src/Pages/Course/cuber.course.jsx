@@ -16,21 +16,9 @@ import {
 import DigitalMarketingHighlights from "../../Components/Course/DigitalMar";
 import DynamicCard from "../../Components/Cards/DynamicCard";
 import CourseInformation from "../../Components/Course/CourseInfo";
-import DynamicSlider from "../../Components/Slider/DynamicSlider";
 import ChatGPTComponent from "../../Components/Course/ChatGpt";
-import CardWithImg from "../../Components/Cards/CardWithImg";
-import DynamicTesti from "../../Components/Slider/DynamicTesti";
-import SyllabusComponent from "../../Components/Course/SlyabusCon";
-import CareerOutcomesComponent from "../../Components/Course/CareerOutcome";
-import CreativityProjects from "../../Components/Course/CreativityProject";
-import DynamicLearMoreSlider from "../../Components/Slider/DynamiLearMoreSlider";
-import PriceBoxComponent from "../../Components/Course/PriceBoxComponent";
-import ReferAndEarnComponent from "../../Components/Course/ReferAndEarn";
 import DynamicAccordians from "../../Components/Accordians/DynamicAccordians";
 import CareerBenefits from "../../Components/Course/CareerBenefits";
-import Reason_to_Join from "../../Components/Course/Reason_to_Join";
-import TrendingBlogs from "../../Components/Course/Trending_Blog";
-import { FaFacebook } from "react-icons/fa6";
 import { MdCheck } from "react-icons/md";
 import { RiLiveFill } from "react-icons/ri";
 
@@ -54,8 +42,8 @@ const CyberSecurityCourse = () => {
     title: "Mastering Cybersecurity Essentials",
     text: "Welcome to our comprehensive Cybersecurity Training Courses, designed to equip aspiring professionals with the knowledge and skills necessary to thrive in the ever-evolving field of cybersecurity. We offer two courses: ",
     points: [
-      'Cybersecurity Professional Program (6 months)',
-      'Cybersecurity Expert Program (12 months including 3 months of internship)'
+      'Cybersecurity Professionals Program (6 months)',
+      'Cybersecurity Experts Program (12 months including 3 months of internship)'
     ],
     logo: [
       {
@@ -77,7 +65,7 @@ const CyberSecurityCourse = () => {
       },
       {
         img: "https://didm.in/assets/upload/images/Placement_Partners.gif",
-        heading: "Professionals Instructor",
+        heading: "Professional Instructors",
         text: "Instructors",
       },
     ],
@@ -240,27 +228,33 @@ const CyberSecurityCourse = () => {
     {
       point: "Career Advancement:",
       description:
-        "By completing our 'Cybersecurity' course, participants will be able to acquire more challenging roles and responsibilities in their current jobs or advance in their careers.",
+        "By completing our Cybersecurity course, participants will be able to acquire more challenging roles and responsibilities in their current jobs or advance in their careers.",
     },
     {
       point: "Enhanced Creativity:",
       description:
-        "To stay ahead of the competition in Cybersecurity, participants attending the 'Cybersecurity' course will learn how to be more creative and innovative in their approach.",
+        "To stay ahead of the competition in Cybersecurity, participants attending the Cybersecurity course will learn how to be more creative and innovative in their approach.",
     },
     {
       point: "Increased Job Opportunities:",
       description:
-        "In the ever-growing field of Cybersecurity, completing our 'Cybersecurity' course can open up a whole new world of career opportunities for participants.",
+        "In the ever-growing field of Cybersecurity, completing our Cybersecurity course can open up a whole new world of career opportunities for participants.",
     },
     {
       point: "Networking Opportunities:",
       description:
-        "The 'Cybersecurity' course will also provide participants with the opportunity to network with other industry professionals, which can lead to new job opportunities and business collaborations.",
+        "The Cybersecurity course will also provide participants with the opportunity to network with other industry professionals, which can lead to new job opportunities and business collaborations.",
     },
     {
       point: "Great Earning Potential:",
       description:
-        "Participants who have completed the 'Cybersecurity' course can negotiate higher salaries and better job benefits due to their updated skills and knowledge of Cybersecurity.",
+        "Participants who have completed the Cybersecurity course can negotiate higher salaries and better job benefits due to their updated skills and knowledge of Cybersecurity.",
+    },
+    
+    {
+      point: "Contribution to Society:",
+      description:
+        "Cybersecurity professionals play a crucial role in protecting individuals, businesses, and governments from cyber threats. Working in cybersecurity allows individuals to make a positive impact by contributing to the security and privacy of digital systems and information.",
     },
   ];
 
@@ -527,13 +521,13 @@ const CyberSecurityCourse = () => {
           </Box>
 
           {/* Best Certification Course on Cybersecurity */}
-          <Box>
+          <Box w='full'>
             <DynamicCard //
               onOpen={onOpen}
               bg="#b9292f"
               borderRadius="none"
               button="Enquire Now"
-              title={"Best Certification Course on Cybersecurity"}
+              title="Our Most Popular Courses"
               text="Best-in-class Cybersecurity course content taught by leading faculty and industry leaders. Assured internships and placements upon meeting the graduation requirements."
             />
           </Box>
@@ -548,6 +542,7 @@ const CyberSecurityCourse = () => {
           {/* Cybersecurity Course */}
           <Box w="full" bg="#fff" py="8">
             <ChatGPTComponent //
+              gridCol={5}
               onOpen={onOpen}
               data={digital_Course}
               title={"Cybersecurity Course"}
@@ -558,7 +553,7 @@ const CyberSecurityCourse = () => {
           {/* Chapter Highlights */}
           <Box w="full" py="8" bg="#f4f5f7">
             <CourseInformation //
-              keyH="Chapters Highlights"
+              keyH="Modules Highlights"
               data={chapterhighlights}
               title={"Course Highlights"}
               subTitle={"UpskillNexus Covers 10+ Modules from basics to advance level in the Cybersecurity Program."}

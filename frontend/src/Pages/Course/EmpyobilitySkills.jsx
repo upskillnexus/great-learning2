@@ -59,7 +59,7 @@ const EmpyobilitySkills = () => {
       },
       {
         img: "https://didm.in/assets/upload/images/Placement_Partners.gif",
-        heading: "Professionals Instructor",
+        heading: "Professional Instructors",
         text: "Instructors",
       },
     ],
@@ -391,7 +391,7 @@ const EmpyobilitySkills = () => {
               bg="#b9292f"
               borderRadius="none"
               button="Enquire Now"
-              title={"Suggest me some title ma'ma "}
+              title={"Our Most Popular Courses"}
               text="Dummy content"
             />
           </Box>

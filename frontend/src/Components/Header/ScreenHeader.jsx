@@ -8,7 +8,13 @@ import { Box } from '@chakra-ui/react'
 const ScreenHeader = ({ children }) => {
   const { pathname } = useLocation()
   
-  const path = ['/admin/students-admission','/admin/leads','/admin']
+  const path = [
+    '/admin/students-admission',
+    '/admin/leads',
+    '/admin',
+    '/admin/course/create',
+    '/admin/course',
+  ]
   
   return (
     <>

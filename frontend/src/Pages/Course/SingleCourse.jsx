@@ -63,13 +63,13 @@ const SingleCourse = () => {
     },
     {
       description:
-        "For every individual chapter of the course, you will learn from a specific 'specialized' trainer.",
+        "For every individual modules of the course, you will learn from a specific 'specialized' trainer.",
       text: "At UpskillNexus, we understand that every digital marketer has a different specialty, and that is why in our digital marketing science course, each individual chapter will be taught by a different trainer who has specialized skills in that field. This means that each student will benefit from the expertise of a wide range of professionals and gain a comprehensive understanding of digital marketing. From performance marketing to programmatic advertising, the digital marketing agency professionals who we have appointed as trainers will ensure that every student gets a well-rounded education in the field. With this unique approach, we are confident that our trainees will be equipped with the necessary skills and knowledge to succeed in the digital marketing industry.",
     },
-    {
-      description: "Any of the agencies your trainers work for can hire you.",
-      text: "One of the most special aspects of our digital marketing science course is that it affords students the opportunity to network with experienced professionals in the field. Our trainers are all industry veterans, and they bring a wealth of knowledge and experience to our classes. They also maintain close relationships with many digital marketing agencies, which can provide our students with valuable connections and potential job opportunities. In fact, there is a higher chance that our students will be hired by one of their trainers' agencies to work in their digital marketing department.",
-    },
+    // {
+    //   description: "Any of the agencies your trainers work for can hire you.",
+    //   text: "One of the most special aspects of our digital marketing science course is that it affords students the opportunity to network with experienced professionals in the field. Our trainers are all industry veterans, and they bring a wealth of knowledge and experience to our classes. They also maintain close relationships with many digital marketing agencies, which can provide our students with valuable connections and potential job opportunities. In fact, there is a higher chance that our students will be hired by one of their trainers' agencies to work in their digital marketing department.",
+    // },
   ];
 
   const data = [
@@ -224,27 +224,32 @@ const SingleCourse = () => {
     {
       point: "Career Advancement:",
       description:
-        "By completing our 'Digital Marketing Science' course, participants will be able to acquire more challenging roles and responsibilities in their current jobs or advance in their careers.",
+        "By completing our Digital Marketing Science course, participants will be able to acquire more challenging roles and responsibilities in their current jobs or advance in their careers.",
     },
     {
       point: "Enhanced Creativity:",
       description:
-        "To stay ahead of the competition in digital marketing, participants attending the 'Digital Marketing Science' course will learn how to be more creative and innovative in their approach.",
+        "To stay ahead of the competition in digital marketing, participants attending the Digital Marketing Science course will learn how to be more creative and innovative in their approach.",
     },
     {
       point: "Increased Job Opportunities:",
       description:
-        "In the ever-growing field of digital marketing, completing our 'Digital Marketing Science' course can open up a whole new world of career opportunities for participants.",
+        "In the ever-growing field of digital marketing, completing our Digital Marketing Science course can open up a whole new world of career opportunities for participants.",
     },
     {
       point: "Networking Opportunities:",
       description:
-        "The 'Digital Marketing Science' course will also provide participants with the opportunity to network with other industry professionals, which can lead to new job opportunities and business collaborations.",
+        "The Digital Marketing Science course will also provide participants with the opportunity to network with other industry professionals, which can lead to new job opportunities and business collaborations.",
     },
     {
       point: "Great Earning Potential:",
       description:
-        "Participants who have completed the 'Digital Marketing Science' course can negotiate higher salaries and better job benefits due to their updated skills and knowledge of digital marketing.",
+        "Participants who have completed the Digital Marketing Science course can negotiate higher salaries and better job benefits due to their updated skills and knowledge of digital marketing.",
+    },
+    {
+      point: "Contribution to Society:",
+      description:
+        "Cybersecurity professionals play a crucial role in protecting individuals, businesses, and governments from cyber threats. Working in cybersecurity allows individuals to make a positive impact by contributing to the security and privacy of digital systems and information.",
     },
   ];
 
@@ -617,8 +622,8 @@ const SingleCourse = () => {
               bg="#b9292f"
               borderRadius="none"
               button="Enquire Now"
-              title={"Best Certification Course on Digital Marketing"}
-              text="Best-in-class digital marketing course content taught by leading faculty and industry leaders in the form of online marketing classes, recorded video lectures, case studies and live projects. Now integrated with Generative AI modules."
+              title={"Our Most Popular Courses"}
+              text="Best-in-class digital marketing course content taught by leading faculty and industry leaders in the form of online & Offline classes, recorded video lectures, case studies and live projects."
             />
           </Box>
 

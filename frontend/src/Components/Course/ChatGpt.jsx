@@ -2,7 +2,7 @@ import { Box, Button, Flex, Grid, Heading, Image, Text } from "@chakra-ui/react"
 import { FaCheckCircle } from "react-icons/fa";
 import { MdCheck } from "react-icons/md";
 
-const ChatGPTComponent = ({ onOpen, title, subTitle, data, button=true }) => {
+const ChatGPTComponent = ({ onOpen, title, subTitle, data, button=true, gridCol=4 }) => {
   return (
     <Flex justify={'center'} align="center" width={{ base: "full", md: "90%" }} mx="auto">
       <Flex flexDir={"column"} align={"center"} gap="5" p={{ base: 0, md: "10px" }}>
@@ -14,7 +14,7 @@ const ChatGPTComponent = ({ onOpen, title, subTitle, data, button=true }) => {
         </Flex>
         {/*  */}
         {data &&
-          <Grid p={'3'} w='full' gridTemplateColumns={{lg:'repeat(4,1fr)', md: 'repeat(3,1fr)', sm: 'repeat(2,1fr)', base: 'repeat(1,1fr)'}} placeItems={'center'} gap={{ base: "20px", md: "3" }} border="3px solid none">
+          <Grid p={'3'} w='full' gridTemplateColumns={{lg:`repeat(${gridCol},1fr)`, md: 'repeat(3,1fr)', sm: 'repeat(2,1fr)', base: 'repeat(1,1fr)'}} placeItems={'center'} gap={{ base: "20px", md: "3" }} border="3px solid none">
             {data?.map((ele, i) => (
               <Flex key={i} flexDir={'column'} w='full' h='full' align="center" p={"3"} rounded={"md"} shadow={"sm"} border={'1px solid #ccc'}>
                 <Text color="#b9292f" fontSize={"40px"}>
