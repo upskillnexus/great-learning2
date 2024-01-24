@@ -1,4 +1,4 @@
-import { Avatar, Box, Flex, Heading, IconButton, Text, useDisclosure } from '@chakra-ui/react'
+import { Avatar, Box, Button, Flex, Heading, IconButton, Text, useDisclosure } from '@chakra-ui/react'
 import React, { useEffect, useState } from 'react'
 import DataTable from 'react-data-table-component'
 import useGetCourses from '../../../Libs/Quirys/course/useGetCourses'
@@ -16,6 +16,7 @@ const AllCourses = () => {
     const [course, setCourse] = useState()
     const {data: courses, isPending: loading} = useGetCourses();
     const {mutate: handleDeleteCourse, isPending: deleting, isSuccess: deleted} = useDeleteCourse()
+
     
     const columns = [
         {
@@ -29,16 +30,16 @@ const AllCourses = () => {
           ),
         },
         { name: 'Course Name' , selector: (row,i) => 
-            row.programName, sortable: true 
+            row?.programName, sortable: true 
         },
         { name: 'Duration', selector: (row,i) =>  
-            row.duration, sortable: true 
+            row?.duration, sortable: true 
         },
         { name: 'Fee', selector: (row,i) =>  
-            row.fee, sortable: true 
+            row?.fee, sortable: true 
         },
         { name: 'Eegistration Fee', selector: (row,i) =>  
-            row.registrationFee, sortable: true 
+            row?.registrationFee, sortable: true 
         },
         {name: "Action", selector: (row,i) => (
                 <Flex justify={'start'} gap='2'>
@@ -61,45 +62,27 @@ const AllCourses = () => {
       },[deleted, deleting])
 
 
-      const paginatorLeft = <Button type="button" icon="pi pi-refresh" text />;
-      const paginatorRight = <Button type="button" icon="pi pi-download" text />;
-
-      useEffect(() => {
-        CustomerService.getCustomersMedium().then((data) => setCustomers(data));
-    }, []);
-
   return (
     <>
         <UpdateCourseModal course={course} isOpen={isOpen1} onOpen={onOpen1} onClose={onClose1} />
         <DySureModal onSubmit={handleDelete} isOpen={isOpen2} onOpen={onOpen2} onClose={onClose2} message={'Are You Sure You Wanna Delete This Course'} />
-        <Flex h='100vh' justify={'center'} align={'center'}>
+        <Flex h='100vh' justify={'center'} align={'center'} >
             <Box overflowY={'scroll'} p='7' border={'2px solid #cccc'} rounded={'md'} w='80%' h='80vh' shadow={'md'}>
+                <DataTable
+                  title={<Heading size={'lg'}>Courses</Heading>}
+                  columns={columns}
+                  data={courses?.data}
+                  progressPending={loading}
+                  pagination
+                  paginationServer
 
-            <DataTable 
-                value={columns} 
-                paginator 
-                rows={5} 
-                rowsPerPageOptions={[5, 10, 25, 50]} 
-                tableStyle={{ minWidth: '50rem' }}
-                paginatorTemplate="RowsPerPageDropdown FirstPageLink PrevPageLink CurrentPageReport NextPageLink LastPageLink"
-                currentPageReportTemplate="{first} to {last} of {totalRecords}" 
-                paginatorLeft={paginatorLeft} 
-                paginatorRight={paginatorRight} 
-            />
-                    {/* title={
-                        <Heading size={'lg'}>Courses</Heading>
-                    }
-                    columns={columns}
-                    data={courses?.data}
-                    progressPending={loading}
-                    pagination
-                    paginationServer
-                    fixedHeader
-                    paginationTotalRows={courses?.count}
+                  paginationTotalRows={courses?.count}
 
-                    // onChangeRowsPerPage={handlePerRowsChange}
-                    // onChangePage={handlePageChange} */}
-                {/* /> */}
+                  paginationComponentOptions={{
+                      // noRowsPerPage: true, // Hide rows per page dropdown
+                      rangeSeparatorText: 'of', // Text between current and total pages
+                  }}
+              />
             </Box>
         </Flex>
     </>

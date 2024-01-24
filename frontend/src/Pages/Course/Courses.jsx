@@ -123,9 +123,11 @@ const Courses = () => {
                 w={{ base: "70%", md: "80px", lg: "80px" }}
                 src="/Upskill-Nexus-favicon.png"
               />
-              <Box>
-                <Text fontWeight={'bold'} m='0'>Skill.ReSkill.UpSkill</Text>
+              
+              <Box fontSize={'28px'}>
+                <GetUpskillnexus fontWeight={'bold'} text={'Skill.Re-skill.Upskill'} />
               </Box>
+
               <Flex flexDir={{ base: "column", lg: "row" }} align="center">
                 <Heading
                   fontSize={{ base: "30px", md: "40px" }}
