@@ -1,5 +1,7 @@
 const express = require("express");
 const dotenv = require("dotenv");
+const path = require("path");
+
 dotenv.config();
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
@@ -19,6 +21,14 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use("/api", AllRoutes);
+
+// 
+
+var __dirname = path.resolve();
+app.use(express.static(path.join(__dirname, "/dist")));
+app.get("*", (req, res) =>
+  res.sendFile(path.join(__dirname, "/dist/index.html"))
+);
 
 app.listen(process.env.port, async () => {
   try {

@@ -33,8 +33,8 @@ const AddProgramForm = () => {
   return (
     <Flex flexDir={'column'} align={'center'} justify={'center'} p={4} h='full' >
 
-      <Box spacing={4} w='90%' p='6' border={'2px solid #b52828'} rounded={'md'}>
-        <Heading>Add Course</Heading>
+      <Box spacing={4} w='80%' p='9' border='1px solid #cccc' shadow={'sm'} rounded={'md'}>
+        <Heading color={'#b52828'}>Add Course</Heading>
         <Box mt='4'>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <Grid w='full' gap='4' gridTemplateColumns={'repeat(2,1fr)'}>
@@ -122,30 +122,29 @@ const AddProgramForm = () => {
 
                     <FormControl id="registrationFee">
                         <Controller
-                        control={control}
-                        rules={{
-                            required: 'Registration Fee is required.',
-                            pattern: {
-                            value: /^\d+$/,
-                            message: 'Please enter a valid number.',
-                            },
-                        }}
-                        name="registrationFee"
-                        render={({ field: { onChange, value } }) => (
-                            <>
-                            <DyInput
-                                title={'Registration Fee'}
-                                type="number"
-                                onChange={onChange}
-                                value={value}
-                            />
-                            <InputError err={errors} name="registrationFee" />
-                            </>
-                        )}
+                            control={control}
+                            rules={{
+                                required: 'Registration Fee is required.',
+                                pattern: {
+                                value: /^\d+$/,
+                                message: 'Please enter a valid number.',
+                                },
+                            }}
+                            name="registrationFee"
+                            render={({ field: { onChange, value } }) => (
+                                <>
+                                <DyInput
+                                    title={'Registration Fee'}
+                                    type="number"
+                                    onChange={onChange}
+                                    value={value}
+                                />
+                                <InputError err={errors} name="registrationFee" />
+                                </>
+                            )}
                         />
                     </FormControl>
                 </Grid>
-
                 <Button isLoading={creating} type="submit" colorScheme="red" bg='#b52828' mt={4}>
                     Add Program
                 </Button>

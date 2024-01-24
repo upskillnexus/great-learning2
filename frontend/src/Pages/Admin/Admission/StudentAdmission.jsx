@@ -45,7 +45,7 @@ const StudentAdmission = () => {
             row.gender, sortable: true 
         },
 
-        {name: "Action", selector: (row,i) => (
+        {name: "Action",  width: 'auto',selector: (row,i) => (
                 <Flex justify={'start'} gap='2'>
                     <IconButton bg='success' size='sm' icon={<FaCheck />} />
                     <IconButton onClick={() => studentDetails(row)} size='sm' icon={<MdOutlineRemoveRedEye />} />

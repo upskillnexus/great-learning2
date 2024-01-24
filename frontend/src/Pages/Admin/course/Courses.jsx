@@ -1,16 +1,22 @@
-import { Avatar, Box, Flex, Heading, IconButton, Text } from '@chakra-ui/react'
-import React, { useState } from 'react'
+import { Avatar, Box, Button, Flex, Heading, IconButton, Text, useDisclosure } from '@chakra-ui/react'
+import React, { useEffect, useState } from 'react'
 import DataTable from 'react-data-table-component'
 import useGetCourses from '../../../Libs/Quirys/course/useGetCourses'
-import { FaCheck } from 'react-icons/fa6'
 import { MdDeleteOutline, MdOutlineClose, MdOutlineRemoveRedEye } from 'react-icons/md'
 import { CiEdit } from 'react-icons/ci'
 import useDeleteCourse from '../../../Libs/Mutation/Course/useDeleteCourse'
+import { UpdateCourseModal } from '../../../Components/Admin/modal_drawr/UpdateCourse'
+import { DySureModal } from '../../../Components/Modal/DySureModal'
 
 const AllCourses = () => {
+    const { isOpen:isOpen1, onOpen:onOpen1, onClose:onClose1 } = useDisclosure()
+    const { isOpen:isOpen2, onOpen:onOpen2, onClose:onClose2 } = useDisclosure()
+
     const [ind, setInd] = useState()
+    const [course, setCourse] = useState()
     const {data: courses, isPending: loading} = useGetCourses();
-    const {mutate: handleDeleteCourse, isPending: deleting} = useDeleteCourse()
+    const {mutate: handleDeleteCourse, isPending: deleting, isSuccess: deleted} = useDeleteCourse()
+
     
     const columns = [
         {
@@ -24,50 +30,62 @@ const AllCourses = () => {
           ),
         },
         { name: 'Course Name' , selector: (row,i) => 
-            row.programName, sortable: true 
+            row?.programName, sortable: true 
         },
         { name: 'Duration', selector: (row,i) =>  
-            row.duration, sortable: true 
+            row?.duration, sortable: true 
         },
         { name: 'Fee', selector: (row,i) =>  
-            row.fee, sortable: true 
+            row?.fee, sortable: true 
         },
         { name: 'Eegistration Fee', selector: (row,i) =>  
-            row.registrationFee, sortable: true 
+            row?.registrationFee, sortable: true 
         },
         {name: "Action", selector: (row,i) => (
                 <Flex justify={'start'} gap='2'>
-                    <IconButton size='sm' icon={<CiEdit />} />
-                    <IconButton isLoading={deleting && i == ind} onClick={() => handleDelete({id:row?._id, ind: i})} bg='#b9292f' color='white' size='sm' icon={<MdDeleteOutline />} />
+                    <IconButton onClick={() => {setCourse(row), onOpen1()}} size='sm' icon={<CiEdit />} />
+                    <IconButton onClick={() => {setCourse(row) , onOpen2()}} bg='#b9292f' color='white' size='sm' icon={<MdDeleteOutline />} />
                 </Flex>
             )
         }
       ];
 
-      const handleDelete = ({id , ind}) => {
-        setInd(ind)
-        handleDeleteCourse(id)
+      const handleDelete = () => {
+        // setInd(ind)
+        handleDeleteCourse(course?._id)
       }
     
-  return (
-    <Flex h='100vh' justify={'center'} align={'center'}>
-        <Box w='80%'>
-            <DataTable
-                title={
-                    <Heading size={'lg'}>Courses</Heading>
-                }
-                columns={columns}
-                data={courses?.data}
-                progressPending={loading}
-                pagination
-                // paginationServer
-                paginationTotalRows={courses?.count}
+      useEffect(() => {
+        if(deleted){
+            onClose2()
+        }
+      },[deleted, deleting])
 
-                // onChangeRowsPerPage={handlePerRowsChange}
-                // onChangePage={handlePageChange}
-            />
-        </Box>
-    </Flex>
+
+  return (
+    <>
+        <UpdateCourseModal course={course} isOpen={isOpen1} onOpen={onOpen1} onClose={onClose1} />
+        <DySureModal onSubmit={handleDelete} isOpen={isOpen2} onOpen={onOpen2} onClose={onClose2} message={'Are You Sure You Wanna Delete This Course'} />
+        <Flex h='100vh' justify={'center'} align={'center'} >
+            <Box overflowY={'scroll'} p='7' border={'2px solid #cccc'} rounded={'md'} w='80%' h='80vh' shadow={'md'}>
+                <DataTable
+                  title={<Heading size={'lg'}>Courses</Heading>}
+                  columns={columns}
+                  data={courses?.data}
+                  progressPending={loading}
+                  pagination
+                  paginationServer
+
+                  paginationTotalRows={courses?.count}
+
+                  paginationComponentOptions={{
+                      // noRowsPerPage: true, // Hide rows per page dropdown
+                      rangeSeparatorText: 'of', // Text between current and total pages
+                  }}
+              />
+            </Box>
+        </Flex>
+    </>
   )
 }
 
