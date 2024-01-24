@@ -1,6 +1,7 @@
 import axios from "axios";
 
-export const baseURL = "http://localhost:8080/api/";
+// export const baseURL = "http://localhost:8080/api/";
+export const baseURL = "http://localhost:8010/api/";
 // export const baseURL = "https://api.upskillnexus.com/api/";
 export const clientUrl = "http://localhost:3000/";
 
